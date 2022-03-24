@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+import com.example.manage_tasks.models.CustomUserDetails;
 import com.example.manage_tasks.models.User;
 
 import org.springframework.core.env.Environment;
@@ -24,6 +25,7 @@ public class JwtUtils {
         this.JWT_TIME_DELTA=env.getRequiredProperty("jwt.time_delta",Long.class);
     }
     public String generateToken( User user) {
+        if(user==null)return null;
         return Jwts
         .builder()
         .setClaims(generateClaimsMap(user))
@@ -48,16 +50,14 @@ public class JwtUtils {
     
     private Map<String, Object> generateClaimsMap(User user) {
         Map<String, Object> claims = new HashMap<>();
-        claims.put("email", user.getEmail());
-        claims.put("username", user.getUsername());
+        claims.put("id", user.getId());
         return claims;
     }
-    public User extractUser(String token){
+    public CustomUserDetails extractUser(String token){
         User user = new User();
         Map<String, Object> claims = extractClaims(token);
-        user.setEmail((String)claims.get("email"));
-        user.setName((String)claims.get("username"));
-        return user;
+        user.setId((Long)claims.get("id"));
+        return new CustomUserDetails(user);
     }
 
 }

@@ -1,13 +1,16 @@
 package com.example.manage_tasks.repositories;
 
-import java.util.Optional;
-
 import com.example.manage_tasks.models.User;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.repository.reactive.ReactiveCrudRepository;
 import org.springframework.stereotype.Repository;
 
+import reactor.core.publisher.Mono;
+
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
-    Optional<User> findByEmail(String email);
+public interface UserRepository extends ReactiveCrudRepository<User, Long> {
+    
+    Mono<User> findByEmail(String email);
+    
+    Mono<Boolean> existsByEmail(String email);
 }

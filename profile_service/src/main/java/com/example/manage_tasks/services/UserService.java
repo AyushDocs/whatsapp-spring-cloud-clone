@@ -3,6 +3,7 @@ package com.example.manage_tasks.services;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 import com.example.manage_tasks.dto.UserDto;
 import com.example.manage_tasks.models.User;
@@ -20,47 +21,40 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
-
+import lombok.RequiredArgsConstructor;
+import reactor.core.publisher.Mono;
 
 @Service
+@RequiredArgsConstructor
 public class UserService {
 
-    private final String JWT_COOKIE_NAME;
-    private final Duration JWT_COOKIE_MAX_AGE;
     private final UserRepository repository;
     private final JwtUtils jwtUtils;
-    private final AuthenticationManager authenticationManager;
     private final PasswordEncoder passwordEncoder;
 
-   public UserService(UserRepository repository,JwtUtils jwtUtils,AuthenticationManager authenticationManager,PasswordEncoder passwordEncoder,Environment env){
-        this.repository = repository;
-        this.jwtUtils = jwtUtils;
-        this.authenticationManager = authenticationManager;
-        this.passwordEncoder = passwordEncoder;
-        this.JWT_COOKIE_MAX_AGE = Duration.ofSeconds(env.getRequiredProperty("jwt.time_delta",Long.class));
-        this.JWT_COOKIE_NAME = env.getRequiredProperty("jwt.cookie_name",String.class);
+    public Mono<String> signup(UserDto userDto) {
+        return repository.existsByEmail(userDto.getEmail())
+                .map(bool -> {
+                    if (bool == null || bool)
+                        return null;
+                    User user = new User();
+                    user.setEmail(userDto.getEmail());
+                    user.setPassword(passwordEncoder.encode(userDto.getPassword()));
+                    user.setUserName(userDto.getUsername());
+                    repository.save(user);
+                    return jwtUtils.generateToken(user);
+                });
     }
 
-    public ResponseEntity signup(UserDto userDto){
-        User prevUser=repository.findByEmail(userDto.getEmail()).orElse(null);
-        if (prevUser!=null) return ResponseEntity.badRequest().body("User already exists");
-        User user=new User();
-        user.setEmail(userDto.getEmail());
-        user.setPassword(passwordEncoder.encode(userDto.getPassword()));
-        user.setName(userDto.getUsername());
-        user=repository.save(user);
-        String jwt=jwtUtils.generateToken(user);
-        ResponseCookie cookie=ResponseCookie.from(JWT_COOKIE_NAME, jwt).httpOnly(true).maxAge(JWT_COOKIE_MAX_AGE).build();
-        return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE,cookie.toString()).build();
+    public Mono<String> login(UserDto userDto) {
+        return repository.findByEmail(userDto.getEmail())
+                .filter(Objects::nonNull)
+                .map(user -> {
+                    if (!passwordEncoder.matches(userDto.getPassword(), user.getPassword()))
+                        return null;
+                    return user;
+                })
+                .map(jwtUtils::generateToken);
     }
-    public ResponseEntity login(UserDto userDto){
-        Authentication authentication= authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(userDto.getEmail(), userDto.getPassword()));
-        String jwt=jwtUtils.generateToken((User)authentication.getPrincipal());
-        System.out.println(jwt);
-        ResponseCookie cookie = ResponseCookie.from(JWT_COOKIE_NAME, jwt).httpOnly(true).maxAge(JWT_COOKIE_MAX_AGE)
-                .build();
-        return ResponseEntity.ok().header(HttpHeaders.SET_COOKIE, cookie.toString()).build();
-    }
-
 
 }

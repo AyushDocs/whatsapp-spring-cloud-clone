@@ -1,46 +1,36 @@
 package com.example.manage_tasks.configuration;
 
-import com.example.manage_tasks.utils.JwtUtils;
-
 import org.springframework.context.annotation.Bean;
-import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
-import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.userdetails.UserDetailsService;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
+import org.springframework.security.authentication.ReactiveAuthenticationManager;
+import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
+import org.springframework.security.config.web.server.ServerHttpSecurity;
+import org.springframework.security.web.server.SecurityWebFilterChain;
+import org.springframework.security.web.server.context.ServerSecurityContextRepository;
 
 import lombok.AllArgsConstructor;
-@EnableWebSecurity
+
+@EnableWebFluxSecurity
+@Configuration
 @AllArgsConstructor
-public class SecurityConfig extends WebSecurityConfigurerAdapter{
-    private final UserDetailsService userDetailsService;
-    private final PasswordEncoder passwordEncoder;
-    private JwtUtils jwtUtils;
-    @Override
-    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
-    }
-    @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http
-        .addFilterBefore(new JwtFilter(jwtUtils),UsernamePasswordAuthenticationFilter.class)
-        .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-        .and()
-        .authorizeRequests()
-        .antMatchers("/h2-console/**").permitAll()
-        .anyRequest().authenticated()
-        .and()
-        .csrf().disable();
-        http.headers().frameOptions().disable();
-    }
-    @Override
+public class SecurityConfig {
+    private final  ReactiveAuthenticationManager authenticationManager;
+    private final ServerSecurityContextRepository securityContextRepository;
+
     @Bean
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManager();
+    protected SecurityWebFilterChain securityWebFilterChain(ServerHttpSecurity http) throws Exception {
+        return http
+                .csrf().disable()
+                .formLogin().disable()
+                .httpBasic().disable()
+                .headers().frameOptions().disable()
+                .and()
+                .authenticationManager(authenticationManager)
+                .securityContextRepository(securityContextRepository)
+                .authorizeExchange()
+                .pathMatchers("/h2-console/**").permitAll()
+                .pathMatchers(HttpMethod.OPTIONS).permitAll()
+                .and().build();
     }
-    
 }
