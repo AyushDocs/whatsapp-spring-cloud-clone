@@ -1,9 +1,0 @@
-# @format
-
-spring:
-  profiles:
-    active:
-      - dev
-eureka:
-  client:
-    disabled: true
