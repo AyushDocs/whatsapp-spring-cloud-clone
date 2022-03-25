@@ -17,7 +17,7 @@ import lombok.Data;
 @Builder
 public class ImageMetadata {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String imgUrl;
     private String imgType;
