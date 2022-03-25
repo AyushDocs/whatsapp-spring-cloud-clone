@@ -7,10 +7,10 @@
 		<version>2.6.4</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.example</groupId>
-	<artifactId>manage_tasks</artifactId>
+	<groupId>com.whatsapp</groupId>
+	<artifactId>profile_service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>manage_tasks</name>
+	<name>profile_service</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>17</java.version>
