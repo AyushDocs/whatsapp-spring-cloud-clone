@@ -1,4 +1,8 @@
+# @format
+
 spring:
-    profiles:
-        active: 
-            - dev
+  profiles:
+    active:
+      - dev
+  application:
+    name: message_service
