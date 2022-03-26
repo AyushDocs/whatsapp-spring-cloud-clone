@@ -1,0 +1,12 @@
+# @format
+
+spring:
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: ${userprofile}/Desktop/code/whatsapp-clone-microservices/config_server/config
+server:
+    port: 8085

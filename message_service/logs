@@ -2980,3 +2980,7 @@ com.netflix.discovery.shared.transport.TransportException: Cannot execute reques
 2022-03-26 16:03:23.132  INFO 9464 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MESSAGE-SERVICE/host.docker.internal:MESSAGE-SERVICE:8082 - registration status: 204
 2022-03-26 16:03:23.403  INFO 9464 --- [restartedMain] c.w.m.MessageServiceApplication          : Started MessageServiceApplication in 3.175 seconds (JVM running for 3669.917)
 2022-03-26 16:03:23.408  INFO 9464 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-26 16:04:38.274  INFO 9464 --- [http-nio-8082-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-26 16:04:38.275  INFO 9464 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-26 16:04:38.276  INFO 9464 --- [http-nio-8082-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-03-26 16:08:23.016  INFO 9464 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
