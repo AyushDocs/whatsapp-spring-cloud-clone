@@ -5,4 +5,4 @@ spring:
     active:
       - dev
   application:
-    name: profile_service
+    name: PROFILE-SERVICE

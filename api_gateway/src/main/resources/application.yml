@@ -1,28 +1,26 @@
-# @format
-
 server:
   port: 8078
-zuul:
-  ignoredServices: '*'
-  prefix: /api/v1
-  routes:
-    route1:
-      path: /images/**
-      serviceId: image_service
-      strip-prefix: false
-
-    route2:
-      path: /messages/**
-      serviceId: message_service
-      strip-prefix: false
-    route3:
-      path: /users/**
-      serviceId: profile_service
-      strip-prefix: false
-endpoints:
-  trace:
-    sensitive: false
+ 
 eureka:
   client:
-    service-url:
-      default-zone: http://localhost:8761/eureka/
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka 
+
+spring:
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+      - id: IMAGE-SERVICE
+        uri: lb://IMAGE-SERVICE
+        predicates:
+        - Path=/api/v1/images/**
+      - id: MESSAGE-SERVICE
+        uri: lb://MESSAGE-SERVICE
+        predicates:
+        - Path=/api/v1/messages/**
+      - id: PROFILE-SERVICE
+        uri: lb://PROFILE-SERVICE
+        predicates:
+        - Path=/api/v1/users/**

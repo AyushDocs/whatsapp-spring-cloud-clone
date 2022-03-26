@@ -1,16 +1,12 @@
 package com.whatsapp.image_service.controllers;
 
-import java.io.File;
-import java.io.IOException;
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.Base64;
 import java.util.Map;
 
 import com.whatsapp.image_service.models.Image;
 import com.whatsapp.image_service.services.ImageService;
 
-import org.apache.commons.io.FileUtils;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,7 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 import lombok.RequiredArgsConstructor;
 
 @RestController
-@RequestMapping("/api/v1//images/{userId}")
+@RequestMapping("/api/v1/images/{userId}")
 @RequiredArgsConstructor
 public class ImageController {
     private final ImageService imageService;

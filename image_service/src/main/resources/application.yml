@@ -2,7 +2,7 @@
 
 spring:
   application:
-    name: image_service
+    name: IMAGE-SERVICE
   profiles:
     active:
-       - dev
+      - dev
