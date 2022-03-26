@@ -1,0 +1,4 @@
+
+logging.file.name: logs
+spring.datasource.url: jdbc:h2:mem:mydb
+server.port: 8082

@@ -1,6 +1,8 @@
+# @format
+
 spring:
-    datasource:
-        url: jdbc:h2:mem:mydb
-    application:
-        name: image_service
-image.upload.dir: user-photos/
+  application:
+    name: image_service
+  profiles:
+    active:
+       - dev
