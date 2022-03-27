@@ -10,9 +10,3 @@ jwt:
   secret_key: gttyvitvuntcutfbcitfctnvtnvvtntvtntyiit
   time_delta: 900000
   cookie_name: token
-server:
-  port: 8083
-eureka:
-   client:
-      serviceUrl:
-         defaultZone: http://localhost:8761/eureka

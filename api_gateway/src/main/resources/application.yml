@@ -1,26 +1,16 @@
-server:
-  port: 8078
- 
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka 
-
 spring:
-  application:
-    name: API-GATEWAY
-  cloud:
-    gateway:
-      routes:
-      - id: IMAGE-SERVICE
-        uri: lb://IMAGE-SERVICE
-        predicates:
-        - Path=/api/v1/images/**
-      - id: MESSAGE-SERVICE
-        uri: lb://MESSAGE-SERVICE
-        predicates:
-        - Path=/api/v1/messages/**
-      - id: PROFILE-SERVICE
-        uri: lb://PROFILE-SERVICE
-        predicates:
-        - Path=/api/v1/users/**
+    cloud:
+        gateway:
+            routes:
+                - id: IMAGE-SERVICE
+                  uri: lb://IMAGE-SERVICE
+                  predicates:
+                      - Path=/api/v1/images/**
+                - id: MESSAGE-SERVICE
+                  uri: lb://MESSAGE-SERVICE
+                  predicates:
+                      - Path=/api/v1/messages/**
+                - id: PROFILE-SERVICE
+                  uri: lb://PROFILE-SERVICE
+                  predicates:
+                      - Path=/api/v1/users/**

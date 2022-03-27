@@ -1,20 +1,19 @@
 # @format
-
 spring:
     application:
-        name: CONFIG-SERVER
-    profiles:
-        active: native
+        name: IMAGE-SERVICE
     cloud:
         config:
             fail-fast: true
+            retry:
+                max-attempts: 20
+                max-interval: 15000
+                initial-interval: 10000
             discovery:
                 enabled: true
-            server:
-                native:
-                    search-locations: ${userprofile}/Desktop/code/whatsapp-clone-microservices/config_server/config
+                service-id: CONFIG-SERVER
 server:
-    port: 8085
+    port: 8081
 eureka:
     client:
         serviceUrl:

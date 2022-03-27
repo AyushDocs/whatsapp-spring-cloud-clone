@@ -1,8 +1,5 @@
 # @format
-
 spring:
-  application:
-    name: IMAGE-SERVICE
   profiles:
     active:
       - dev
