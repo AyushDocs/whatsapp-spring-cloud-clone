@@ -34,5 +34,3 @@ build/
 
 user-photos
 config_server/config
-node_modules
-dist
