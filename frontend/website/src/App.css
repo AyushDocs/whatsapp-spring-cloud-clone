@@ -1,0 +1,22 @@
+/** @format */
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	--whatsapp-light-dark: #202c33;
+	--whatsapp-dark: rgb(17, 27, 33);
+}
+img {
+	display: block;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+}
+body::-webkit-scrollbar {
+	width: 0px;
+	height: 0px;
+}

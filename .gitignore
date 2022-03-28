@@ -34,3 +34,10 @@ build/
 
 user-photos
 config_server/config
+build
+
+.env
+.env.development
+.env.test
+
+node_modules
