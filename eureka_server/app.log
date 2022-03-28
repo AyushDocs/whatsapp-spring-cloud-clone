@@ -1,0 +1,246 @@
+2022-03-27 13:51:29.459  INFO 9372 --- [main] c.w.e.EurekaServerApplication            : Starting EurekaServerApplication using Java 17 on DESKTOP-HB7E3FD with PID 9372 (C:\Users\user\Desktop\code\whatsapp-clone-microservices\eureka_server\target\classes started by user in C:\Users\user\Desktop\code\whatsapp-clone-microservices\eureka_server)
+2022-03-27 13:51:29.464  INFO 9372 --- [main] c.w.e.EurekaServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-03-27 13:51:30.403  INFO 9372 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=25eda9e0-56ef-3976-b92e-b1826873253f
+2022-03-27 13:51:30.867  INFO 9372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
+2022-03-27 13:51:30.877  INFO 9372 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-27 13:51:30.878  INFO 9372 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-03-27 13:51:31.014  INFO 9372 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-27 13:51:31.015  INFO 9372 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1496 ms
+2022-03-27 13:51:31.451  INFO 9372 --- [main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.4 05/24/2017 03:20 PM'
+2022-03-27 13:51:31.519  INFO 9372 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-03-27 13:51:31.521  INFO 9372 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-03-27 13:51:31.740  INFO 9372 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-03-27 13:51:31.741  INFO 9372 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-03-27 13:51:33.618  INFO 9372 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2022-03-27 13:51:33.710  WARN 9372 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-27 13:51:33.749  INFO 9372 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-27 13:51:33.799  INFO 9372 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-27 13:51:33.800  INFO 9372 --- [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2022-03-27 13:51:33.816  INFO 9372 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648378293815 with initial instances count: 0
+2022-03-27 13:51:33.874  INFO 9372 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2022-03-27 13:51:33.886  INFO 9372 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2022-03-27 13:51:34.181  INFO 9372 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-03-27 13:51:34.182  INFO 9372 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-03-27 13:51:34.182  INFO 9372 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-03-27 13:51:34.183  INFO 9372 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-03-27 13:51:34.472  INFO 9372 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2022-03-27 13:51:34.526  INFO 9372 --- [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2022-03-27 13:51:34.539  INFO 9372 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2022-03-27 13:51:34.559  INFO 9372 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-27 13:51:34.607  INFO 9372 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+2022-03-27 13:51:34.613  INFO 9372 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
+2022-03-27 13:51:34.631  INFO 9372 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2022-03-27 13:51:34.633  INFO 9372 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2022-03-27 13:51:34.635  INFO 9372 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2022-03-27 13:51:34.636  INFO 9372 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2022-03-27 13:51:34.646  INFO 9372 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2022-03-27 13:51:34.666  INFO 9372 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8761 (http) with context path ''
+2022-03-27 13:51:34.672  INFO 9372 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2022-03-27 13:51:34.771  INFO 9372 --- [Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2022-03-27 13:51:34.898  INFO 9372 --- [main] c.w.e.EurekaServerApplication            : Started EurekaServerApplication in 5.935 seconds (JVM running for 6.38)
+2022-03-27 13:51:42.819  INFO 9372 --- [http-nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 13:51:42.821  INFO 9372 --- [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-27 13:51:42.826  INFO 9372 --- [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-03-27 13:51:43.689  INFO 9372 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085 with status UP (replication=false)
+2022-03-27 13:51:44.499  INFO 9372 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085 with status UP (replication=true)
+2022-03-27 13:51:49.263  WARN 9372 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 13:51:59.510  INFO 9372 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-03-27 13:52:00.001  WARN 9372 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 13:52:00.022  INFO 9372 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-03-27 13:52:30.001  WARN 9372 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 13:52:34.656  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 13:53:34.657  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 13:54:34.658  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 13:55:30.031  WARN 9372 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 13:55:33.432  INFO 9372 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/host.docker.internal:API-GATEWAY:8078 with status UP (replication=false)
+2022-03-27 13:55:33.945  INFO 9372 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/host.docker.internal:API-GATEWAY:8078 with status UP (replication=true)
+2022-03-27 13:55:34.659  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 13:56:00.032  WARN 9372 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 13:56:34.660  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-27 13:57:34.663  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2022-03-27 13:58:34.667  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
+2022-03-27 13:59:00.081  WARN 9372 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 13:59:34.668  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-27 14:00:34.669  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:01:34.669  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:02:00.084  WARN 9372 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:02:34.669  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:03:34.670  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:04:34.672  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2022-03-27 14:05:00.104  WARN 9372 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:05:34.673  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:06:34.527  INFO 9372 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2022-03-27 14:06:34.673  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:07:34.674  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-27 14:08:00.106  WARN 9372 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:08:34.674  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:09:34.675  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:10:34.676  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-27 14:11:00.109  WARN 9372 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:11:34.676  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:12:34.676  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:13:34.677  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:14:00.112  WARN 9372 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:14:34.678  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-27 14:15:29.977  INFO 9372 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-03-27 14:15:30.292  WARN 9372 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:15:30.489  INFO 9372 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-03-27 14:15:34.335  INFO 9372 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
+2022-03-27 14:15:34.713  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 35ms
+2022-03-27 14:15:34.865  WARN 9372 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
+2022-03-27 14:15:34.891  INFO 9372 --- [http-nio-8761-exec-5] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-03-27 14:15:34.896  WARN 9372 --- [TaskBatchingWorker-target_localhost-15] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-03-27 14:15:34.899  WARN 9372 --- [TaskBatchingWorker-target_localhost-15] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-03-27 14:16:00.297  WARN 9372 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:16:23.678  INFO 9372 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-03-27 14:16:24.192  INFO 9372 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-03-27 14:16:27.795  INFO 9372 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-03-27 14:16:28.309  INFO 9372 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-03-27 14:16:30.293  WARN 9372 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:16:32.085  INFO 9372 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
+2022-03-27 14:16:32.594  WARN 9372 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
+2022-03-27 14:16:32.595  INFO 9372 --- [http-nio-8761-exec-5] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-03-27 14:16:32.597  WARN 9372 --- [TaskBatchingWorker-target_localhost-12] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-03-27 14:16:32.599  WARN 9372 --- [TaskBatchingWorker-target_localhost-12] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-03-27 14:16:33.888  INFO 9372 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-03-27 14:16:34.403  INFO 9372 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-03-27 14:16:34.713  INFO 9372 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:16:37.066  INFO 9372 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-03-27 14:16:37.570  INFO 9372 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-03-27 14:16:41.317  INFO 9372 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
+2022-03-27 14:16:41.826  WARN 9372 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
+2022-03-27 14:16:41.827  INFO 9372 --- [http-nio-8761-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-03-27 14:16:41.828  WARN 9372 --- [TaskBatchingWorker-target_localhost-8] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-03-27 14:16:41.829  WARN 9372 --- [TaskBatchingWorker-target_localhost-8] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-03-27 14:16:53.354  INFO 9372 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-03-27 14:16:53.868  INFO 9372 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-03-27 14:16:57.781  INFO 9372 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
+2022-03-27 14:16:58.285  WARN 9372 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
+2022-03-27 14:16:58.286  INFO 9372 --- [http-nio-8761-exec-6] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-03-27 14:16:58.288  WARN 9372 --- [TaskBatchingWorker-target_localhost-10] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-03-27 14:16:58.289  WARN 9372 --- [TaskBatchingWorker-target_localhost-10] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-03-27 14:17:00.304  WARN 9372 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:17:03.709  INFO 9372 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-03-27 14:17:04.280  INFO 9372 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-03-27 14:17:10.189  INFO 9372 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
+2022-03-27 14:17:10.701  WARN 9372 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
+2022-03-27 14:17:10.702  INFO 9372 --- [http-nio-8761-exec-1] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-03-27 14:17:10.714  WARN 9372 --- [TaskBatchingWorker-target_localhost-12] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-03-27 14:17:10.715  WARN 9372 --- [TaskBatchingWorker-target_localhost-12] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-03-27 14:21:36.461  INFO 29652 --- [main] c.w.e.EurekaServerApplication            : Starting EurekaServerApplication using Java 17 on DESKTOP-HB7E3FD with PID 29652 (C:\Users\user\Desktop\code\whatsapp-clone-microservices\eureka_server\target\classes started by user in C:\Users\user\Desktop\code\whatsapp-clone-microservices\eureka_server)
+2022-03-27 14:21:36.473  INFO 29652 --- [main] c.w.e.EurekaServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-03-27 14:21:41.188  INFO 29652 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=25eda9e0-56ef-3976-b92e-b1826873253f
+2022-03-27 14:21:43.555  INFO 29652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
+2022-03-27 14:21:43.648  INFO 29652 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-27 14:21:43.668  INFO 29652 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-03-27 14:21:44.589  INFO 29652 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-27 14:21:44.599  INFO 29652 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8000 ms
+2022-03-27 14:21:46.700  INFO 29652 --- [main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.4 05/24/2017 03:20 PM'
+2022-03-27 14:21:46.970  INFO 29652 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-03-27 14:21:46.983  INFO 29652 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-03-27 14:21:48.002  INFO 29652 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-03-27 14:21:48.006  INFO 29652 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-03-27 14:21:54.746  INFO 29652 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2022-03-27 14:21:55.160  WARN 29652 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-27 14:21:55.301  INFO 29652 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-27 14:21:55.490  INFO 29652 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-27 14:21:55.494  INFO 29652 --- [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2022-03-27 14:21:55.564  INFO 29652 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648380115561 with initial instances count: 0
+2022-03-27 14:21:55.753  INFO 29652 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2022-03-27 14:21:55.768  INFO 29652 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2022-03-27 14:21:56.683  INFO 29652 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-03-27 14:21:56.686  INFO 29652 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-03-27 14:21:56.691  INFO 29652 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-03-27 14:21:56.694  INFO 29652 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-03-27 14:21:57.515  INFO 29652 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2022-03-27 14:21:57.618  INFO 29652 --- [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2022-03-27 14:21:57.649  INFO 29652 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2022-03-27 14:21:57.675  INFO 29652 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-27 14:21:57.786  INFO 29652 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+2022-03-27 14:21:57.797  INFO 29652 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
+2022-03-27 14:21:57.842  INFO 29652 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2022-03-27 14:21:57.863  INFO 29652 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2022-03-27 14:21:57.875  INFO 29652 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2022-03-27 14:21:57.879  INFO 29652 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2022-03-27 14:21:57.904  INFO 29652 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2022-03-27 14:21:57.906  INFO 29652 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8761 (http) with context path ''
+2022-03-27 14:21:57.915  INFO 29652 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2022-03-27 14:21:58.119  INFO 29652 --- [Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2022-03-27 14:21:58.471  INFO 29652 --- [main] c.w.e.EurekaServerApplication            : Started EurekaServerApplication in 23.852 seconds (JVM running for 25.295)
+2022-03-27 14:22:05.409  INFO 29652 --- [http-nio-8761-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 14:22:05.413  INFO 29652 --- [http-nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-27 14:22:05.420  INFO 29652 --- [http-nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-03-27 14:22:05.628  WARN 29652 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:22:14.029  INFO 29652 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085 with status UP (replication=false)
+2022-03-27 14:22:15.801  INFO 29652 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085 with status UP (replication=true)
+2022-03-27 14:22:30.018  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:22:51.660  INFO 29652 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/host.docker.internal:API-GATEWAY:8078 with status UP (replication=false)
+2022-03-27 14:22:52.174  INFO 29652 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/host.docker.internal:API-GATEWAY:8078 with status UP (replication=true)
+2022-03-27 14:22:57.915  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:23:00.018  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:23:46.091  INFO 29652 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-03-27 14:23:46.606  INFO 29652 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-03-27 14:23:57.915  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:24:00.020  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:24:57.915  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:25:57.916  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:26:57.924  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2022-03-27 14:27:00.036  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:27:57.925  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:28:57.925  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:29:57.925  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:30:00.041  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:30:57.925  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:31:57.926  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:32:57.927  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-27 14:33:30.042  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:33:57.928  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:34:57.928  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:35:57.929  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:36:57.618  INFO 29652 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2022-03-27 14:36:57.929  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:37:00.045  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:37:57.929  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:38:57.930  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:39:57.931  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:40:30.047  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:40:57.932  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:41:57.932  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:42:57.932  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:43:30.050  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:43:57.933  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:44:57.933  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:45:57.934  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:46:30.053  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:46:57.935  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:47:57.935  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:48:57.935  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:49:30.057  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:49:57.936  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:50:57.937  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:51:57.618  INFO 29652 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2022-03-27 14:51:57.938  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:52:30.060  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:52:57.939  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-27 14:53:57.940  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:54:57.940  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:55:30.063  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:55:57.941  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:56:57.942  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 14:57:57.943  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-27 14:58:30.066  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 14:58:57.944  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-27 14:59:57.944  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 15:00:57.945  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 15:01:30.070  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 15:01:57.946  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-03-27 15:02:57.947  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 15:03:57.947  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 15:04:30.074  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 15:04:57.948  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 15:05:57.949  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 15:06:57.618  INFO 29652 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2022-03-27 15:06:57.949  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 15:07:30.078  WARN 29652 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-27 15:07:57.949  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-27 15:08:57.950  INFO 29652 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms

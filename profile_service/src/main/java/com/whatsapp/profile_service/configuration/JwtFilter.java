@@ -36,10 +36,24 @@ public class JwtFilter extends OncePerRequestFilter {
                                         Arrays.stream(cookies)
                                                         .filter(i -> i.getName().equals("token"))
                                                         .findFirst()
-                                                        .ifPresentOrElse(cookie -> createJwtUser(cookie, request),
+                                                        .ifPresentOrElse(cookie -> {
+                                                                if (userHasValidJwt(cookie))
+                                                                        createJwtUser(cookie, request);
+                                                                else
+                                                                        createdBaseUser(request);
+                                                        },
                                                                         () -> createdBaseUser(request));
                                 }, () -> createdBaseUser(request));
                 filterChain.doFilter(request, response);
+        }
+
+        private boolean userHasValidJwt(Cookie cookie) {
+                try {
+                        return jwtUtils.verifyToken(cookie.getValue());
+                } catch (Exception e) {
+                        return false;
+                }
+
         }
 
         private void createJwtUser(Cookie cookie, HttpServletRequest request) {

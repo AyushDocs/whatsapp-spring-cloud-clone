@@ -1,0 +1,46 @@
+2022-03-27 10:04:54.899  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] c.w.i.ImageServiceApplication            : The following 1 profile is active: "dev"
+2022-03-27 10:04:56.695  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 10:04:57.056  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 336 ms. Found 2 JPA repository interfaces.
+2022-03-27 10:04:57.938  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=97703d06-c649-3a9e-b2b2-b410d62d0771
+2022-03-27 10:05:00.213  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2022-03-27 10:05:00.252  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-27 10:05:00.256  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-03-27 10:05:00.688  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-27 10:05:00.691  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5758 ms
+2022-03-27 10:05:00.869  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-27 10:05:01.504  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-27 10:05:01.551  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mydb'
+2022-03-27 10:05:02.374  WARN [IMAGE-SERVICE,,] 17624 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"}]
+2022-03-27 10:05:02.885  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 10:05:03.012  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-03-27 10:05:03.325  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-27 10:05:03.555  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-27 10:05:04.172  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.whatsapp.image_service.models.Image (class must be instantiated by Interceptor)
+2022-03-27 10:05:04.488  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] org.hibernate.tuple.PojoInstantiator     : HHH000182: No default (no-argument) constructor for class: com.whatsapp.image_service.models.ImageMetadata (class must be instantiated by Interceptor)
+2022-03-27 10:05:04.847  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 10:05:04.869  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 10:05:05.826  WARN [IMAGE-SERVICE,,] 17624 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-27 10:05:06.776  WARN [IMAGE-SERVICE,,] 17624 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-03-27 10:05:07.000  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-27 10:05:07.481  WARN [IMAGE-SERVICE,,] 17624 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-27 10:05:07.603  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-27 10:05:07.733  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-27 10:05:07.740  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 10:05:07.790  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-27 10:05:07.791  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-27 10:05:07.792  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-27 10:05:07.792  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-27 10:05:07.794  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-27 10:05:07.797  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-27 10:05:07.798  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-27 10:05:07.847  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-27 10:05:07.857  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-27 10:05:07.867  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-27 10:05:07.887  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648364707886 with initial instances count: 1
+2022-03-27 10:05:07.902  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application IMAGE-SERVICE with eureka with status UP
+2022-03-27 10:05:07.903  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648364707903, current=UP, previous=STARTING]
+2022-03-27 10:05:07.907  INFO [IMAGE-SERVICE,,] 17624 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IMAGE-SERVICE/host.docker.internal:IMAGE-SERVICE:8081: registering service...
+2022-03-27 10:05:07.962  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2022-03-27 10:05:07.964  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8081
+2022-03-27 10:05:07.987  INFO [IMAGE-SERVICE,,] 17624 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_IMAGE-SERVICE/host.docker.internal:IMAGE-SERVICE:8081 - registration status: 204
+2022-03-27 10:05:08.155  INFO [IMAGE-SERVICE,,] 17624 --- [restartedMain] c.w.i.ImageServiceApplication            : Started ImageServiceApplication in 18.131 seconds (JVM running for 20.487)

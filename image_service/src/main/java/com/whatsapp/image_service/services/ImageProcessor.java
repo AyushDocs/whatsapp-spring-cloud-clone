@@ -46,16 +46,16 @@ public class ImageProcessor {
         }
     }
 
-    private void saveFile(MultipartFile multiPartfile, String userId, String fileType)
+    private void saveFile(MultipartFile multiPartFile, String userId, String fileType)
             throws IOException {
         String fileLocation = imagesDirectory + userId;
-        String fileName = StringUtils.cleanPath(multiPartfile.getOriginalFilename());
+        String fileName = StringUtils.cleanPath(multiPartFile.getOriginalFilename());
         Path uploadPath = Paths.get(fileLocation);
         Path filePath = uploadPath.resolve(fileName);
         if (!Files.exists(uploadPath))
             Files.createDirectories(uploadPath);
-        Files.copy(multiPartfile.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
-        InputStream is = multiPartfile.getInputStream();
+        Files.copy(multiPartFile.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
+        InputStream is = multiPartFile.getInputStream();
         BufferedImage img = ImageIO.read(is);
         fileName = fileName.substring(0, fileName.lastIndexOf("."));
         File file = Paths.get(imagesDirectory + userId + "/" + fileName + "." + fileType)

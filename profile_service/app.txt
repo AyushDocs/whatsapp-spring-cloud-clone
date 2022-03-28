@@ -1,0 +1,955 @@
+2022-03-27 10:04:36.778  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] c.w.p.ProfileServiceApplication          : The following 1 profile is active: "dev"
+2022-03-27 10:04:41.485  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 10:04:42.336  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 822 ms. Found 1 JPA repository interfaces.
+2022-03-27 10:04:43.872  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=413b5755-1cf3-3b2f-a5db-cd3ffeaf2f12
+2022-03-27 10:04:48.113  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2022-03-27 10:04:48.145  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-27 10:04:48.148  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 10:04:48.835  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-27 10:04:48.865  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11965 ms
+2022-03-27 10:04:49.272  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-27 10:04:50.010  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-27 10:04:50.051  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ayush'
+2022-03-27 10:04:51.408  WARN [PROFILE-SERVICE,,] 29428 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"}]
+2022-03-27 10:04:52.151  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 10:04:52.385  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-27 10:04:52.949  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-27 10:04:53.506  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-27 10:04:54.959  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 10:04:54.982  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 10:04:56.350  WARN [PROFILE-SERVICE,,] 29428 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-27 10:04:56.906  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-27 10:04:58.149  WARN [PROFILE-SERVICE,,] 29428 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-27 10:04:58.839  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-27 10:04:59.415  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-27 10:05:00.511  WARN [PROFILE-SERVICE,,] 29428 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-27 10:05:00.853  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-27 10:05:01.156  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-27 10:05:01.167  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 10:05:01.259  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-27 10:05:01.262  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-27 10:05:01.263  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-27 10:05:01.265  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-27 10:05:01.269  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-27 10:05:01.274  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-27 10:05:01.279  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-27 10:05:01.346  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-27 10:05:01.359  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-27 10:05:01.376  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-27 10:05:01.413  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648364701408 with initial instances count: 1
+2022-03-27 10:05:01.441  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROFILE-SERVICE with eureka with status UP
+2022-03-27 10:05:01.448  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648364701448, current=UP, previous=STARTING]
+2022-03-27 10:05:01.454  INFO [PROFILE-SERVICE,,] 29428 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083: registering service...
+2022-03-27 10:05:01.516  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2022-03-27 10:05:01.522  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2022-03-27 10:05:01.574  INFO [PROFILE-SERVICE,,] 29428 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 - registration status: 204
+2022-03-27 10:05:01.894  INFO [PROFILE-SERVICE,,] 29428 --- [restartedMain] c.w.p.ProfileServiceApplication          : Started ProfileServiceApplication in 34.949 seconds (JVM running for 39.213)
+2022-03-27 13:51:49.725  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.w.p.ProfileServiceApplication          : The following 1 profile is active: "dev"
+2022-03-27 13:51:50.665  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 13:51:50.961  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 279 ms. Found 1 JPA repository interfaces.
+2022-03-27 13:51:51.742  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=378ee9e3-c42c-38ab-aa62-c5d59eb66efc
+2022-03-27 13:51:53.062  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2022-03-27 13:51:53.088  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-27 13:51:53.090  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 13:51:53.378  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-27 13:51:53.379  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3634 ms
+2022-03-27 13:51:53.480  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-27 13:51:53.759  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-27 13:51:53.774  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ayush'
+2022-03-27 13:51:54.290  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"}]
+2022-03-27 13:51:54.678  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 13:51:54.788  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-27 13:51:55.038  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-27 13:51:55.233  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-27 13:51:56.077  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 13:51:56.090  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 13:51:56.748  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-27 13:51:57.168  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-27 13:51:57.968  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-27 13:51:58.354  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-27 13:51:58.551  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-27 13:51:59.038  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-27 13:51:59.167  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-27 13:51:59.286  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-27 13:51:59.291  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 13:51:59.333  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-27 13:51:59.334  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-27 13:51:59.335  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-27 13:51:59.336  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-27 13:51:59.337  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-27 13:51:59.338  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-27 13:51:59.339  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-27 13:51:59.378  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-27 13:51:59.387  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-27 13:51:59.399  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-27 13:51:59.419  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648378319418 with initial instances count: 0
+2022-03-27 13:51:59.433  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROFILE-SERVICE with eureka with status UP
+2022-03-27 13:51:59.435  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648378319435, current=UP, previous=STARTING]
+2022-03-27 13:51:59.439  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083: registering service...
+2022-03-27 13:51:59.487  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2022-03-27 13:51:59.489  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2022-03-27 13:51:59.513  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 - registration status: 204
+2022-03-27 13:51:59.654  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.w.p.ProfileServiceApplication          : Started ProfileServiceApplication in 12.571 seconds (JVM running for 13.76)
+2022-03-27 13:52:29.387  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-27 13:52:29.388  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-27 13:52:29.389  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-27 13:52:29.389  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-27 13:52:29.390  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-27 13:52:29.391  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2022-03-27 13:52:29.392  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-27 13:52:29.401  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-27 13:56:35.994  INFO [PROFILE-SERVICE,aec3ed5676f14550,aec3ed5676f14550] 29752 --- [http-nio-8083-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 13:56:35.994  INFO [PROFILE-SERVICE,aec3ed5676f14550,aec3ed5676f14550] 29752 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-27 13:56:36.004  INFO [PROFILE-SERVICE,aec3ed5676f14550,aec3ed5676f14550] 29752 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2022-03-27 13:56:37.470  WARN [PROFILE-SERVICE,,] 29752 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-03-27 13:56:37.479  WARN [PROFILE-SERVICE,,] 29752 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 2 spans due to MethodNotAllowed(405 Method Not Allowed: "405 Method Not Allowed")
+
+org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:168) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:122) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:819) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:51) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.lambda$new$0(RestTemplateSender.java:44) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender.post(HttpSender.java:137) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:150) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:140) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.2.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.3.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) ~[zipkin-reporter-2.16.3.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-03-27 13:56:59.355  INFO [PROFILE-SERVICE,,] 29752 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:01:59.372  INFO [PROFILE-SERVICE,,] 29752 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:06:59.383  INFO [PROFILE-SERVICE,,] 29752 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:11:59.394  INFO [PROFILE-SERVICE,,] 29752 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:12:01.422 ERROR [PROFILE-SERVICE,316cf0b2bb167d62,316cf0b2bb167d62] 29752 --- [http-nio-8083-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2022-03-27T14:11:39Z. Current time: 2022-03-27T14:12:01Z, a difference of 22418 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541) ~[jjwt-0.9.1.jar:0.9.1]
+	at com.whatsapp.profile_service.utils.JwtUtils.extractClaims(JwtUtils.java:37) ~[classes/:na]
+	at com.whatsapp.profile_service.utils.JwtUtils.extractClaim(JwtUtils.java:41) ~[classes/:na]
+	at com.whatsapp.profile_service.utils.JwtUtils.extractExpiration(JwtUtils.java:45) ~[classes/:na]
+	at com.whatsapp.profile_service.utils.JwtUtils.verifyToken(JwtUtils.java:49) ~[classes/:na]
+	at com.whatsapp.profile_service.configuration.JwtFilter.createJwtUser(JwtFilter.java:47) ~[classes/:na]
+	at com.whatsapp.profile_service.configuration.JwtFilter.lambda$3(JwtFilter.java:39) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196) ~[na:na]
+	at com.whatsapp.profile_service.configuration.JwtFilter.lambda$0(JwtFilter.java:39) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196) ~[na:na]
+	at com.whatsapp.profile_service.configuration.JwtFilter.doFilterInternal(JwtFilter.java:35) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:68) ~[spring-cloud-sleuth-instrumentation-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.web.TraceWebServletConfiguration$LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:131) ~[spring-cloud-sleuth-autoconfigure-3.1.1.jar:3.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.cloud.sleuth.instrument.web.tomcat.TraceValve.invoke(TraceValve.java:90) ~[spring-cloud-sleuth-instrumentation-3.1.1.jar:3.1.1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-03-27 14:12:56.561 ERROR [PROFILE-SERVICE,f4bc5c136ceaa7ad,f4bc5c136ceaa7ad] 29752 --- [http-nio-8083-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2022-03-27T14:11:39Z. Current time: 2022-03-27T14:12:56Z, a difference of 77560 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541) ~[jjwt-0.9.1.jar:0.9.1]
+	at com.whatsapp.profile_service.utils.JwtUtils.extractClaims(JwtUtils.java:37) ~[classes/:na]
+	at com.whatsapp.profile_service.utils.JwtUtils.extractClaim(JwtUtils.java:41) ~[classes/:na]
+	at com.whatsapp.profile_service.utils.JwtUtils.extractExpiration(JwtUtils.java:45) ~[classes/:na]
+	at com.whatsapp.profile_service.utils.JwtUtils.verifyToken(JwtUtils.java:49) ~[classes/:na]
+	at com.whatsapp.profile_service.configuration.JwtFilter.createJwtUser(JwtFilter.java:47) ~[classes/:na]
+	at com.whatsapp.profile_service.configuration.JwtFilter.lambda$3(JwtFilter.java:39) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196) ~[na:na]
+	at com.whatsapp.profile_service.configuration.JwtFilter.lambda$0(JwtFilter.java:39) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196) ~[na:na]
+	at com.whatsapp.profile_service.configuration.JwtFilter.doFilterInternal(JwtFilter.java:35) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:68) ~[spring-cloud-sleuth-instrumentation-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.web.TraceWebServletConfiguration$LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:131) ~[spring-cloud-sleuth-autoconfigure-3.1.1.jar:3.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.cloud.sleuth.instrument.web.tomcat.TraceValve.invoke(TraceValve.java:90) ~[spring-cloud-sleuth-instrumentation-3.1.1.jar:3.1.1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-03-27 14:12:57.690 ERROR [PROFILE-SERVICE,429f57493db61b90,429f57493db61b90] 29752 --- [http-nio-8083-exec-6] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
+
+io.jsonwebtoken.ExpiredJwtException: JWT expired at 2022-03-27T14:11:39Z. Current time: 2022-03-27T14:12:57Z, a difference of 78689 milliseconds.  Allowed clock skew: 0 milliseconds.
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:385) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:481) ~[jjwt-0.9.1.jar:0.9.1]
+	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:541) ~[jjwt-0.9.1.jar:0.9.1]
+	at com.whatsapp.profile_service.utils.JwtUtils.extractClaims(JwtUtils.java:37) ~[classes/:na]
+	at com.whatsapp.profile_service.utils.JwtUtils.extractClaim(JwtUtils.java:41) ~[classes/:na]
+	at com.whatsapp.profile_service.utils.JwtUtils.extractExpiration(JwtUtils.java:45) ~[classes/:na]
+	at com.whatsapp.profile_service.utils.JwtUtils.verifyToken(JwtUtils.java:49) ~[classes/:na]
+	at com.whatsapp.profile_service.configuration.JwtFilter.createJwtUser(JwtFilter.java:47) ~[classes/:na]
+	at com.whatsapp.profile_service.configuration.JwtFilter.lambda$3(JwtFilter.java:39) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196) ~[na:na]
+	at com.whatsapp.profile_service.configuration.JwtFilter.lambda$0(JwtFilter.java:39) ~[classes/:na]
+	at java.base/java.util.Optional.ifPresentOrElse(Optional.java:196) ~[na:na]
+	at com.whatsapp.profile_service.configuration.JwtFilter.doFilterInternal(JwtFilter.java:35) ~[classes/:na]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:110) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:80) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:336) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:211) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:183) ~[spring-security-web-5.6.2.jar:5.6.2]
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.cloud.sleuth.instrument.web.servlet.TracingFilter.doFilter(TracingFilter.java:68) ~[spring-cloud-sleuth-instrumentation-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.autoconfig.instrument.web.TraceWebServletConfiguration$LazyTracingFilter.doFilter(TraceWebServletConfiguration.java:131) ~[spring-cloud-sleuth-autoconfigure-3.1.1.jar:3.1.1]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:197) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.springframework.cloud.sleuth.instrument.web.tomcat.TraceValve.invoke(TraceValve.java:90) ~[spring-cloud-sleuth-instrumentation-3.1.1.jar:3.1.1]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:359) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:889) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1735) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.58.jar:9.0.58]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-03-27 14:15:29.968  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-9] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application PROFILE-SERVICE with eureka with status DOWN
+2022-03-27 14:15:29.969  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-9] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648379729969, current=DOWN, previous=UP]
+2022-03-27 14:15:29.970  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083: registering service...
+2022-03-27 14:15:29.980  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 - registration status: 204
+2022-03-27 14:15:30.019  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-9] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 14:15:30.020  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-9] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-03-27 14:15:30.241  WARN [PROFILE-SERVICE,,] 29752 --- [Thread-9] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-03-27 14:15:31.248  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-27 14:15:31.252  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-27 14:15:31.254  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-9] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-03-27 14:15:34.293  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-9] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-03-27 14:15:34.356  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-9] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 - deregister  status: 200
+2022-03-27 14:15:34.901  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-9] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-03-27 14:15:38.735  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.w.p.ProfileServiceApplication          : No active profile set, falling back to 1 default profile: "default"
+2022-03-27 14:15:41.889  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 14:15:42.077  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 175 ms. Found 1 JPA repository interfaces.
+2022-03-27 14:15:43.131  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=8021cd12-c988-397a-8df2-d53416347c92
+2022-03-27 14:15:44.724  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2022-03-27 14:15:44.730  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-27 14:15:44.745  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 14:15:45.002  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-27 14:15:45.011  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6249 ms
+2022-03-27 14:15:45.216  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-03-27 14:15:45.244  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-03-27 14:15:45.270  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:5f78d91d-1eda-4137-b322-1d8cd34510fe'
+2022-03-27 14:15:47.383  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"}]
+2022-03-27 14:15:48.380  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 14:15:48.449  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-27 14:15:48.728  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 14:15:48.750  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 14:15:49.335  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-27 14:15:51.804  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-27 14:15:53.958  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 284fd744-b7fb-4eee-91c1-15e834e5dcab
+
+2022-03-27 14:15:54.560  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-27 14:15:54.963  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-27 14:15:57.854  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-27 14:15:58.381  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'eurekaInstanceConfigBean' defined in class path resource [org/springframework/cloud/netflix/eureka/EurekaClientAutoConfiguration.class]: Unsatisfied dependency expressed through method 'eurekaInstanceConfigBean' parameter 0; nested exception is org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'inetUtilsProperties': Could not bind properties to 'InetUtilsProperties' : prefix=spring.cloud.inetutils, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is java.lang.IllegalStateException: org.springframework.context.annotation.AnnotationConfigApplicationContext@5e918f58 has been closed already
+2022-03-27 14:15:58.429  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 14:15:58.453  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-03-27 14:16:18.586  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.w.p.ProfileServiceApplication          : The following 1 profile is active: "dev"
+2022-03-27 14:16:18.621  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] z.r.AsyncReporter$BoundedAsyncReporter   : Timed out waiting for in-flight spans to send
+2022-03-27 14:16:18.623  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown initiated...
+2022-03-27 14:16:18.626  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-4 - Shutdown completed.
+2022-03-27 14:16:18.628  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-03-27 14:16:18.659  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-27 14:16:18.662  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'spring.cloud.config-org.springframework.cloud.bootstrap.config.PropertySourceBootstrapProperties': Could not bind properties to 'PropertySourceBootstrapProperties' : prefix=spring.cloud.config, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is java.lang.IllegalStateException: org.springframework.context.annotation.AnnotationConfigApplicationContext@38b2ea3b has been closed already
+2022-03-27 14:16:18.676  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 14:16:18.677  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-03-27 14:16:18.683 ERROR [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Initialization of bean failed; nested exception is java.lang.IllegalStateException: org.springframework.context.annotation.AnnotationConfigApplicationContext@64fac422 has been closed already
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:628) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.whatsapp.profile_service.ProfileServiceApplication.main(ProfileServiceApplication.java:13) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.4.jar:2.6.4]
+Caused by: java.lang.IllegalStateException: org.springframework.context.annotation.AnnotationConfigApplicationContext@64fac422 has been closed already
+	at org.springframework.context.support.AbstractApplicationContext.assertBeanFactoryActive(AbstractApplicationContext.java:1138) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansOfType(AbstractApplicationContext.java:1307) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:378) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.BeanFactoryUtils.beansOfTypeIncludingAncestors(BeanFactoryUtils.java:382) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.detectMappedInterceptors(AbstractHandlerMapping.java:406) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.web.servlet.handler.AbstractHandlerMapping.initApplicationContext(AbstractHandlerMapping.java:380) ~[spring-webmvc-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.ApplicationObjectSupport.initApplicationContext(ApplicationObjectSupport.java:124) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.web.context.support.WebApplicationObjectSupport.initApplicationContext(WebApplicationObjectSupport.java:78) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.ApplicationObjectSupport.setApplicationContext(ApplicationObjectSupport.java:78) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.ApplicationContextAwareProcessor.invokeAwareInterfaces(ApplicationContextAwareProcessor.java:128) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.ApplicationContextAwareProcessor.postProcessBeforeInitialization(ApplicationContextAwareProcessor.java:102) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 20 common frames omitted
+
+2022-03-27 14:16:18.887  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-03-27 14:16:19.322  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 14:16:19.352  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interfaces.
+2022-03-27 14:16:19.598  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=378ee9e3-c42c-38ab-aa62-c5d59eb66efc
+2022-03-27 14:16:19.907  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown initiated...
+2022-03-27 14:16:19.910  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Shutdown completed.
+2022-03-27 14:16:19.938  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-27 14:16:19.960 ERROR [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'spring.cloud.config-org.springframework.cloud.bootstrap.config.PropertySourceBootstrapProperties': Could not bind properties to 'PropertySourceBootstrapProperties' : prefix=spring.cloud.config, ignoreInvalidFields=false, ignoreUnknownFields=true; nested exception is java.lang.IllegalStateException: org.springframework.context.annotation.AnnotationConfigApplicationContext@38b2ea3b has been closed already
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.bind(ConfigurationPropertiesBindingPostProcessor.java:92) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(ConfigurationPropertiesBindingPostProcessor.java:78) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:283) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1154) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.cloud.context.properties.ConfigurationPropertiesRebinder.rebind(ConfigurationPropertiesRebinder.java:94) ~[spring-cloud-context-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration.afterSingletonsInstantiated(ConfigurationPropertiesRebinderAutoConfiguration.java:73) ~[spring-cloud-context-3.1.1.jar:3.1.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:972) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.whatsapp.profile_service.ProfileServiceApplication.main(ProfileServiceApplication.java:13) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.4.jar:2.6.4]
+Caused by: java.lang.IllegalStateException: org.springframework.context.annotation.AnnotationConfigApplicationContext@38b2ea3b has been closed already
+	at org.springframework.context.support.AbstractApplicationContext.assertBeanFactoryActive(AbstractApplicationContext.java:1138) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1159) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.context.properties.BoundConfigurationProperties.get(BoundConfigurationProperties.java:78) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBinder.getHandler(ConfigurationPropertiesBinder.java:133) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBinder.getBindHandler(ConfigurationPropertiesBinder.java:114) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBinder.bind(ConfigurationPropertiesBinder.java:94) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.bind(ConfigurationPropertiesBindingPostProcessor.java:89) ~[spring-boot-2.6.4.jar:2.6.4]
+	... 28 common frames omitted
+
+2022-03-27 14:16:20.053  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2022-03-27 14:16:20.133  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1537 ms
+2022-03-27 14:16:20.209  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Starting...
+2022-03-27 14:16:20.213  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Start completed.
+2022-03-27 14:16:20.215  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ayush'
+2022-03-27 14:16:20.632  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"}]
+2022-03-27 14:16:20.791  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 14:16:20.803  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-27 14:16:20.855  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 14:16:20.857  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 14:16:21.213  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-27 14:16:21.399  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-27 14:16:21.898  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-27 14:16:22.174  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-27 14:16:22.443  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-27 14:16:23.254  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-27 14:16:23.441  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-27 14:16:23.487  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-27 14:16:23.488  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:16:23.524  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-27 14:16:23.526  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-27 14:16:23.527  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-27 14:16:23.528  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-27 14:16:23.529  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-27 14:16:23.531  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-27 14:16:23.532  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-27 14:16:23.576  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-27 14:16:23.588  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-27 14:16:23.599  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-27 14:16:23.624  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648379783624 with initial instances count: 2
+2022-03-27 14:16:23.648  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROFILE-SERVICE with eureka with status UP
+2022-03-27 14:16:23.649  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648379783649, current=UP, previous=STARTING]
+2022-03-27 14:16:23.651  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083: registering service...
+2022-03-27 14:16:23.660  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2022-03-27 14:16:23.662  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2022-03-27 14:16:23.681  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 - registration status: 204
+2022-03-27 14:16:23.937  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.w.p.ProfileServiceApplication          : Started ProfileServiceApplication in 6.831 seconds (JVM running for 1478.043)
+2022-03-27 14:16:23.945  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-27 14:16:28.297  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.w.p.ProfileServiceApplication          : The following 1 profile is active: "dev"
+2022-03-27 14:16:28.560  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2022-03-27 14:16:28.561  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2022-03-27 14:16:28.580  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Fetching config from server at : http://host.docker.internal:8085/
+2022-03-27 14:16:28.634  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=PROFILE-SERVICE, profiles=[default], label=null, version=null, state=null
+2022-03-27 14:16:28.635  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-file:C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\config\application.yml'}]
+2022-03-27 14:16:28.652  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.w.p.ProfileServiceApplication          : The following 1 profile is active: "dev"
+2022-03-27 14:16:29.056  WARN [PROFILE-SERVICE,,] 29752 --- [Thread-34] z.r.AsyncReporter$BoundedAsyncReporter   : Timed out waiting for in-flight spans to send
+2022-03-27 14:16:29.058  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown initiated...
+2022-03-27 14:16:29.060  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-34] com.zaxxer.hikari.HikariDataSource       : HikariPool-5 - Shutdown completed.
+2022-03-27 14:16:29.061  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-34] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-03-27 14:16:29.068  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 14:16:29.098  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interfaces.
+2022-03-27 14:16:29.283  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 14:16:29.314  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 29 ms. Found 1 JPA repository interfaces.
+2022-03-27 14:16:29.388  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=378ee9e3-c42c-38ab-aa62-c5d59eb66efc
+2022-03-27 14:16:29.569  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=378ee9e3-c42c-38ab-aa62-c5d59eb66efc
+2022-03-27 14:16:29.774  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2022-03-27 14:16:29.776  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-27 14:16:29.777  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 14:16:29.840  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.a.c.c.C.[Tomcat-3].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-03-27 14:16:29.841  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1536 ms
+2022-03-27 14:16:29.910  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Starting...
+2022-03-27 14:16:29.913  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Start completed.
+2022-03-27 14:16:29.914  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ayush'
+2022-03-27 14:16:29.970  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2022-03-27 14:16:29.972  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-27 14:16:29.973  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 14:16:30.065  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.a.c.c.C.[Tomcat-4].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-03-27 14:16:30.066  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1409 ms
+2022-03-27 14:16:30.163  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Starting...
+2022-03-27 14:16:30.165  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Start completed.
+2022-03-27 14:16:30.166  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ayush'
+2022-03-27 14:16:30.349  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"}]
+2022-03-27 14:16:30.508  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"}]
+2022-03-27 14:16:30.518  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 14:16:30.535  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-27 14:16:30.602  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 14:16:30.608  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 14:16:30.732  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 14:16:30.749  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-27 14:16:30.835  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 14:16:30.837  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 14:16:31.080  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-27 14:16:31.235  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-27 14:16:31.261  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-27 14:16:31.436  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-27 14:16:31.826  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-27 14:16:31.969  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-27 14:16:32.080  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-34] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-03-27 14:16:32.088  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-34] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 - deregister  status: 200
+2022-03-27 14:16:32.141  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-27 14:16:32.214  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-34] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-03-27 14:16:33.131  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.w.p.ProfileServiceApplication          : The following 1 profile is active: "dev"
+2022-03-27 14:16:33.446  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-27 14:16:33.604  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-27 14:16:33.649  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-27 14:16:33.650  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:16:33.674  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-27 14:16:33.675  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-27 14:16:33.677  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-27 14:16:33.678  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-27 14:16:33.679  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-27 14:16:33.680  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-27 14:16:33.681  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-27 14:16:33.712  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] z.r.AsyncReporter$BoundedAsyncReporter   : Timed out waiting for in-flight spans to send
+2022-03-27 14:16:33.714  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown initiated...
+2022-03-27 14:16:33.716  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-27 14:16:33.717  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-6 - Shutdown completed.
+2022-03-27 14:16:33.719  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-03-27 14:16:33.727  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-27 14:16:33.738  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-27 14:16:33.761  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-27 14:16:33.782  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648379793782 with initial instances count: 3
+2022-03-27 14:16:33.780 ERROR [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'compositeDiscoveryClient' defined in class path resource [org/springframework/cloud/client/discovery/composite/CompositeDiscoveryClientAutoConfiguration.class]: Unsatisfied dependency expressed through method 'compositeDiscoveryClient' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'simpleDiscoveryClient' defined in class path resource [org/springframework/cloud/client/discovery/simple/SimpleDiscoveryClientAutoConfiguration.class]: Unsatisfied dependency expressed through method 'simpleDiscoveryClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleDiscoveryProperties' defined in class path resource [org/springframework/cloud/client/discovery/simple/SimpleDiscoveryClientAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.client.discovery.simple.SimpleDiscoveryProperties]: Factory method 'simpleDiscoveryProperties' threw exception; nested exception is java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@4dff1c48[Not completed, task = org.springframework.cloud.commons.util.InetUtils$$Lambda$145/0x0000000800d0d3d0@4862c719] rejected from java.util.concurrent.ThreadPoolExecutor@529e0026[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.16.jar:5.3.16]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:145) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:740) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:415) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:303) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1312) ~[spring-boot-2.6.4.jar:2.6.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301) ~[spring-boot-2.6.4.jar:2.6.4]
+	at com.whatsapp.profile_service.ProfileServiceApplication.main(ProfileServiceApplication.java:13) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.6.4.jar:2.6.4]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'simpleDiscoveryClient' defined in class path resource [org/springframework/cloud/client/discovery/simple/SimpleDiscoveryClientAutoConfiguration.class]: Unsatisfied dependency expressed through method 'simpleDiscoveryClient' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleDiscoveryProperties' defined in class path resource [org/springframework/cloud/client/discovery/simple/SimpleDiscoveryClientAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.client.discovery.simple.SimpleDiscoveryProperties]: Factory method 'simpleDiscoveryProperties' threw exception; nested exception is java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@4dff1c48[Not completed, task = org.springframework.cloud.commons.util.InetUtils$$Lambda$145/0x0000000800d0d3d0@4862c719] rejected from java.util.concurrent.ThreadPoolExecutor@529e0026[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:800) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:541) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.addCandidateEntry(DefaultListableBeanFactory.java:1607) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAutowireCandidates(DefaultListableBeanFactory.java:1571) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveMultipleBeans(DefaultListableBeanFactory.java:1460) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1347) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'simpleDiscoveryProperties' defined in class path resource [org/springframework/cloud/client/discovery/simple/SimpleDiscoveryClientAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.client.discovery.simple.SimpleDiscoveryProperties]: Factory method 'simpleDiscoveryProperties' threw exception; nested exception is java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@4dff1c48[Not completed, task = org.springframework.cloud.commons.util.InetUtils$$Lambda$145/0x0000000800d0d3d0@4862c719] rejected from java.util.concurrent.ThreadPoolExecutor@529e0026[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1352) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1195) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1389) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1309) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:887) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 41 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.client.discovery.simple.SimpleDiscoveryProperties]: Factory method 'simpleDiscoveryProperties' threw exception; nested exception is java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@4dff1c48[Not completed, task = org.springframework.cloud.commons.util.InetUtils$$Lambda$145/0x0000000800d0d3d0@4862c719] rejected from java.util.concurrent.ThreadPoolExecutor@529e0026[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185) ~[spring-beans-5.3.16.jar:5.3.16]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 55 common frames omitted
+Caused by: java.util.concurrent.RejectedExecutionException: Task java.util.concurrent.FutureTask@4dff1c48[Not completed, task = org.springframework.cloud.commons.util.InetUtils$$Lambda$145/0x0000000800d0d3d0@4862c719] rejected from java.util.concurrent.ThreadPoolExecutor@529e0026[Terminated, pool size = 0, active threads = 0, queued tasks = 0, completed tasks = 0]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$AbortPolicy.rejectedExecution(ThreadPoolExecutor.java:2065) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.reject(ThreadPoolExecutor.java:833) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.execute(ThreadPoolExecutor.java:1365) ~[na:na]
+	at java.base/java.util.concurrent.AbstractExecutorService.submit(AbstractExecutorService.java:145) ~[na:na]
+	at java.base/java.util.concurrent.Executors$DelegatedExecutorService.submit(Executors.java:753) ~[na:na]
+	at org.springframework.cloud.commons.util.InetUtils.convertAddress(InetUtils.java:163) ~[spring-cloud-commons-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.commons.util.InetUtils.findFirstNonLoopbackHostInfo(InetUtils.java:66) ~[spring-cloud-commons-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.client.discovery.simple.SimpleDiscoveryClientAutoConfiguration.simpleDiscoveryProperties(SimpleDiscoveryClientAutoConfiguration.java:66) ~[spring-cloud-commons-3.1.1.jar:3.1.1]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154) ~[spring-beans-5.3.16.jar:5.3.16]
+	... 56 common frames omitted
+
+2022-03-27 14:16:33.793  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 14:16:33.848  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROFILE-SERVICE with eureka with status UP
+2022-03-27 14:16:33.849  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648379793849, current=UP, previous=STARTING]
+2022-03-27 14:16:33.850  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083: registering service...
+2022-03-27 14:16:33.875  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2022-03-27 14:16:33.876  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2022-03-27 14:16:33.886  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 59 ms. Found 1 JPA repository interfaces.
+2022-03-27 14:16:33.890  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 - registration status: 204
+2022-03-27 14:16:34.126  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.w.p.ProfileServiceApplication          : Started ProfileServiceApplication in 6.397 seconds (JVM running for 1488.233)
+2022-03-27 14:16:34.133  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-27 14:16:34.224  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=378ee9e3-c42c-38ab-aa62-c5d59eb66efc
+2022-03-27 14:16:34.555  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2022-03-27 14:16:34.621  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1485 ms
+2022-03-27 14:16:34.676  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Starting...
+2022-03-27 14:16:34.679  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Start completed.
+2022-03-27 14:16:34.681  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ayush'
+2022-03-27 14:16:34.989  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"}]
+2022-03-27 14:16:35.198  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 14:16:35.210  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-27 14:16:35.262  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 14:16:35.263  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 14:16:35.527  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-27 14:16:35.659  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-27 14:16:36.005  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-27 14:16:36.201  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-27 14:16:36.363  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-27 14:16:36.816  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-27 14:16:36.931  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-27 14:16:36.956  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-27 14:16:36.957  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:16:36.970  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-27 14:16:36.971  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-27 14:16:36.971  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-27 14:16:36.972  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-27 14:16:36.972  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-27 14:16:36.973  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-27 14:16:36.973  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-27 14:16:37.002  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-27 14:16:37.011  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-27 14:16:37.018  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-27 14:16:37.033  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648379797033 with initial instances count: 3
+2022-03-27 14:16:37.047  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROFILE-SERVICE with eureka with status UP
+2022-03-27 14:16:37.048  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648379797048, current=UP, previous=STARTING]
+2022-03-27 14:16:37.048  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083: registering service...
+2022-03-27 14:16:37.052  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 8083 is already in use
+2022-03-27 14:16:37.056  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 14:16:37.057  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-03-27 14:16:37.068  INFO [PROFILE-SERVICE,,] 29752 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 - registration status: 204
+2022-03-27 14:16:37.273  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-03-27 14:16:38.290  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown initiated...
+2022-03-27 14:16:38.292  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-8 - Shutdown completed.
+2022-03-27 14:16:38.294  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-03-27 14:16:41.314  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-03-27 14:16:41.319  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 - deregister  status: 200
+2022-03-27 14:16:41.384  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-03-27 14:16:41.399  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-03-27 14:16:41.412 ERROR [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8083 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8083 or configure this application to listen on another port.
+
+2022-03-27 14:16:54.442  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.w.p.ProfileServiceApplication          : The following 1 profile is active: "dev"
+2022-03-27 14:16:54.694  WARN [PROFILE-SERVICE,,] 29752 --- [Thread-47] z.r.AsyncReporter$BoundedAsyncReporter   : Timed out waiting for in-flight spans to send
+2022-03-27 14:16:54.711  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown initiated...
+2022-03-27 14:16:54.735  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-47] com.zaxxer.hikari.HikariDataSource       : HikariPool-7 - Shutdown completed.
+2022-03-27 14:16:55.202  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.w.p.ProfileServiceApplication          : The following 1 profile is active: "dev"
+2022-03-27 14:16:55.585  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 14:16:55.653  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 65 ms. Found 1 JPA repository interfaces.
+2022-03-27 14:16:56.006  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=378ee9e3-c42c-38ab-aa62-c5d59eb66efc
+2022-03-27 14:16:56.080  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 14:16:56.101  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interfaces.
+2022-03-27 14:16:56.345  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=378ee9e3-c42c-38ab-aa62-c5d59eb66efc
+2022-03-27 14:16:56.359  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2022-03-27 14:16:56.360  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-27 14:16:56.361  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 14:16:56.445  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.a.c.c.C.[Tomcat-5].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-03-27 14:16:56.446  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1994 ms
+2022-03-27 14:16:56.528  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Starting...
+2022-03-27 14:16:56.530  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-9 - Start completed.
+2022-03-27 14:16:56.531  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ayush'
+2022-03-27 14:16:56.732  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2022-03-27 14:16:56.735  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-27 14:16:56.736  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 14:16:56.808  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.a.c.c.C.[Tomcat-6].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-03-27 14:16:56.808  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1600 ms
+2022-03-27 14:16:56.873  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Starting...
+2022-03-27 14:16:56.874  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-10 - Start completed.
+2022-03-27 14:16:56.875  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ayush'
+2022-03-27 14:16:56.946  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"}]
+2022-03-27 14:16:57.091  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 14:16:57.103  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-27 14:16:57.149  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 14:16:57.150  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 14:16:57.219  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"}]
+2022-03-27 14:16:57.392  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 14:16:57.408  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-27 14:16:57.471  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 14:16:57.472  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 14:16:57.548  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-27 14:16:57.769  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-27 14:16:57.776  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-47] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-03-27 14:16:57.784  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-47] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 - deregister  status: 200
+2022-03-27 14:16:57.972  INFO [PROFILE-SERVICE,,] 29752 --- [Thread-47] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-03-27 14:16:58.776  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.w.p.ProfileServiceApplication          : The following 1 profile is active: "dev"
+2022-03-27 14:16:58.956  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-27 14:16:58.967  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-27 14:16:59.500  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-27 14:16:59.519  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-27 14:16:59.695  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 14:16:59.731  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+2022-03-27 14:17:00.349  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=378ee9e3-c42c-38ab-aa62-c5d59eb66efc
+2022-03-27 14:17:00.496  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-27 14:17:01.028  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2022-03-27 14:17:01.078  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-27 14:17:01.096  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 14:17:01.397  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.a.c.c.C.[Tomcat-7].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-03-27 14:17:01.425  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2643 ms
+2022-03-27 14:17:01.631  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Starting...
+2022-03-27 14:17:01.655  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-11 - Start completed.
+2022-03-27 14:17:01.669  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ayush'
+2022-03-27 14:17:01.773  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-27 14:17:02.252  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-27 14:17:02.321  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-27 14:17:02.323  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:17:02.345  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-27 14:17:02.346  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-27 14:17:02.346  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-27 14:17:02.347  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-27 14:17:02.348  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-27 14:17:02.348  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-27 14:17:02.349  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-27 14:17:02.490  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-27 14:17:02.597  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-27 14:17:02.838  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-27 14:17:03.533  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"}]
+2022-03-27 14:17:03.627  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648379823627 with initial instances count: 2
+2022-03-27 14:17:11.120  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.w.p.ProfileServiceApplication          : The following 1 profile is active: "dev"
+2022-03-27 14:17:11.171  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.c.c.ConfigServicePropertySourceLocator : Located environment: name=PROFILE-SERVICE, profiles=[default], label=null, version=null, state=null
+2022-03-27 14:17:11.172  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] b.c.PropertySourceBootstrapConfiguration : Located property source: [BootstrapPropertySource {name='bootstrapProperties-configClient'}, BootstrapPropertySource {name='bootstrapProperties-file:C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\config\application.yml'}]
+2022-03-27 14:17:11.191  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] c.w.p.ProfileServiceApplication          : The following 1 profile is active: "dev"
+2022-03-27 14:17:11.610  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Starting...
+2022-03-27 14:17:11.613  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-13 - Start completed.
+2022-03-27 14:17:11.622  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 14:17:11.637  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-27 14:17:11.686  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 14:17:11.687  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 14:17:11.756  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 14:17:11.773  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-27 14:17:11.774  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 14:17:11.820  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interfaces.
+2022-03-27 14:17:11.822  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 14:17:11.837  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 14:17:11.838  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 14:17:11.855  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interfaces.
+2022-03-27 14:17:12.163  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=378ee9e3-c42c-38ab-aa62-c5d59eb66efc
+2022-03-27 14:17:12.194  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=378ee9e3-c42c-38ab-aa62-c5d59eb66efc
+2022-03-27 14:17:12.233  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-27 14:17:12.249  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [C:\Users\user\Desktop\code\whatsapp-clone-microservices\profile_service\target\classes\com\whatsapp\profile_service\configuration\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 2; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jwtUtils': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'jwt.secret_key' in value "${jwt.secret_key}"
+2022-03-27 14:17:12.251  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 14:17:12.253  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-03-27 14:17:12.461  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-03-27 14:17:12.652  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2022-03-27 14:17:12.654  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-27 14:17:12.655  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 14:17:12.682  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2022-03-27 14:17:12.684  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-27 14:17:12.685  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 14:17:12.774  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.a.c.c.C.[Tomcat-9].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2022-03-27 14:17:12.775  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1648 ms
+2022-03-27 14:17:12.796  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.a.c.c.C.[Tomcat-10].[localhost].[/]    : Initializing Spring embedded WebApplicationContext
+2022-03-27 14:17:12.802  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1603 ms
+2022-03-27 14:17:12.990  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Starting...
+2022-03-27 14:17:13.018  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-14 - Start completed.
+2022-03-27 14:17:13.022  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Starting...
+2022-03-27 14:17:13.034  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ayush'
+2022-03-27 14:17:13.035  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-15 - Start completed.
+2022-03-27 14:17:13.037  INFO [PROFILE-SERVICE,,] 29752 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ayush'
+2022-03-27 14:17:13.131  WARN [PROFILE-SERVICE,,] 29752 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-27 14:23:33.122  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] c.w.p.ProfileServiceApplication          : The following 1 profile is active: "dev"
+2022-03-27 14:23:35.549  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-27 14:23:36.109  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 526 ms. Found 1 JPA repository interfaces.
+2022-03-27 14:23:37.050  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=378ee9e3-c42c-38ab-aa62-c5d59eb66efc
+2022-03-27 14:23:38.448  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8083 (http)
+2022-03-27 14:23:38.464  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-27 14:23:38.466  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.58]
+2022-03-27 14:23:38.700  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-27 14:23:38.702  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5538 ms
+2022-03-27 14:23:38.800  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-27 14:23:39.095  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-27 14:23:39.113  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:ayush'
+2022-03-27 14:23:39.724  WARN [PROFILE-SERVICE,,] 26916 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"}]
+2022-03-27 14:23:40.115  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-27 14:23:40.199  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.5.Final
+2022-03-27 14:23:40.448  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-27 14:23:40.664  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-27 14:23:41.481  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-27 14:23:41.496  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-27 14:23:42.182  WARN [PROFILE-SERVICE,,] 26916 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-27 14:23:42.491  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will not secure any request
+2022-03-27 14:23:43.239  WARN [PROFILE-SERVICE,,] 26916 --- [restartedMain] ion$DefaultTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2022-03-27 14:23:43.891  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2022-03-27 14:23:44.226  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-27 14:23:45.297  WARN [PROFILE-SERVICE,,] 26916 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-27 14:23:45.550  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-27 14:23:45.766  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-27 14:23:45.774  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:23:45.842  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-27 14:23:45.844  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-27 14:23:45.845  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-27 14:23:45.846  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-27 14:23:45.848  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-27 14:23:45.850  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-27 14:23:45.852  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-27 14:23:45.919  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-27 14:23:45.932  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-27 14:23:45.944  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-27 14:23:45.971  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648380225969 with initial instances count: 2
+2022-03-27 14:23:45.991  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application PROFILE-SERVICE with eureka with status UP
+2022-03-27 14:23:45.993  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648380225993, current=UP, previous=STARTING]
+2022-03-27 14:23:46.001  INFO [PROFILE-SERVICE,,] 26916 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083: registering service...
+2022-03-27 14:23:46.073  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8083 (http) with context path ''
+2022-03-27 14:23:46.076  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8083
+2022-03-27 14:23:46.096  INFO [PROFILE-SERVICE,,] 26916 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 - registration status: 204
+2022-03-27 14:23:46.343  INFO [PROFILE-SERVICE,,] 26916 --- [restartedMain] c.w.p.ProfileServiceApplication          : Started ProfileServiceApplication in 17.075 seconds (JVM running for 19.548)
+2022-03-27 14:25:54.242  INFO [PROFILE-SERVICE,581410a8e9688a9c,581410a8e9688a9c] 26916 --- [http-nio-8083-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 14:25:54.243  INFO [PROFILE-SERVICE,581410a8e9688a9c,581410a8e9688a9c] 26916 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-27 14:25:54.247  INFO [PROFILE-SERVICE,581410a8e9688a9c,581410a8e9688a9c] 26916 --- [http-nio-8083-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-03-27 14:25:55.777  WARN [PROFILE-SERVICE,,] 26916 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-03-27 14:25:55.784  WARN [PROFILE-SERVICE,,] 26916 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 2 spans due to MethodNotAllowed(405 Method Not Allowed: "405 Method Not Allowed")
+
+org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:117) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:168) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:122) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:819) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660) ~[spring-web-5.3.16.jar:5.3.16]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:51) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.lambda$new$0(RestTemplateSender.java:44) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender.post(HttpSender.java:137) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:150) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:140) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.2.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.3.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) ~[zipkin-reporter-2.16.3.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-03-27 14:28:45.865  INFO [PROFILE-SERVICE,,] 26916 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:33:45.880  INFO [PROFILE-SERVICE,,] 26916 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:38:45.894  INFO [PROFILE-SERVICE,,] 26916 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:43:45.904  INFO [PROFILE-SERVICE,,] 26916 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:48:45.916  INFO [PROFILE-SERVICE,,] 26916 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:53:45.925  INFO [PROFILE-SERVICE,,] 26916 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:58:45.931  INFO [PROFILE-SERVICE,,] 26916 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 15:03:45.935  INFO [PROFILE-SERVICE,,] 26916 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 15:08:45.941  INFO [PROFILE-SERVICE,,] 26916 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration

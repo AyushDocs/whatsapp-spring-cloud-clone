@@ -1,0 +1,112 @@
+2022-03-27 13:51:37.226  INFO 16364 --- [main] c.w.c.ConfigServerApplication            : Starting ConfigServerApplication using Java 17 on DESKTOP-HB7E3FD with PID 16364 (C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\target\classes started by user in C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server)
+2022-03-27 13:51:37.230  INFO 16364 --- [main] c.w.c.ConfigServerApplication            : The following 1 profile is active: "native"
+2022-03-27 13:51:38.300  INFO 16364 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ea564f55-1482-3e9f-b05b-b77cc626b441
+2022-03-27 13:51:38.769  INFO 16364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2022-03-27 13:51:38.788  INFO 16364 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-27 13:51:38.789  INFO 16364 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-03-27 13:51:39.001  INFO 16364 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-27 13:51:39.002  INFO 16364 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1720 ms
+2022-03-27 13:51:40.130  INFO 16364 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-27 13:51:40.936  WARN 16364 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-27 13:51:40.994  INFO 16364 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-27 13:51:41.380  INFO 16364 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-27 13:51:41.409  INFO 16364 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 13:51:41.494  INFO 16364 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-27 13:51:41.497  INFO 16364 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-27 13:51:41.499  INFO 16364 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-27 13:51:41.514  INFO 16364 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-27 13:51:41.517  INFO 16364 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-27 13:51:41.521  INFO 16364 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-27 13:51:41.524  INFO 16364 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-27 13:51:43.061  INFO 16364 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-27 13:51:43.079  INFO 16364 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-27 13:51:43.112  INFO 16364 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-27 13:51:43.172  INFO 16364 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648378303169 with initial instances count: 0
+2022-03-27 13:51:43.184  INFO 16364 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CONFIG-SERVER with eureka with status UP
+2022-03-27 13:51:43.205  INFO 16364 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648378303205, current=UP, previous=STARTING]
+2022-03-27 13:51:43.228  INFO 16364 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085: registering service...
+2022-03-27 13:51:43.323  INFO 16364 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2022-03-27 13:51:43.330  INFO 16364 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2022-03-27 13:51:43.706  INFO 16364 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085 - registration status: 204
+2022-03-27 13:51:43.830  INFO 16364 --- [main] c.w.c.ConfigServerApplication            : Started ConfigServerApplication in 7.185 seconds (JVM running for 7.652)
+2022-03-27 13:51:49.581  INFO 16364 --- [http-nio-8085-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 13:51:49.582  INFO 16364 --- [http-nio-8085-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-27 13:51:49.585  INFO 16364 --- [http-nio-8085-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-03-27 13:51:49.665  INFO 16364 --- [http-nio-8085-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\config\application.yml]' via location 'C:\Users\user/Desktop/code/whatsapp-clone-microservices/config_server/config/'
+2022-03-27 13:52:13.083  INFO 16364 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-27 13:52:13.084  INFO 16364 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-27 13:52:13.085  INFO 16364 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-27 13:52:13.086  INFO 16364 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-27 13:52:13.087  INFO 16364 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-27 13:52:13.089  INFO 16364 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2022-03-27 13:52:13.090  INFO 16364 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-27 13:52:13.106  INFO 16364 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-27 13:55:30.427  INFO 16364 --- [http-nio-8085-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\config\application.yml]' via location 'C:\Users\user/Desktop/code/whatsapp-clone-microservices/config_server/config/'
+2022-03-27 13:56:41.563  INFO 16364 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:01:41.579  INFO 16364 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:06:41.594  INFO 16364 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:11:41.600  INFO 16364 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:15:38.550  INFO 16364 --- [http-nio-8085-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\config\application.yml]' via location 'C:\Users\user/Desktop/code/whatsapp-clone-microservices/config_server/config/'
+2022-03-27 14:16:18.542  INFO 16364 --- [http-nio-8085-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\config\application.yml]' via location 'C:\Users\user/Desktop/code/whatsapp-clone-microservices/config_server/config/'
+2022-03-27 14:16:28.272  INFO 16364 --- [http-nio-8085-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\config\application.yml]' via location 'C:\Users\user/Desktop/code/whatsapp-clone-microservices/config_server/config/'
+2022-03-27 14:16:28.630  INFO 16364 --- [http-nio-8085-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\config\application.yml]' via location 'C:\Users\user/Desktop/code/whatsapp-clone-microservices/config_server/config/'
+2022-03-27 14:16:33.110  INFO 16364 --- [http-nio-8085-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\config\application.yml]' via location 'C:\Users\user/Desktop/code/whatsapp-clone-microservices/config_server/config/'
+2022-03-27 14:16:41.606  INFO 16364 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:16:54.396  INFO 16364 --- [http-nio-8085-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\config\application.yml]' via location 'C:\Users\user/Desktop/code/whatsapp-clone-microservices/config_server/config/'
+2022-03-27 14:16:55.174  INFO 16364 --- [http-nio-8085-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\config\application.yml]' via location 'C:\Users\user/Desktop/code/whatsapp-clone-microservices/config_server/config/'
+2022-03-27 14:16:58.738  INFO 16364 --- [http-nio-8085-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\config\application.yml]' via location 'C:\Users\user/Desktop/code/whatsapp-clone-microservices/config_server/config/'
+2022-03-27 14:17:11.091  INFO 16364 --- [http-nio-8085-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\config\application.yml]' via location 'C:\Users\user/Desktop/code/whatsapp-clone-microservices/config_server/config/'
+2022-03-27 14:17:11.167  INFO 16364 --- [http-nio-8085-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\config\application.yml]' via location 'C:\Users\user/Desktop/code/whatsapp-clone-microservices/config_server/config/'
+2022-03-27 14:21:49.729  INFO 24380 --- [main] c.w.c.ConfigServerApplication            : Starting ConfigServerApplication using Java 17 on DESKTOP-HB7E3FD with PID 24380 (C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\target\classes started by user in C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server)
+2022-03-27 14:21:49.751  INFO 24380 --- [main] c.w.c.ConfigServerApplication            : The following 1 profile is active: "native"
+2022-03-27 14:21:56.441  INFO 24380 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ea564f55-1482-3e9f-b05b-b77cc626b441
+2022-03-27 14:21:58.190  INFO 24380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8085 (http)
+2022-03-27 14:21:58.231  INFO 24380 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-27 14:21:58.234  INFO 24380 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-03-27 14:21:58.710  INFO 24380 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-27 14:21:58.712  INFO 24380 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 8619 ms
+2022-03-27 14:22:03.245  INFO 24380 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-27 14:22:06.926  WARN 24380 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-27 14:22:07.200  INFO 24380 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-27 14:22:08.240  INFO 24380 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-27 14:22:08.341  INFO 24380 --- [main] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:22:08.818  INFO 24380 --- [main] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-27 14:22:08.852  INFO 24380 --- [main] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-27 14:22:08.866  INFO 24380 --- [main] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-27 14:22:08.889  INFO 24380 --- [main] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-27 14:22:08.909  INFO 24380 --- [main] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-27 14:22:08.925  INFO 24380 --- [main] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-27 14:22:08.937  INFO 24380 --- [main] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-27 14:22:12.205  INFO 24380 --- [main] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-27 14:22:12.304  INFO 24380 --- [main] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-27 14:22:12.355  INFO 24380 --- [main] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-27 14:22:12.476  INFO 24380 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648380132470 with initial instances count: 0
+2022-03-27 14:22:12.513  INFO 24380 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application CONFIG-SERVER with eureka with status UP
+2022-03-27 14:22:12.604  INFO 24380 --- [main] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648380132604, current=UP, previous=STARTING]
+2022-03-27 14:22:12.640  INFO 24380 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085: registering service...
+2022-03-27 14:22:12.889  INFO 24380 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8085 (http) with context path ''
+2022-03-27 14:22:13.096  INFO 24380 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8085
+2022-03-27 14:22:14.119  INFO 24380 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085 - registration status: 204
+2022-03-27 14:22:14.963  INFO 24380 --- [main] c.w.c.ConfigServerApplication            : Started ConfigServerApplication in 28.159 seconds (JVM running for 29.767)
+2022-03-27 14:22:42.309  INFO 24380 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-27 14:22:42.312  INFO 24380 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-27 14:22:42.313  INFO 24380 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-27 14:22:42.315  INFO 24380 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-27 14:22:42.318  INFO 24380 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-27 14:22:42.323  INFO 24380 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Application version is -1: false
+2022-03-27 14:22:42.328  INFO 24380 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-27 14:22:42.369  INFO 24380 --- [DiscoveryClient-CacheRefreshExecutor-0] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-27 14:22:46.959  INFO 24380 --- [http-nio-8085-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-27 14:22:46.960  INFO 24380 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-27 14:22:46.963  INFO 24380 --- [http-nio-8085-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-03-27 14:22:47.065  INFO 24380 --- [http-nio-8085-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\config\application.yml]' via location 'C:\Users\user/Desktop/code/whatsapp-clone-microservices/config_server/config/'
+2022-03-27 14:23:33.033  INFO 24380 --- [http-nio-8085-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [C:\Users\user\Desktop\code\whatsapp-clone-microservices\config_server\config\application.yml]' via location 'C:\Users\user/Desktop/code/whatsapp-clone-microservices/config_server/config/'
+2022-03-27 14:27:08.960  INFO 24380 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:32:08.963  INFO 24380 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:37:08.976  INFO 24380 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:42:08.991  INFO 24380 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:47:09.008  INFO 24380 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:52:09.021  INFO 24380 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 14:57:09.030  INFO 24380 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 15:02:09.042  INFO 24380 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-27 15:07:09.056  INFO 24380 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
