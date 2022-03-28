@@ -10,6 +10,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -33,5 +34,11 @@ public class MessageController {
         List<Message> messages = messageService.findMessages(forWhom);
         if(messages.isEmpty()) return ResponseEntity.noContent().build();
         return ResponseEntity.ok(messages);
+    }
+    @PutMapping("/{id}")
+    public ResponseEntity<List<Message>> updateMessageState(@PathVariable Long id){
+        boolean messageExists = messageService.updateMessageStateToSentToFriend(id);
+        if(!messageExists) return ResponseEntity.notFound().build();
+        return ResponseEntity.ok().build();
     }
 }

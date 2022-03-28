@@ -14,3 +14,4 @@ spring:
                   uri: lb://PROFILE-SERVICE
                   predicates:
                       - Path=/api/v1/users/**
+    main.web-application-type: reactive

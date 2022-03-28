@@ -15,22 +15,31 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class MessageService {
-    
+
     private final MessageRepo messageRepo;
-    
-    public void saveMessage(String content, String sentBy,String sentTo) {
-        Message message=Message.builder()
-        .content(content)
-        .sentBy(sentBy)
-        .sentTo(sentTo)
-        .timestamp(LocalDateTime.now())
-        .status(Status.RECEIVED_BY_SERVER)
-        .build();
-        //TODO:send back sender message as event from api gateway
+
+    public void saveMessage(String content, String sentBy, String sentTo) {
+        Message message = Message.builder()
+                .content(content)
+                .sentBy(sentBy)
+                .sentTo(sentTo)
+                .timestamp(LocalDateTime.now())
+                .status(Status.RECEIVED_BY_SERVER)
+                .build();
         messageRepo.save(message);
-        // TODO:send user message as event from api gateway
     }
+
     public List<Message> findMessages(String forWhom) {
-       return messageRepo.findUreadMessages(forWhom) ;
+        return messageRepo.findUreadMessages(forWhom);
+    }
+
+    public boolean updateMessageStateToSentToFriend(Long id) {
+        Optional<Message> message = messageRepo.findById(id);
+        if (!message.isPresent()) return message.isPresent();
+        Message m = message.get();
+        if (m.getStatus().equals(Status.SENT_TO_FRIEND)) m.setStatus(Status.SENT_TO_FRIEND);
+        else m.setStatus(Status.RECEIVED_BY_FRIEND);
+        messageRepo.save(m);
+        return message.isPresent();
     }
 }
