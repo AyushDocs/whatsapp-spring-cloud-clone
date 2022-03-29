@@ -1,15 +1,69 @@
+/** @format */
+
+import axios from 'axios';
+import {Proxy} from 'axios-express-proxy';
+import bodyParser from 'body-parser';
 import express from 'express';
-import { Server } from 'http';
+import fileUpload from 'express-fileupload';
+import {Server} from 'http';
 import * as SocketIO from 'socket.io';
-const port=process.env.PORT || 3001;
+import getServiceUrl from './eureka/path';
+import {createFormForFileUpload} from './service/imageService';
+import handleIo from './socket';
+import corsConfig from './socket/cors.config.json';
 
-const app=express();
-const server=new Server(app);
+const port = process.env.PORT ? parseInt(process.env.PORT) : 8078;
+const app = express();
+app.use(
+	fileUpload({
+		createParentPath: true,
+	})
+);
+app.use(bodyParser.json());
+app.use((_, res, next) => {
+	try {
+		next();
+	} catch (err) {
+		res.send(err);
+	}
+});
+app.use((req, _, next) => {
+	console.log(req.url);
+	next();
+});
 
-const io=new SocketIO.Server(server,{
-      cors:{
-            origin:'*'
-      }
-})
+app.get('/info', (_, res) => {
+	res.json({status: 'UP'});
+});
+app.all('/api/v1/images/:path', async (req, res) => {
+	const serverPath = getServiceUrl(req, 'IMAGE-SERVICE');
+	if (!serverPath) return res.status(502).send('SERVICE UNREACHABLE');
+	const isMultiPartMessage = req.headers['content-type'] !== 'application/json';
+	if (!isMultiPartMessage) return Proxy(serverPath, req, res);
+	const form = createFormForFileUpload(req);
+	if (!form) return res.status(400).end();
+	const response = await axios.post(serverPath, form, {
+		headers: form.getHeaders(),
+	});
+	return res.json({data: response.data});
+});
+app.all('/api/v1/users/:path', async (req, res) => {
+	const serverPath = getServiceUrl(req, 'PROFILE-SERVICE');
+	if (!serverPath) return res.status(502).send('SERVICE UNREACHABLE');
+	return Proxy(serverPath, req, res);
+});
+app.all('/api/v1/messages/:path', async (req, res) => {
+	const serverPath = getServiceUrl(req, 'MESSAGE-SERVICE');
+	if (!serverPath) return res.status(502).send('SERVICE UNREACHABLE');
+	return Proxy(serverPath, req, res);
+});
+app.all('/api/v1/messages/', async (req, res) => {
+	const serverPath = getServiceUrl(req, 'MESSAGE-SERVICE');
+	if (!serverPath) return res.status(502).send('SERVICE UNREACHABLE');
+	return Proxy(serverPath, req, res);
+});
+const server = new Server(app);
 
-server.listen(port,()=>console.log(`server is running on port ${port}`));
+const socketIoServer = new SocketIO.Server(server, corsConfig);
+handleIo(socketIoServer);
+server.listen(port, () => console.log(`server is running on port ${port}`));

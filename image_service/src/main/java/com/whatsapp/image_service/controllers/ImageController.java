@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -28,7 +29,7 @@ public class ImageController {
     public ResponseEntity<?> uploadImage(@RequestParam("image") MultipartFile file,
             @PathVariable String userId) throws URISyntaxException {
         Image image = imageService.storeImage(file, userId);
-        String path = String.format("/api/v1/users/%s/images/%s", userId, image.getId());
+        String path = String.format("/api/v1/images/%s/%s", userId, image.getId());
         return ResponseEntity.created(new URI(path)).body(image);
     }
 

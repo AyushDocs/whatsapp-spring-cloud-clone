@@ -1,44 +1,182 @@
-2022-03-27 10:04:50.297  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] c.w.m.MessageServiceApplication          : The following 1 profile is active: "dev"
-2022-03-27 10:04:52.484  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2022-03-27 10:04:53.015  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 492 ms. Found 1 JPA repository interfaces.
-2022-03-27 10:04:54.252  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ff9df96d-b02a-3703-a50f-9522f762d170
-2022-03-27 10:04:56.374  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
-2022-03-27 10:04:56.402  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-27 10:04:56.404  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-03-27 10:04:56.682  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-27 10:04:56.683  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6274 ms
-2022-03-27 10:04:56.809  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-03-27 10:04:57.169  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-03-27 10:04:57.190  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mydb'
-2022-03-27 10:04:57.986  WARN [MESSAGE-SERVICE,,] 14248 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"}]
-2022-03-27 10:04:58.696  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2022-03-27 10:04:58.905  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
-2022-03-27 10:04:59.463  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2022-03-27 10:04:59.766  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2022-03-27 10:05:01.569  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2022-03-27 10:05:01.614  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2022-03-27 10:05:02.799  WARN [MESSAGE-SERVICE,,] 14248 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2022-03-27 10:05:03.980  WARN [MESSAGE-SERVICE,,] 14248 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2022-03-27 10:05:04.272  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
-2022-03-27 10:05:05.125  WARN [MESSAGE-SERVICE,,] 14248 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-03-27 10:05:05.307  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2022-03-27 10:05:05.483  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2022-03-27 10:05:05.489  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
-2022-03-27 10:05:05.550  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
-2022-03-27 10:05:05.550  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
-2022-03-27 10:05:05.551  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
-2022-03-27 10:05:05.552  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
-2022-03-27 10:05:05.553  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
-2022-03-27 10:05:05.554  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
-2022-03-27 10:05:05.555  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
-2022-03-27 10:05:05.607  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
-2022-03-27 10:05:05.620  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
-2022-03-27 10:05:05.633  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
-2022-03-27 10:05:05.658  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648364705657 with initial instances count: 1
-2022-03-27 10:05:05.675  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MESSAGE-SERVICE with eureka with status UP
-2022-03-27 10:05:05.677  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648364705677, current=UP, previous=STARTING]
-2022-03-27 10:05:05.683  INFO [MESSAGE-SERVICE,,] 14248 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MESSAGE-SERVICE/host.docker.internal:MESSAGE-SERVICE:8082: registering service...
-2022-03-27 10:05:05.733  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
-2022-03-27 10:05:05.735  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
-2022-03-27 10:05:05.766  INFO [MESSAGE-SERVICE,,] 14248 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MESSAGE-SERVICE/host.docker.internal:MESSAGE-SERVICE:8082 - registration status: 204
-2022-03-27 10:05:05.954  INFO [MESSAGE-SERVICE,,] 14248 --- [restartedMain] c.w.m.MessageServiceApplication          : Started MessageServiceApplication in 22.865 seconds (JVM running for 26.001)
+2022-03-29 19:26:34.293  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] c.w.m.MessageServiceApplication          : The following 1 profile is active: "dev"
+2022-03-29 19:26:35.736  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-29 19:26:36.185  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 412 ms. Found 1 JPA repository interfaces.
+2022-03-29 19:26:36.992  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ff9df96d-b02a-3703-a50f-9522f762d170
+2022-03-29 19:26:40.064  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-03-29 19:26:40.098  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-29 19:26:40.100  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-03-29 19:26:40.428  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-29 19:26:40.430  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6100 ms
+2022-03-29 19:26:40.612  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-03-29 19:26:41.094  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-03-29 19:26:41.129  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mydb'
+2022-03-29 19:26:42.001  WARN [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"}]
+2022-03-29 19:26:42.703  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-29 19:26:42.842  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.7.Final
+2022-03-29 19:26:43.245  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2022-03-29 19:26:43.538  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-29 19:26:45.170  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-29 19:26:45.197  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-29 19:26:46.437  WARN [MESSAGE-SERVICE,,] 23584 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-29 19:26:48.061  WARN [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-03-29 19:26:48.517  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-29 19:26:49.430  WARN [MESSAGE-SERVICE,,] 23584 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-29 19:26:49.732  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-29 19:26:49.999  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-29 19:26:50.026  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-29 19:26:50.131  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-29 19:26:50.133  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-29 19:26:50.134  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-29 19:26:50.136  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-29 19:26:50.137  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-29 19:26:50.141  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-29 19:26:50.143  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-29 19:26:50.299  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-29 19:26:50.321  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-29 19:26:50.356  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-29 19:26:50.417  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648571210415 with initial instances count: 4
+2022-03-29 19:26:50.453  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MESSAGE-SERVICE with eureka with status UP
+2022-03-29 19:26:50.456  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648571210455, current=UP, previous=STARTING]
+2022-03-29 19:26:50.465  INFO [MESSAGE-SERVICE,,] 23584 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MESSAGE-SERVICE/host.docker.internal:MESSAGE-SERVICE:8082: registering service...
+2022-03-29 19:26:50.563  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-03-29 19:26:50.567  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2022-03-29 19:26:50.653  INFO [MESSAGE-SERVICE,,] 23584 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MESSAGE-SERVICE/host.docker.internal:MESSAGE-SERVICE:8082 - registration status: 204
+2022-03-29 19:26:50.992  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] c.w.m.MessageServiceApplication          : Started MessageServiceApplication in 21.157 seconds (JVM running for 23.038)
+2022-03-29 19:28:14.293  INFO [MESSAGE-SERVICE,99102b4c065fba73,99102b4c065fba73] 23584 --- [http-nio-8082-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-29 19:28:14.295  INFO [MESSAGE-SERVICE,99102b4c065fba73,99102b4c065fba73] 23584 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-29 19:28:14.298  INFO [MESSAGE-SERVICE,99102b4c065fba73,99102b4c065fba73] 23584 --- [http-nio-8082-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-03-29 19:28:15.434  WARN [MESSAGE-SERVICE,,] 23584 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Spans were dropped due to exceptions. All subsequent errors will be logged at FINE level.
+2022-03-29 19:28:15.441  WARN [MESSAGE-SERVICE,,] 23584 --- [AsyncReporter{RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}}] z.r.AsyncReporter$BoundedAsyncReporter   : Dropped 1 spans due to MethodNotAllowed(405 Method Not Allowed: "405 Method Not Allowed")
+
+org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"
+	at org.springframework.web.client.HttpClientErrorException.create(HttpClientErrorException.java:117) ~[spring-web-5.3.17.jar:5.3.17]
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:168) ~[spring-web-5.3.17.jar:5.3.17]
+	at org.springframework.web.client.DefaultResponseErrorHandler.handleError(DefaultResponseErrorHandler.java:122) ~[spring-web-5.3.17.jar:5.3.17]
+	at org.springframework.web.client.ResponseErrorHandler.handleError(ResponseErrorHandler.java:63) ~[spring-web-5.3.17.jar:5.3.17]
+	at org.springframework.web.client.RestTemplate.handleResponse(RestTemplate.java:819) ~[spring-web-5.3.17.jar:5.3.17]
+	at org.springframework.web.client.RestTemplate.doExecute(RestTemplate.java:777) ~[spring-web-5.3.17.jar:5.3.17]
+	at org.springframework.cloud.sleuth.zipkin2.ZipkinRestTemplateWrapper.doExecute(ZipkinRestTemplateWrapper.java:69) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.web.client.RestTemplate.exchange(RestTemplate.java:660) ~[spring-web-5.3.17.jar:5.3.17]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.post(RestTemplateSender.java:51) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.zipkin2.RestTemplateSender.lambda$new$0(RestTemplateSender.java:44) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender.post(HttpSender.java:137) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:150) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at org.springframework.cloud.sleuth.zipkin2.HttpSender$HttpPostCall.doExecute(HttpSender.java:140) ~[spring-cloud-sleuth-zipkin-3.1.1.jar:3.1.1]
+	at zipkin2.Call$Base.execute(Call.java:391) ~[zipkin-2.23.2.jar:na]
+	at zipkin2.reporter.AsyncReporter$BoundedAsyncReporter.flush(AsyncReporter.java:299) ~[zipkin-reporter-2.16.3.jar:na]
+	at zipkin2.reporter.AsyncReporter$Flusher.run(AsyncReporter.java:378) ~[zipkin-reporter-2.16.3.jar:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-03-29 19:31:50.158  INFO [MESSAGE-SERVICE,,] 23584 --- [AsyncResolver-bootstrap-executor-0] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-29 19:32:32.328  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-1] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MESSAGE-SERVICE with eureka with status DOWN
+2022-03-29 19:32:32.363  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648571552363, current=DOWN, previous=UP]
+2022-03-29 19:32:32.382  INFO [MESSAGE-SERVICE,,] 23584 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MESSAGE-SERVICE/host.docker.internal:MESSAGE-SERVICE:8082: registering service...
+2022-03-29 19:32:32.397  INFO [MESSAGE-SERVICE,,] 23584 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MESSAGE-SERVICE/host.docker.internal:MESSAGE-SERVICE:8082 - registration status: 204
+2022-03-29 19:32:32.519  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-29 19:32:32.554  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-1] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-03-29 19:32:32.804  WARN [MESSAGE-SERVICE,,] 23584 --- [Thread-1] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-03-29 19:32:33.108  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-03-29 19:32:33.118  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-03-29 19:32:33.122  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-03-29 19:32:36.188  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-03-29 19:32:36.249  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MESSAGE-SERVICE/host.docker.internal:MESSAGE-SERVICE:8082 - deregister  status: 200
+2022-03-29 19:32:36.679  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-1] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-03-29 19:32:39.979  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] c.w.m.MessageServiceApplication          : The following 1 profile is active: "dev"
+2022-03-29 19:32:44.707  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-29 19:32:44.873  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 148 ms. Found 1 JPA repository interfaces.
+2022-03-29 19:32:45.597  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ff9df96d-b02a-3703-a50f-9522f762d170
+2022-03-29 19:32:46.325  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-03-29 19:32:46.329  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-29 19:32:46.330  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-03-29 19:32:46.421  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-29 19:32:46.423  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6308 ms
+2022-03-29 19:32:46.539  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2022-03-29 19:32:46.544  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2022-03-29 19:32:46.546  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mydb'
+2022-03-29 19:32:47.133  WARN [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"}]
+2022-03-29 19:32:47.314  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-29 19:32:47.344  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-29 19:32:47.405  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-29 19:32:47.407  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-29 19:32:47.775  WARN [MESSAGE-SERVICE,,] 23584 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-29 19:32:48.384  WARN [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-03-29 19:32:48.600  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-29 19:32:49.036  WARN [MESSAGE-SERVICE,,] 23584 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-29 19:32:49.143  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-29 19:32:49.169  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-29 19:32:49.170  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-29 19:32:49.197  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-29 19:32:49.198  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-29 19:32:49.199  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-29 19:32:49.199  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-29 19:32:49.200  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-29 19:32:49.201  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-29 19:32:49.201  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-29 19:32:49.232  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-29 19:32:49.240  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-29 19:32:49.247  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-29 19:32:49.262  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648571569262 with initial instances count: 5
+2022-03-29 19:32:49.277  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MESSAGE-SERVICE with eureka with status UP
+2022-03-29 19:32:49.278  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648571569278, current=UP, previous=STARTING]
+2022-03-29 19:32:49.279  INFO [MESSAGE-SERVICE,,] 23584 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MESSAGE-SERVICE/host.docker.internal:MESSAGE-SERVICE:8082: registering service...
+2022-03-29 19:32:49.288  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-03-29 19:32:49.290  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2022-03-29 19:32:49.304  INFO [MESSAGE-SERVICE,,] 23584 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MESSAGE-SERVICE/host.docker.internal:MESSAGE-SERVICE:8082 - registration status: 204
+2022-03-29 19:32:49.473  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] c.w.m.MessageServiceApplication          : Started MessageServiceApplication in 11.974 seconds (JVM running for 381.518)
+2022-03-29 19:32:49.478  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2022-03-29 19:32:49.838  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-10] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application MESSAGE-SERVICE with eureka with status DOWN
+2022-03-29 19:32:49.839  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648571569839, current=DOWN, previous=UP]
+2022-03-29 19:32:49.840  INFO [MESSAGE-SERVICE,,] 23584 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MESSAGE-SERVICE/host.docker.internal:MESSAGE-SERVICE:8082: registering service...
+2022-03-29 19:32:49.846  INFO [MESSAGE-SERVICE,,] 23584 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MESSAGE-SERVICE/host.docker.internal:MESSAGE-SERVICE:8082 - registration status: 204
+2022-03-29 19:32:49.861  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-10] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2022-03-29 19:32:49.863  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-10] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2022-03-29 19:32:50.070  WARN [MESSAGE-SERVICE,,] 23584 --- [Thread-10] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
+2022-03-29 19:32:51.082  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2022-03-29 19:32:51.083  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-10] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2022-03-29 19:32:51.084  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2022-03-29 19:32:54.108  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Unregistering ...
+2022-03-29 19:32:54.113  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MESSAGE-SERVICE/host.docker.internal:MESSAGE-SERVICE:8082 - deregister  status: 200
+2022-03-29 19:32:54.156  INFO [MESSAGE-SERVICE,,] 23584 --- [Thread-10] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient
+2022-03-29 19:32:54.582  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] c.w.m.MessageServiceApplication          : The following 1 profile is active: "dev"
+2022-03-29 19:32:54.958  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2022-03-29 19:32:54.975  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 15 ms. Found 1 JPA repository interfaces.
+2022-03-29 19:32:55.161  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=ff9df96d-b02a-3703-a50f-9522f762d170
+2022-03-29 19:32:55.494  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2022-03-29 19:32:55.497  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-29 19:32:55.498  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-03-29 19:32:55.600  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-29 19:32:55.601  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1014 ms
+2022-03-29 19:32:55.674  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Starting...
+2022-03-29 19:32:55.678  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-3 - Start completed.
+2022-03-29 19:32:55.679  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:mydb'
+2022-03-29 19:32:56.069  WARN [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.c.s.a.z.ZipkinAutoConfiguration      : Check result of the [RestTemplateSender{http://localhost:9411/zipkin/api/v2/spans}] contains an error [CheckResult{ok=false, error=org.springframework.web.client.HttpClientErrorException$MethodNotAllowed: 405 Method Not Allowed: "405 Method Not Allowed"}]
+2022-03-29 19:32:56.233  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2022-03-29 19:32:56.245  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2022-03-29 19:32:56.292  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2022-03-29 19:32:56.294  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2022-03-29 19:32:56.673  WARN [MESSAGE-SERVICE,,] 23584 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2022-03-29 19:32:57.275  WARN [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2022-03-29 19:32:57.515  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses RestTemplate.
+2022-03-29 19:32:57.968  WARN [MESSAGE-SERVICE,,] 23584 --- [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-29 19:32:58.070  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-29 19:32:58.103  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-29 19:32:58.104  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] c.n.d.s.r.aws.ConfigClusterResolver      : Resolving eureka endpoints via configuration
+2022-03-29 19:32:58.120  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Disable delta property : false
+2022-03-29 19:32:58.121  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Single vip registry refresh property : null
+2022-03-29 19:32:58.122  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Force full registry fetch : false
+2022-03-29 19:32:58.122  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application is null : false
+2022-03-29 19:32:58.123  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Registered Applications size is zero : true
+2022-03-29 19:32:58.124  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Application version is -1: true
+2022-03-29 19:32:58.124  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Getting all instance registry info from the eureka server
+2022-03-29 19:32:58.157  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : The response status is 200
+2022-03-29 19:32:58.166  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Starting heartbeat executor: renew interval is: 30
+2022-03-29 19:32:58.174  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] c.n.discovery.InstanceInfoReplicator     : InstanceInfoReplicator onDemand update allowed rate per min is 4
+2022-03-29 19:32:58.191  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648571578191 with initial instances count: 5
+2022-03-29 19:32:58.210  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application MESSAGE-SERVICE with eureka with status UP
+2022-03-29 19:32:58.211  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] com.netflix.discovery.DiscoveryClient    : Saw local status change event StatusChangeEvent [timestamp=1648571578211, current=UP, previous=STARTING]
+2022-03-29 19:32:58.212  INFO [MESSAGE-SERVICE,,] 23584 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MESSAGE-SERVICE/host.docker.internal:MESSAGE-SERVICE:8082: registering service...
+2022-03-29 19:32:58.220  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8082 (http) with context path ''
+2022-03-29 19:32:58.222  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8082
+2022-03-29 19:32:58.238  INFO [MESSAGE-SERVICE,,] 23584 --- [DiscoveryClient-InstanceInfoReplicator-0] com.netflix.discovery.DiscoveryClient    : DiscoveryClient_MESSAGE-SERVICE/host.docker.internal:MESSAGE-SERVICE:8082 - registration status: 204
+2022-03-29 19:32:58.426  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] c.w.m.MessageServiceApplication          : Started MessageServiceApplication in 4.194 seconds (JVM running for 390.472)
+2022-03-29 19:32:58.432  INFO [MESSAGE-SERVICE,,] 23584 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
