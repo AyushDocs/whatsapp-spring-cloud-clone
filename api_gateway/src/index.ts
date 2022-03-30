@@ -39,7 +39,9 @@ app.all('/api/v1/images/:path', async (req, res) => {
 	const serverPath = getServiceUrl(req, 'IMAGE-SERVICE');
 	if (!serverPath) return res.status(502).send('SERVICE UNREACHABLE');
 	const isMultiPartMessage = req.headers['content-type'] !== 'application/json';
-	if (!isMultiPartMessage) return Proxy(serverPath, req, res);
+	if (!isMultiPartMessage) return Proxy(serverPath, req, res)
+		.then(result => result)
+		.catch(err => res.status(500).send(err.message));;
 	const form = createFormForFileUpload(req);
 	if (!form) return res.status(400).end();
 	const response = await axios.post(serverPath, form, {
@@ -48,23 +50,25 @@ app.all('/api/v1/images/:path', async (req, res) => {
 	return res.json({data: response.data});
 });
 app.all('/api/v1/users/:path', async (req, res) => {
-	try {
-		const serverPath = getServiceUrl(req, 'PROFILE-SERVICE');
-		if (!serverPath) return res.status(502).send('SERVICE UNREACHABLE');
-		return await  Proxy(serverPath, req, res);
-	} catch (error) {
-		return res.status(500).send(error);
-	}
+	const serverPath = getServiceUrl(req, 'PROFILE-SERVICE');
+	if (!serverPath) return res.status(502).send('SERVICE UNREACHABLE');
+	return Proxy(serverPath, req, res)
+		.then(result => result)
+		.catch(err => res.status(500).send(err.message));
 });
 app.all('/api/v1/messages/:path', async (req, res) => {
 	const serverPath = getServiceUrl(req, 'MESSAGE-SERVICE');
 	if (!serverPath) return res.status(502).send('SERVICE UNREACHABLE');
-	return Proxy(serverPath, req, res);
+	return Proxy(serverPath, req, res)
+		.then(result => result)
+		.catch(err => res.status(500).send(err.message));;
 });
 app.all('/api/v1/messages/', async (req, res) => {
 	const serverPath = getServiceUrl(req, 'MESSAGE-SERVICE');
 	if (!serverPath) return res.status(502).send('SERVICE UNREACHABLE');
-	return Proxy(serverPath, req, res);
+	return Proxy(serverPath, req, res)
+		.then(result => result)
+		.catch(err => res.status(500).send(err.message));;
 });
 const server = new Server(app);
 

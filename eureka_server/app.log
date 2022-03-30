@@ -505,3 +505,99 @@
 2022-03-30 14:40:39.118  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
 2022-03-30 14:41:39.120  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
 2022-03-30 14:42:39.119  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-30 14:43:00.651  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-30 14:43:39.119  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-30 15:15:28.527  INFO 19000 --- [main] c.w.e.EurekaServerApplication            : Starting EurekaServerApplication using Java 17 on DESKTOP-HB7E3FD with PID 19000 (C:\Users\user\Desktop\code\whatsapp-clone-microservices\eureka_server\target\classes started by user in C:\Users\user\Desktop\code\whatsapp-clone-microservices\eureka_server)
+2022-03-30 15:15:28.616  INFO 19000 --- [main] c.w.e.EurekaServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-03-30 15:15:42.129  INFO 19000 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=25eda9e0-56ef-3976-b92e-b1826873253f
+2022-03-30 15:15:48.449  INFO 19000 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
+2022-03-30 15:15:48.681  INFO 19000 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-03-30 15:15:48.873  INFO 19000 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-03-30 15:15:51.983  INFO 19000 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-03-30 15:15:51.992  INFO 19000 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 22109 ms
+2022-03-30 15:15:56.234  INFO 19000 --- [main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.4 05/24/2017 03:20 PM'
+2022-03-30 15:15:56.711  INFO 19000 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-03-30 15:15:56.723  INFO 19000 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-03-30 15:16:00.753  INFO 19000 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-03-30 15:16:00.790  INFO 19000 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-03-30 15:16:13.212  INFO 19000 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2022-03-30 15:16:14.147  WARN 19000 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-03-30 15:16:14.375  INFO 19000 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-03-30 15:16:14.623  INFO 19000 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-03-30 15:16:14.638  INFO 19000 --- [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2022-03-30 15:16:14.800  INFO 19000 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648642574791 with initial instances count: 0
+2022-03-30 15:16:15.235  INFO 19000 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2022-03-30 15:16:15.278  INFO 19000 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2022-03-30 15:16:16.708  INFO 19000 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-03-30 15:16:16.712  INFO 19000 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-03-30 15:16:16.714  INFO 19000 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-03-30 15:16:16.717  INFO 19000 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-03-30 15:16:17.970  INFO 19000 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2022-03-30 15:16:18.164  INFO 19000 --- [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2022-03-30 15:16:18.235  INFO 19000 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2022-03-30 15:16:18.283  INFO 19000 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-03-30 15:16:18.436  INFO 19000 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+2022-03-30 15:16:18.451  INFO 19000 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
+2022-03-30 15:16:18.497  INFO 19000 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2022-03-30 15:16:18.506  INFO 19000 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2022-03-30 15:16:18.525  INFO 19000 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2022-03-30 15:16:18.529  INFO 19000 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2022-03-30 15:16:18.535  INFO 19000 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2022-03-30 15:16:18.571  INFO 19000 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8761 (http) with context path ''
+2022-03-30 15:16:18.578  INFO 19000 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2022-03-30 15:16:18.764  INFO 19000 --- [Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2022-03-30 15:16:19.159  INFO 19000 --- [main] c.w.e.EurekaServerApplication            : Started EurekaServerApplication in 59.248 seconds (JVM running for 67.049)
+2022-03-30 15:16:47.770  INFO 19000 --- [http-nio-8761-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-03-30 15:16:47.773  INFO 19000 --- [http-nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-03-30 15:16:47.796  INFO 19000 --- [http-nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
+2022-03-30 15:16:47.957  WARN 19000 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: CONFIG-SERVER - host.docker.internal:CONFIG-SERVER:8085
+2022-03-30 15:16:47.961  WARN 19000 --- [http-nio-8761-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Renew): CONFIG-SERVER - host.docker.internal:CONFIG-SERVER:8085
+2022-03-30 15:16:48.420  INFO 19000 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085 with status UP (replication=false)
+2022-03-30 15:16:48.421  INFO 19000 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085 with status UP (replication=false)
+2022-03-30 15:16:49.378  WARN 19000 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : There is an existing lease and the existing lease's dirty timestamp 1648642608079 is greater than the one that is being registered 1648642577434
+2022-03-30 15:16:49.383  WARN 19000 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Using the existing instanceInfo instead of the new instanceInfo as the registrant
+2022-03-30 15:16:49.386  INFO 19000 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085 with status UP (replication=true)
+2022-03-30 15:17:18.596  INFO 19000 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-30 15:17:25.461  WARN 19000 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-30 15:18:08.639  INFO 19000 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-03-30 15:18:09.160  INFO 19000 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-03-30 15:18:18.597  INFO 19000 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-30 15:18:30.077  WARN 19000 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-30 15:19:10.302  INFO 19000 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-03-30 15:19:10.807  INFO 19000 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-03-30 15:19:18.597  INFO 19000 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-30 15:19:30.079  WARN 19000 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-30 15:20:02.927  INFO 19000 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-03-30 15:20:03.451  INFO 19000 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-03-30 15:20:18.597  INFO 19000 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-30 15:20:30.079  WARN 19000 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-30 15:20:30.205  INFO 19000 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-03-30 15:20:30.726  INFO 19000 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-03-30 15:20:31.716  INFO 19000 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-03-30 15:20:32.232  INFO 19000 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-03-30 15:21:00.080  WARN 19000 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-30 15:21:11.361  INFO 19000 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-03-30 15:21:11.871  INFO 19000 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-03-30 15:21:18.597  INFO 19000 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-30 15:21:30.080  WARN 19000 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-30 15:21:39.721  INFO 19000 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-03-30 15:21:40.232  INFO 19000 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-03-30 15:21:54.137  INFO 19000 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-03-30 15:21:54.647  INFO 19000 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-03-30 15:21:56.354  INFO 19000 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-03-30 15:21:56.858  INFO 19000 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-03-30 15:22:00.080  WARN 19000 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-30 15:22:00.724  INFO 19000 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-03-30 15:22:01.236  INFO 19000 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-03-30 15:22:05.373  INFO 19000 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-03-30 15:22:05.885  INFO 19000 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-03-30 15:22:15.237  INFO 19000 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-03-30 15:22:15.749  INFO 19000 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-03-30 15:22:18.598  INFO 19000 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-03-30 15:22:30.081  WARN 19000 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-03-30 15:22:34.235  INFO 19000 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-03-30 15:22:34.750  INFO 19000 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-03-30 15:22:38.862  INFO 19000 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-03-30 15:22:38.996  INFO 19000 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-03-30 15:22:41.557  INFO 19000 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-03-30 15:22:42.064  INFO 19000 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
