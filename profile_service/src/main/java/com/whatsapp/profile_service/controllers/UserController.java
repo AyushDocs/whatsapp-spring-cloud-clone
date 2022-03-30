@@ -1,5 +1,9 @@
 package com.whatsapp.profile_service.controllers;
 
+import java.util.Optional;
+
+import javax.servlet.http.HttpServletRequest;
+
 import com.whatsapp.profile_service.dto.UserDto;
 import com.whatsapp.profile_service.services.UserService;
 
@@ -29,23 +33,25 @@ public class UserController {
     @PostMapping("/signup")
     @PreFilter("hasRole('NONE')")
     public ResponseEntity<Void> signup(@RequestBody UserDto userDto) {
-        String jwt = userService.signup(userDto);
-        if (jwt == null)
-            return ResponseEntity.badRequest().build();
-        ResponseCookie cookie = ResponseCookie.from(jwtCookieName, jwt)
-                .httpOnly(true)
-                .maxAge(jwtCookieMaxAge)
+        String username=userDto.getUsername();
+        String email=userDto.getEmail();
+        String password=userDto.getPassword();
+        boolean successState=userService.signupAndReturnSuccessState(email,password,username);       
+        return ResponseEntity
+                .status(successState?
+                         HttpStatus.CREATED:
+                         HttpStatus.BAD_REQUEST)
                 .build();
-        return ResponseEntity.status(HttpStatus.CREATED).header(HttpHeaders.SET_COOKIE, cookie.toString()).build();
     }
 
     @PostMapping("/login")
     @PreFilter("hasRole('NONE')")
-    public ResponseEntity<Void> login(@RequestBody UserDto userDto) {
-        String jwt = userService.login(userDto);
-        if (jwt == null)
-            return ResponseEntity.badRequest().build();
-        ResponseCookie cookie = ResponseCookie.from(jwtCookieName, jwt)
+    public ResponseEntity<Void> login(@RequestBody UserDto userDto,HttpServletRequest request) {
+        String email = userDto.getEmail();
+        String password = userDto.getPassword();
+        Optional<String> jwtOpt =Optional.ofNullable(userService.generateToken(email,password,request.getRemoteAddr())) ;
+        if (jwtOpt.isEmpty()) return ResponseEntity.badRequest().build();
+        ResponseCookie cookie = ResponseCookie.from(jwtCookieName, jwtOpt.get())
                 .httpOnly(true)
                 .maxAge(jwtCookieMaxAge)
                 .build();
@@ -54,9 +60,4 @@ public class UserController {
                 .header(HttpHeaders.SET_COOKIE, cookie.toString())
                 .build();
     }
-
-    // String jwt = jwtUtils.generateToken(user);
-    // ResponseCookie cookie=ResponseCookie.from(JWT_COOKIE_NAME,
-    // jwt).httpOnly(true).maxAge(JWT_COOKIE_MAX_AGE).build();return
-    // ResponseEntity.ok().header(HttpHeaders.SET_COOKIE,cookie.toString()).build();
 }

@@ -1,6 +1,7 @@
 package com.whatsapp.profile_service.models;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -40,7 +41,8 @@ public class User{
     @LastModifiedDate()
     private LocalDate updatedAt;
     private String roles="NONE";
-
+    private LocalDateTime lastLoggedInAt;
+    
     public User(String username, String password, String email){
         this.name = username;
         this.password = password;

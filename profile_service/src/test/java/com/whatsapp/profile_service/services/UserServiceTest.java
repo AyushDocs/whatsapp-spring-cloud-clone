@@ -1,7 +1,9 @@
 package com.whatsapp.profile_service.services;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.never;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -11,7 +13,6 @@ import java.util.Optional;
 import com.whatsapp.profile_service.dto.UserDto;
 import com.whatsapp.profile_service.models.User;
 import com.whatsapp.profile_service.repositories.UserRepository;
-import com.whatsapp.profile_service.services.UserService;
 import com.whatsapp.profile_service.utils.JwtUtils;
 
 import org.junit.jupiter.api.Test;
@@ -33,7 +34,7 @@ class UserServiceTest {
         when(passwordEncoder.matches("123456", "123456")).thenReturn(true);
         when(repository.findByEmail(userDto.getEmail())).thenReturn(Optional.of(user));
         when(jwtUtils.generateToken(user)).thenReturn("token");
-        String token=underTest.login(userDto);
+        String token=underTest.generateToken(userDto.getEmail(),userDto.getPassword(),"127.0.0.1");
         verify(repository).findByEmail(userDto.getEmail());
         assertEquals( "token",token);
     }
@@ -44,7 +45,7 @@ class UserServiceTest {
         when(passwordEncoder.matches("123456", "123456")).thenReturn(true);
         when(repository.findByEmail(userDto.getEmail())).thenReturn(Optional.of(user));
         when(jwtUtils.generateToken(user)).thenReturn("token");
-        String token=underTest.login(userDto);
+        String token= underTest.generateToken(userDto.getEmail(), userDto.getPassword(), "127.0.0.1");
         assertNull(token);
     }
     @Test
@@ -54,7 +55,7 @@ class UserServiceTest {
         when(passwordEncoder.matches("123456", "123456")).thenReturn(true);
         when(repository.findByEmail(userDto.getEmail())).thenReturn(Optional.of(user));
         when(jwtUtils.generateToken(user)).thenReturn("token");
-        String token=underTest.login(userDto);
+        String token= underTest.generateToken(userDto.getEmail(), userDto.getPassword(), "127.0.0.1");
         verify(repository,never()).findByEmail(userDto.getEmail());
         assertNull(token);
     }
@@ -65,11 +66,10 @@ class UserServiceTest {
         User user=new User("ayush", "123456", "ayush@gmail.com");
         when(passwordEncoder.encode("123456")).thenReturn("123456");
         when(repository.existsByEmail("ayush@gmail.com")).thenReturn(false);
-        when(jwtUtils.generateToken(user)).thenReturn("token");
-        String token=underTest.signup(userDto);
+        boolean success=underTest.signupAndReturnSuccessState(userDto.getEmail(), userDto.getPassword(),userDto.getUsername());
         verify(repository).existsByEmail("ayush@gmail.com");
         verify(repository).save(user);
-        assertEquals("token", token);
+        assertTrue(success);
     }
     
     @Test
@@ -79,8 +79,9 @@ class UserServiceTest {
         when(passwordEncoder.matches("123456", "123456")).thenReturn(true);
         when(repository.existsByEmail("ayush@gmail.com")).thenReturn(false);
         when(jwtUtils.generateToken(user)).thenReturn("token");
-        String token = underTest.signup(userDto);
-        assertNull(token);
+        boolean success = underTest.signupAndReturnSuccessState(userDto.getEmail(), userDto.getPassword(),
+                userDto.getUsername());
+        assertFalse(success);
     }
 
     @Test
@@ -90,9 +91,10 @@ class UserServiceTest {
         when(passwordEncoder.matches("123456", "123456")).thenReturn(true);
         when(repository.existsByEmail("ayush@gmail.com")).thenReturn(false);
         when(jwtUtils.generateToken(user)).thenReturn("token");
-        String token = underTest.signup(userDto);
+        boolean success = underTest.signupAndReturnSuccessState(userDto.getEmail(), userDto.getPassword(),
+                userDto.getUsername());
         verify(repository, never()).existsByEmail(userDto.getEmail());
-        assertNull(token);
+        assertFalse(success);
     }
     @Test
     void should_not_signup_invalid_similar_user_exists() {
@@ -101,8 +103,10 @@ class UserServiceTest {
         when(passwordEncoder.matches("123456", "123456")).thenReturn(true);
         when(repository.existsByEmail("ayush@gmail.com")).thenReturn(true);
         when(jwtUtils.generateToken(user)).thenReturn("token");
-        String token = underTest.signup(userDto);
+        boolean success = underTest.signupAndReturnSuccessState(userDto.getEmail(), userDto.getPassword(),
+                userDto.getUsername());
         verify(repository).existsByEmail(userDto.getEmail());
-        assertNull(token);
+        assertFalse(success);
+
     }
 }

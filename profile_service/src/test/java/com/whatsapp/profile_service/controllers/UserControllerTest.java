@@ -32,30 +32,16 @@ class UserControllerTest {
     @Test
     void should_signup_successfully() throws Exception {
         UserDto userDto = new UserDto("test", "test", "test@gmail.com");
-        when(userService.signup(userDto)).thenReturn("test");
+        when(userService.signupAndReturnSuccessState("test@gmail.com", "test", "test")).thenReturn(true);
         mockMvc.perform(post("/api/v1/users/signup")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(asJsonString(userDto)))
-                .andExpect(status().isCreated())
-                .andExpect(cookie().exists("token"))
-                .andExpect(cookie().value("token", "test"));
-    }
-
-    @Test
-    void should_not_signup_successfully_invalid_credentials() throws Exception {
-        UserDto userDto = new UserDto("test", "test", "test@gmail.com");
-        UserDto fake = new UserDto("fake", "fake", "fake@gmail.com");
-        when(userService.signup(userDto)).thenReturn("test");
-        mockMvc.perform(post("/api/v1/users/signup")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(asJsonString(fake)))
-                .andExpect(status().isBadRequest())
-                .andExpect(cookie().doesNotExist("token"));
+                .andExpect(status().isCreated());
     }
     @Test
     void should_login_successfully() throws Exception {
         UserDto userDto = new UserDto("test", "test", "test@gmail.com");
-        when(userService.login(userDto)).thenReturn("test");
+        when(userService.generateToken("test@gmail.com", "test","127.0.0.1")).thenReturn("test");
         mockMvc.perform(post("/api/v1/users/login")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(asJsonString(userDto)))
@@ -65,9 +51,8 @@ class UserControllerTest {
     }
     @Test
     void should_not_login_successfully() throws Exception {
-        UserDto userDto = new UserDto("test", "test", "test@gmail.com");
         UserDto fake = new UserDto("fake", "fake", "fake@gmail.com");
-        when(userService.login(userDto)).thenReturn("test");
+        when(userService.generateToken("test@gmail.com", "test","127.0.0.1")).thenReturn("test");
         mockMvc.perform(post("/api/v1/users/signup")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(asJsonString(fake)))

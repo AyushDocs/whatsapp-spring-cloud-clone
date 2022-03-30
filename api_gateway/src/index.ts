@@ -48,9 +48,13 @@ app.all('/api/v1/images/:path', async (req, res) => {
 	return res.json({data: response.data});
 });
 app.all('/api/v1/users/:path', async (req, res) => {
-	const serverPath = getServiceUrl(req, 'PROFILE-SERVICE');
-	if (!serverPath) return res.status(502).send('SERVICE UNREACHABLE');
-	return Proxy(serverPath, req, res);
+	try {
+		const serverPath = getServiceUrl(req, 'PROFILE-SERVICE');
+		if (!serverPath) return res.status(502).send('SERVICE UNREACHABLE');
+		return await  Proxy(serverPath, req, res);
+	} catch (error) {
+		return res.status(500).send(error);
+	}
 });
 app.all('/api/v1/messages/:path', async (req, res) => {
 	const serverPath = getServiceUrl(req, 'MESSAGE-SERVICE');

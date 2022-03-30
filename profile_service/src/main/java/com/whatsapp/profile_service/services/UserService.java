@@ -1,5 +1,8 @@
 package com.whatsapp.profile_service.services;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+
 import com.whatsapp.profile_service.dto.UserDto;
 import com.whatsapp.profile_service.exceptions.UserNotFoundException;
 import com.whatsapp.profile_service.models.User;
@@ -19,25 +22,53 @@ public class UserService {
     private final JwtUtils jwtUtils;
     private final PasswordEncoder passwordEncoder;
     private final EmailValidator emailValidator;
+    private final RateLimiterService rateLimiterService;
 
-    public String signup(UserDto userDto) {
-        if(!emailValidator.test(userDto.getEmail()))return null;
-        boolean userExists = repository.existsByEmail(userDto.getEmail());
-        if (userExists) return null;
-        User user = new User();
-        user.setEmail(userDto.getEmail());
-        user.setPassword(passwordEncoder.encode(userDto.getPassword()));
-        user.setName(userDto.getUsername());
-        repository.save(user);
+    public boolean signupAndReturnSuccessState(String email, String password, String username) {
+        if (!emailValidator.test(email)) return false;
+        boolean userExists = repository.existsByEmail(email);
+        if (userExists) return false;
+        saveUser(email, password, username);
+        return true;
+    }
+
+    
+    public String generateToken(String email, String password,String ip) {
+        if (!rateLimiterService.isEligibleForLogin(ip)) return null;
+        if (!emailValidator.test(email)) return null;
+        User user = fetchUser(email,ip);
+        boolean passwordMatches=checkIfPasswordsAreCorrect(user,password,ip);
+        if(!passwordMatches) return null;
+        updateLastLoggedInAtForUser(user);
         return jwtUtils.generateToken(user);
     }
 
-    public String login(UserDto userDto) {
-        if (!emailValidator.test(userDto.getEmail()))
-            return null;
+    private void saveUser(String email, String password, String username) {
+        LocalDate todayDate = LocalDate.now();
+        String encodedPassword=passwordEncoder.encode(password);
+        User user = new User(null, username, encodedPassword, email, todayDate,
+                todayDate, "NONE", LocalDateTime.now());
+        repository.save(user);
+    }
+    
+    private void updateLastLoggedInAtForUser(User user) {
+        user.setLastLoggedInAt(LocalDateTime.now());
+        repository.save(user);
+        rateLimiterService.clear(user.getEmail());
+    }
 
-        User user = repository.findByEmail(userDto.getEmail()).orElseThrow(UserNotFoundException::new);
-        if(!passwordEncoder.matches(userDto.getPassword(), user.getPassword())) return null;
-        return jwtUtils.generateToken(user);
+    private boolean checkIfPasswordsAreCorrect(User user, String rawPassword,String ip) {
+        boolean matches = passwordEncoder.matches(rawPassword, user.getPassword());
+        if (!matches) rateLimiterService.incrementTries(ip);
+        return matches;
+    }
+
+    private User fetchUser(String email,String ip) {
+        return repository
+        .findByEmail(email)
+        .orElseThrow(() -> {
+            rateLimiterService.incrementTries(ip);
+            return new UserNotFoundException();
+        });
     }
 }
