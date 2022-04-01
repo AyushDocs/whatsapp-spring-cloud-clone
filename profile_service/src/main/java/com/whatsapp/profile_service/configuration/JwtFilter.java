@@ -12,7 +12,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.whatsapp.profile_service.models.CustomUserDetails;
-import com.whatsapp.profile_service.models.User;
 import com.whatsapp.profile_service.utils.JwtUtils;
 
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -32,7 +31,7 @@ public class JwtFilter extends OncePerRequestFilter {
         protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
                         FilterChain filterChain) throws ServletException, IOException {
                 Optional.ofNullable(request.getCookies())
-                                .ifPresentOrElse(cookies -> {
+                                .ifPresentOrElse(cookies -> 
                                         Arrays.stream(cookies)
                                                         .filter(i -> i.getName().equals("token"))
                                                         .findFirst()
@@ -42,8 +41,8 @@ public class JwtFilter extends OncePerRequestFilter {
                                                                 else
                                                                         createdBaseUser(request);
                                                         },
-                                                                        () -> createdBaseUser(request));
-                                }, () -> createdBaseUser(request));
+                                                                        () -> createdBaseUser(request))
+                        , () -> createdBaseUser(request));
                 filterChain.doFilter(request, response);
         }
 

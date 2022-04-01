@@ -1,603 +1,315 @@
-2022-03-30 12:00:33.921  INFO 19684 --- [main] c.w.e.EurekaServerApplication            : Starting EurekaServerApplication using Java 17 on DESKTOP-HB7E3FD with PID 19684 (C:\Users\user\Desktop\code\whatsapp-clone-microservices\eureka_server\target\classes started by user in C:\Users\user\Desktop\code\whatsapp-clone-microservices\eureka_server)
-2022-03-30 12:00:33.932  INFO 19684 --- [main] c.w.e.EurekaServerApplication            : No active profile set, falling back to 1 default profile: "default"
-2022-03-30 12:00:35.409  INFO 19684 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=25eda9e0-56ef-3976-b92e-b1826873253f
-2022-03-30 12:00:35.836  INFO 19684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
-2022-03-30 12:00:35.848  INFO 19684 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-30 12:00:35.851  INFO 19684 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-03-30 12:00:36.041  INFO 19684 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-30 12:00:36.042  INFO 19684 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1997 ms
-2022-03-30 12:00:36.593  INFO 19684 --- [main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.4 05/24/2017 03:20 PM'
-2022-03-30 12:00:36.687  INFO 19684 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2022-03-30 12:00:36.689  INFO 19684 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2022-03-30 12:00:36.972  INFO 19684 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2022-03-30 12:00:36.973  INFO 19684 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2022-03-30 12:00:38.206  INFO 19684 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
-2022-03-30 12:00:38.275  WARN 19684 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-03-30 12:00:38.295  INFO 19684 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2022-03-30 12:00:38.330  INFO 19684 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2022-03-30 12:00:38.331  INFO 19684 --- [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
-2022-03-30 12:00:38.350  INFO 19684 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648630838348 with initial instances count: 0
-2022-03-30 12:00:38.392  INFO 19684 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
-2022-03-30 12:00:38.396  INFO 19684 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
-2022-03-30 12:00:38.619  INFO 19684 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2022-03-30 12:00:38.620  INFO 19684 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2022-03-30 12:00:38.621  INFO 19684 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2022-03-30 12:00:38.622  INFO 19684 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2022-03-30 12:00:38.824  INFO 19684 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
-2022-03-30 12:00:38.861  INFO 19684 --- [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
-2022-03-30 12:00:38.872  INFO 19684 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
-2022-03-30 12:00:38.880  INFO 19684 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2022-03-30 12:00:38.908  INFO 19684 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
-2022-03-30 12:00:38.912  INFO 19684 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
-2022-03-30 12:00:38.923  INFO 19684 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
-2022-03-30 12:00:38.925  INFO 19684 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
-2022-03-30 12:00:38.925  INFO 19684 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
-2022-03-30 12:00:38.926  INFO 19684 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
-2022-03-30 12:00:38.927  INFO 19684 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
-2022-03-30 12:00:38.952  INFO 19684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8761 (http) with context path ''
-2022-03-30 12:00:38.954  INFO 19684 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
-2022-03-30 12:00:39.002  INFO 19684 --- [Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
-2022-03-30 12:00:39.085  INFO 19684 --- [main] c.w.e.EurekaServerApplication            : Started EurekaServerApplication in 5.93 seconds (JVM running for 6.456)
-2022-03-30 12:00:45.258  INFO 19684 --- [http-nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-30 12:00:45.259  INFO 19684 --- [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-03-30 12:00:45.262  INFO 19684 --- [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2022-03-30 12:00:45.375  INFO 19684 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 12:00:45.995  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 12:01:03.880  INFO 19684 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085 with status UP (replication=false)
-2022-03-30 12:01:04.395  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085 with status UP (replication=true)
-2022-03-30 12:01:15.365  WARN 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:01:23.522  INFO 19684 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 12:01:24.037  INFO 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 12:01:30.003  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:01:38.937  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:02:24.274  INFO 19684 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 12:02:24.782  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 12:02:28.698  INFO 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 12:02:29.204  WARN 19684 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:02:29.207  INFO 19684 --- [http-nio-8761-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:02:29.210  WARN 19684 --- [TaskBatchingWorker-target_localhost-17] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 12:02:29.211  WARN 19684 --- [TaskBatchingWorker-target_localhost-17] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 12:02:30.005  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:02:32.718  INFO 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 12:02:33.228  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 12:02:38.936  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:02:58.092  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 12:02:58.628  INFO 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 12:03:00.010  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:03:02.468  INFO 19684 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 12:03:03.031  WARN 19684 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:03:03.034  INFO 19684 --- [http-nio-8761-exec-9] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:03:03.055  WARN 19684 --- [TaskBatchingWorker-target_localhost-5] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 12:03:03.061  WARN 19684 --- [TaskBatchingWorker-target_localhost-5] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 12:03:30.016  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:03:30.183  INFO 19684 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 12:03:30.693  INFO 19684 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 12:03:36.842  INFO 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 12:03:37.355  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 12:03:38.941  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
-2022-03-30 12:03:41.155  INFO 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 12:03:41.661  WARN 19684 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:03:41.662  INFO 19684 --- [http-nio-8761-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:03:41.668  WARN 19684 --- [TaskBatchingWorker-target_localhost-14] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 12:03:41.676  WARN 19684 --- [TaskBatchingWorker-target_localhost-14] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 12:03:47.708  INFO 19684 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 12:03:48.218  INFO 19684 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 12:04:00.048  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:04:04.316  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 12:04:04.852  INFO 19684 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 12:04:09.836  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 12:04:10.543  WARN 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:04:10.561  INFO 19684 --- [http-nio-8761-exec-6] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:04:10.571  WARN 19684 --- [TaskBatchingWorker-target_localhost-5] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 12:04:10.574  WARN 19684 --- [TaskBatchingWorker-target_localhost-5] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 12:04:30.101  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:04:38.948  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
-2022-03-30 12:05:02.995  INFO 19684 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 12:05:03.593  INFO 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 12:05:12.954  INFO 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 12:05:13.538  INFO 19684 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 12:05:18.039  INFO 19684 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 12:05:18.583  WARN 19684 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:05:18.587  INFO 19684 --- [http-nio-8761-exec-10] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:05:18.622  WARN 19684 --- [TaskBatchingWorker-target_localhost-17] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 12:05:18.626  WARN 19684 --- [TaskBatchingWorker-target_localhost-17] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 12:05:26.418  INFO 19684 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 12:05:26.933  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 12:05:30.100  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:05:38.948  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:06:38.949  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2022-03-30 12:07:38.951  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2022-03-30 12:08:30.166  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:08:38.962  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
-2022-03-30 12:09:38.963  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:10:38.963  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:10:38.964  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Evicting 1 items (expired=1, evictionLimit=1)
-2022-03-30 12:10:38.965  WARN 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: expired lease for API-GATEWAY/localhost
-2022-03-30 12:10:38.966  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance API-GATEWAY/localhost (replication=false)
-2022-03-30 12:11:00.170  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:11:38.963  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:12:38.963  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:13:38.964  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:14:00.174  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:14:38.965  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:15:38.867  INFO 19684 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 5
-2022-03-30 12:15:38.965  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:16:38.965  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:17:00.178  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:17:38.966  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:18:38.967  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:19:38.968  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2022-03-30 12:20:00.181  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:20:38.970  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2022-03-30 12:21:38.971  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:22:38.972  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:23:00.186  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:23:38.972  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:24:38.973  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:25:38.973  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:26:00.190  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:26:31.514  INFO 19684 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 12:26:32.117  INFO 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 12:26:35.594  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 12:26:36.102  WARN 19684 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:26:36.103  INFO 19684 --- [http-nio-8761-exec-5] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:26:36.105  WARN 19684 --- [TaskBatchingWorker-target_localhost-5] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 12:26:36.106  WARN 19684 --- [TaskBatchingWorker-target_localhost-5] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 12:26:38.974  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2022-03-30 12:26:49.528  INFO 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 12:26:50.042  INFO 19684 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 12:26:51.187  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 12:26:51.696  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 12:26:55.457  INFO 19684 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 12:26:55.966  WARN 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:26:55.967  INFO 19684 --- [http-nio-8761-exec-6] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:26:55.968  WARN 19684 --- [TaskBatchingWorker-target_localhost-3] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 12:26:55.969  WARN 19684 --- [TaskBatchingWorker-target_localhost-3] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 12:26:58.841  INFO 19684 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 12:26:59.348  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 12:27:00.204  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:27:38.974  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:28:38.975  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:29:38.976  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:30:00.209  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:30:38.867  INFO 19684 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 5
-2022-03-30 12:30:38.977  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2022-03-30 12:31:38.977  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:32:38.977  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:33:00.210  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:33:38.978  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:34:38.978  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:35:38.978  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:36:00.215  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:36:38.979  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:37:38.979  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:38:38.980  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:39:00.218  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:39:38.981  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:40:38.981  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:41:38.982  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:42:00.223  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:42:38.982  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:43:38.983  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:44:38.983  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:45:00.226  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:45:38.867  INFO 19684 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 5
-2022-03-30 12:45:38.983  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:46:38.983  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:47:38.984  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:48:00.228  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:48:38.985  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2022-03-30 12:49:10.497  INFO 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 12:49:11.009  INFO 19684 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 12:49:30.230  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:49:38.986  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:50:05.612  INFO 19684 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 12:50:06.136  INFO 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 12:50:09.734  INFO 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 12:50:10.243  WARN 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:50:10.244  INFO 19684 --- [http-nio-8761-exec-7] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:50:10.246  WARN 19684 --- [TaskBatchingWorker-target_localhost-7] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 12:50:10.246  WARN 19684 --- [TaskBatchingWorker-target_localhost-7] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 12:50:14.251  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 12:50:14.763  INFO 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 12:50:15.432  INFO 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 12:50:15.937  INFO 19684 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 12:50:30.232  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:50:38.986  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:51:38.986  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:52:38.986  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:52:38.986  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Evicting 1 items (expired=1, evictionLimit=1)
-2022-03-30 12:52:38.987  WARN 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: expired lease for API-GATEWAY/localhost
-2022-03-30 12:52:38.988  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance API-GATEWAY/localhost (replication=false)
-2022-03-30 12:53:00.234  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:53:38.987  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:54:38.988  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:55:38.989  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2022-03-30 12:55:41.256  INFO 19684 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 12:55:41.764  INFO 19684 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 12:55:52.738  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 12:55:53.246  INFO 19684 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 12:55:54.557  INFO 19684 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 12:55:55.066  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 12:55:58.410  INFO 19684 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 12:55:58.917  WARN 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:55:58.918  INFO 19684 --- [http-nio-8761-exec-6] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 12:55:58.919  WARN 19684 --- [TaskBatchingWorker-target_localhost-4] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 12:55:58.920  WARN 19684 --- [TaskBatchingWorker-target_localhost-4] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 12:56:00.240  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:56:38.990  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:57:38.990  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:58:25.186  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 12:58:25.706  INFO 19684 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 12:58:30.241  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 12:58:38.991  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 12:59:38.992  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2022-03-30 12:59:44.711  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 12:59:45.214  INFO 19684 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 13:00:00.243  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:00:38.867  INFO 19684 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
-2022-03-30 13:00:38.992  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:01:12.566  INFO 19684 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 13:01:13.082  INFO 19684 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 13:01:23.788  INFO 19684 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 13:01:24.323  WARN 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 13:01:24.325  INFO 19684 --- [http-nio-8761-exec-3] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 13:01:24.328  WARN 19684 --- [TaskBatchingWorker-target_localhost-4] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 13:01:24.329  WARN 19684 --- [TaskBatchingWorker-target_localhost-4] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 13:01:30.391  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:01:38.993  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:02:38.993  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:03:02.666  INFO 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 13:03:03.178  INFO 19684 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 13:03:30.389  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:03:38.994  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:04:38.994  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:05:02.844  INFO 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 13:05:03.043  INFO 19684 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 13:05:03.052  WARN 19684 --- [TaskBatchingWorker-target_localhost-6] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Heartbeat@localhost failed with response code 409
-2022-03-30 13:05:03.057  WARN 19684 --- [TaskBatchingWorker-target_localhost-6] c.netflix.eureka.cluster.PeerEurekaNode  : Peer wants us to take the instance information from it, since the timestamp differs,Id : host.docker.internal:PROFILE-SERVICE:8083 My Timestamp : 1648634582521, Peer's timestamp: 1648634702832
-2022-03-30 13:05:03.059  INFO 19684 --- [TaskBatchingWorker-target_localhost-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 13:05:06.448  INFO 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 13:05:06.957  WARN 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 13:05:06.958  INFO 19684 --- [http-nio-8761-exec-6] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 13:05:06.965  WARN 19684 --- [TaskBatchingWorker-target_localhost-6] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 13:05:06.966  WARN 19684 --- [TaskBatchingWorker-target_localhost-6] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 13:05:12.484  INFO 19684 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 13:05:12.993  INFO 19684 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 13:05:30.390  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:05:38.995  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:05:38.995  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Evicting 1 items (expired=1, evictionLimit=1)
-2022-03-30 13:05:38.996  WARN 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: expired lease for API-GATEWAY/localhost
-2022-03-30 13:05:38.997  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance API-GATEWAY/localhost (replication=false)
-2022-03-30 13:05:49.749  INFO 19684 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 13:05:50.281  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 13:05:54.473  INFO 19684 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 13:05:55.031  WARN 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 13:05:55.036  INFO 19684 --- [http-nio-8761-exec-4] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 13:05:55.041  WARN 19684 --- [TaskBatchingWorker-target_localhost-15] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 13:05:55.046  WARN 19684 --- [TaskBatchingWorker-target_localhost-15] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 13:06:00.416  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:06:37.661  INFO 19684 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 13:06:38.172  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 13:06:38.995  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:06:39.008  INFO 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 13:06:39.519  INFO 19684 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 13:06:43.247  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 13:06:43.752  WARN 19684 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 13:06:43.753  INFO 19684 --- [http-nio-8761-exec-1] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 13:06:43.754  WARN 19684 --- [TaskBatchingWorker-target_localhost-3] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 13:06:43.756  WARN 19684 --- [TaskBatchingWorker-target_localhost-3] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 13:06:48.088  INFO 19684 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 13:06:48.599  INFO 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 13:06:52.402  INFO 19684 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 13:06:52.907  WARN 19684 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 13:06:52.908  INFO 19684 --- [http-nio-8761-exec-10] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 13:06:52.910  WARN 19684 --- [TaskBatchingWorker-target_localhost-16] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 13:06:52.911  WARN 19684 --- [TaskBatchingWorker-target_localhost-16] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 13:07:00.415  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:07:38.996  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:07:40.433  INFO 19684 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 13:07:40.945  INFO 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 13:08:00.416  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:08:09.287  INFO 19684 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 13:08:09.798  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 13:08:12.610  INFO 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 13:08:13.119  WARN 19684 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 13:08:13.119  INFO 19684 --- [http-nio-8761-exec-9] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 13:08:13.120  WARN 19684 --- [TaskBatchingWorker-target_localhost-10] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 13:08:13.121  WARN 19684 --- [TaskBatchingWorker-target_localhost-10] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 13:08:30.418  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:08:38.997  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2022-03-30 13:08:50.273  INFO 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 13:08:50.819  INFO 19684 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 13:09:00.420  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:09:00.975  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 13:09:01.482  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 13:09:30.417  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:09:38.998  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:10:39.000  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2022-03-30 13:10:55.682  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 13:10:56.188  INFO 19684 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 13:10:59.600  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 13:11:00.105  WARN 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 13:11:00.106  INFO 19684 --- [http-nio-8761-exec-6] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 13:11:00.107  WARN 19684 --- [TaskBatchingWorker-target_localhost-19] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 13:11:00.108  WARN 19684 --- [TaskBatchingWorker-target_localhost-19] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 13:11:00.420  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:11:04.943  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 13:11:05.457  INFO 19684 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 13:11:30.419  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:11:39.000  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:11:53.367  INFO 19684 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 13:11:53.874  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 13:12:00.420  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:12:20.004  INFO 19684 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 13:12:20.517  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 13:12:30.420  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:12:39.000  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:13:39.001  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2022-03-30 13:14:39.002  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:15:30.425  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:15:38.868  INFO 19684 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
-2022-03-30 13:15:39.002  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:16:39.003  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:17:39.004  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:18:30.427  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:18:39.004  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:19:39.005  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:20:39.005  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:21:30.430  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:21:39.005  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:22:39.006  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:23:39.006  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:24:30.434  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:24:39.007  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:25:39.008  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2022-03-30 13:26:39.009  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:27:30.438  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:27:39.009  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:28:39.010  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:29:39.011  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2022-03-30 13:30:30.441  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:30:38.868  INFO 19684 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
-2022-03-30 13:30:39.012  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:31:39.013  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:32:39.013  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:33:30.447  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:33:39.014  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:34:39.015  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:35:39.016  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:36:30.462  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:36:39.020  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
-2022-03-30 13:37:39.021  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:38:39.021  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:39:30.465  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:39:39.022  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:40:39.022  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:41:39.022  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:42:30.475  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:42:39.027  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
-2022-03-30 13:43:39.028  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:44:39.041  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 13ms
-2022-03-30 13:45:30.504  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:45:38.868  INFO 19684 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
-2022-03-30 13:45:39.044  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2022-03-30 13:46:39.045  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:47:39.054  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
-2022-03-30 13:48:30.522  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:48:39.054  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:49:39.054  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:50:39.055  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:51:30.535  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:51:39.065  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
-2022-03-30 13:52:39.066  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:53:39.066  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:54:30.537  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:54:39.067  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2022-03-30 13:55:39.067  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:56:39.077  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
-2022-03-30 13:57:30.554  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 13:57:39.078  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:58:39.078  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 13:59:39.079  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:00:30.562  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:00:38.869  INFO 19684 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
-2022-03-30 14:00:39.079  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:01:39.080  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:02:39.080  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:03:30.567  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:03:39.080  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:04:39.080  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:05:39.081  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:06:39.082  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2022-03-30 14:07:00.566  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:07:39.082  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:08:39.082  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:09:39.082  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:10:00.569  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:10:39.082  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:11:39.082  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:12:39.083  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:13:30.573  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:13:39.083  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:14:39.084  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2022-03-30 14:15:38.870  INFO 19684 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
-2022-03-30 14:15:39.084  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:16:30.575  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:16:39.085  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:17:39.085  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:18:39.086  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:19:30.579  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:19:39.086  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:20:39.087  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:21:39.087  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:22:30.582  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:22:39.088  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:23:39.088  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:24:39.088  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:25:30.585  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:25:39.088  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:25:49.942  INFO 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 14:25:50.446  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 14:25:54.228  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 14:25:54.740  WARN 19684 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 14:25:54.741  INFO 19684 --- [http-nio-8761-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 14:25:54.743  WARN 19684 --- [TaskBatchingWorker-target_localhost-9] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 14:25:54.744  WARN 19684 --- [TaskBatchingWorker-target_localhost-9] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 14:26:00.586  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:26:39.089  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2022-03-30 14:26:48.341  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 14:26:48.855  INFO 19684 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 14:27:00.590  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:27:39.090  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:28:37.147  INFO 19684 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
-2022-03-30 14:28:37.655  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 14:28:39.090  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:28:48.502  INFO 19684 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
-2022-03-30 14:28:48.674  WARN 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 14:28:48.674  WARN 19684 --- [http-nio-8761-exec-4] c.n.eureka.resources.InstanceResource    : Not Found (Renew): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 14:28:48.675  WARN 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 14:28:48.676  INFO 19684 --- [http-nio-8761-exec-4] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
-2022-03-30 14:28:48.677  WARN 19684 --- [TaskBatchingWorker-target_localhost-5] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Heartbeat@localhost failed with response code 404
-2022-03-30 14:28:48.677  WARN 19684 --- [TaskBatchingWorker-target_localhost-5] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Heartbeat@localhost: missing entry.
-2022-03-30 14:28:48.678  WARN 19684 --- [TaskBatchingWorker-target_localhost-5] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Heartbeat@localhost: cannot find instance id host.docker.internal:PROFILE-SERVICE:8083 and hence replicating the instance with status DOWN
-2022-03-30 14:28:48.679  WARN 19684 --- [TaskBatchingWorker-target_localhost-5] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
-2022-03-30 14:28:48.679  WARN 19684 --- [TaskBatchingWorker-target_localhost-5] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
-2022-03-30 14:28:49.183  INFO 19684 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
-2022-03-30 14:29:00.590  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:29:21.281  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 14:29:21.821  INFO 19684 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 14:29:30.592  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:29:32.066  INFO 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 14:29:32.574  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 14:29:39.090  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:30:00.593  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:30:38.870  INFO 19684 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
-2022-03-30 14:30:39.091  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:31:39.092  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:31:59.107  INFO 19684 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 14:31:59.615  INFO 19684 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 14:32:00.595  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:32:39.107  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
-2022-03-30 14:33:39.108  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:33:39.108  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Evicting 1 items (expired=1, evictionLimit=1)
-2022-03-30 14:33:39.108  WARN 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: expired lease for API-GATEWAY/localhost
-2022-03-30 14:33:39.109  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance API-GATEWAY/localhost (replication=false)
-2022-03-30 14:34:00.605  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:34:39.108  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:35:39.109  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:36:39.110  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:37:00.629  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:37:39.110  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:38:23.022  INFO 19684 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 14:38:23.529  INFO 19684 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 14:38:24.736  INFO 19684 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 14:38:25.252  INFO 19684 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 14:38:30.644  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:38:39.117  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
-2022-03-30 14:38:46.859  INFO 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 14:38:47.370  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 14:39:00.646  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:39:17.698  INFO 19684 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 14:39:18.210  INFO 19684 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 14:39:30.650  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:39:39.117  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:40:39.118  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2022-03-30 14:41:39.120  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:42:39.119  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 14:43:00.651  WARN 19684 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 14:43:39.119  INFO 19684 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 15:15:28.527  INFO 19000 --- [main] c.w.e.EurekaServerApplication            : Starting EurekaServerApplication using Java 17 on DESKTOP-HB7E3FD with PID 19000 (C:\Users\user\Desktop\code\whatsapp-clone-microservices\eureka_server\target\classes started by user in C:\Users\user\Desktop\code\whatsapp-clone-microservices\eureka_server)
-2022-03-30 15:15:28.616  INFO 19000 --- [main] c.w.e.EurekaServerApplication            : No active profile set, falling back to 1 default profile: "default"
-2022-03-30 15:15:42.129  INFO 19000 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=25eda9e0-56ef-3976-b92e-b1826873253f
-2022-03-30 15:15:48.449  INFO 19000 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
-2022-03-30 15:15:48.681  INFO 19000 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-03-30 15:15:48.873  INFO 19000 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
-2022-03-30 15:15:51.983  INFO 19000 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-03-30 15:15:51.992  INFO 19000 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 22109 ms
-2022-03-30 15:15:56.234  INFO 19000 --- [main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.4 05/24/2017 03:20 PM'
-2022-03-30 15:15:56.711  INFO 19000 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2022-03-30 15:15:56.723  INFO 19000 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2022-03-30 15:16:00.753  INFO 19000 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2022-03-30 15:16:00.790  INFO 19000 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2022-03-30 15:16:13.212  INFO 19000 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
-2022-03-30 15:16:14.147  WARN 19000 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2022-03-30 15:16:14.375  INFO 19000 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2022-03-30 15:16:14.623  INFO 19000 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2022-03-30 15:16:14.638  INFO 19000 --- [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
-2022-03-30 15:16:14.800  INFO 19000 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648642574791 with initial instances count: 0
-2022-03-30 15:16:15.235  INFO 19000 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
-2022-03-30 15:16:15.278  INFO 19000 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
-2022-03-30 15:16:16.708  INFO 19000 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2022-03-30 15:16:16.712  INFO 19000 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2022-03-30 15:16:16.714  INFO 19000 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2022-03-30 15:16:16.717  INFO 19000 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2022-03-30 15:16:17.970  INFO 19000 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
-2022-03-30 15:16:18.164  INFO 19000 --- [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
-2022-03-30 15:16:18.235  INFO 19000 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
-2022-03-30 15:16:18.283  INFO 19000 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
-2022-03-30 15:16:18.436  INFO 19000 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
-2022-03-30 15:16:18.451  INFO 19000 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
-2022-03-30 15:16:18.497  INFO 19000 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
-2022-03-30 15:16:18.506  INFO 19000 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
-2022-03-30 15:16:18.525  INFO 19000 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
-2022-03-30 15:16:18.529  INFO 19000 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
-2022-03-30 15:16:18.535  INFO 19000 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
-2022-03-30 15:16:18.571  INFO 19000 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8761 (http) with context path ''
-2022-03-30 15:16:18.578  INFO 19000 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
-2022-03-30 15:16:18.764  INFO 19000 --- [Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
-2022-03-30 15:16:19.159  INFO 19000 --- [main] c.w.e.EurekaServerApplication            : Started EurekaServerApplication in 59.248 seconds (JVM running for 67.049)
-2022-03-30 15:16:47.770  INFO 19000 --- [http-nio-8761-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-03-30 15:16:47.773  INFO 19000 --- [http-nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-03-30 15:16:47.796  INFO 19000 --- [http-nio-8761-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2022-03-30 15:16:47.957  WARN 19000 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: CONFIG-SERVER - host.docker.internal:CONFIG-SERVER:8085
-2022-03-30 15:16:47.961  WARN 19000 --- [http-nio-8761-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Renew): CONFIG-SERVER - host.docker.internal:CONFIG-SERVER:8085
-2022-03-30 15:16:48.420  INFO 19000 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085 with status UP (replication=false)
-2022-03-30 15:16:48.421  INFO 19000 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085 with status UP (replication=false)
-2022-03-30 15:16:49.378  WARN 19000 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : There is an existing lease and the existing lease's dirty timestamp 1648642608079 is greater than the one that is being registered 1648642577434
-2022-03-30 15:16:49.383  WARN 19000 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Using the existing instanceInfo instead of the new instanceInfo as the registrant
-2022-03-30 15:16:49.386  INFO 19000 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085 with status UP (replication=true)
-2022-03-30 15:17:18.596  INFO 19000 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 15:17:25.461  WARN 19000 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 15:18:08.639  INFO 19000 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
-2022-03-30 15:18:09.160  INFO 19000 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
-2022-03-30 15:18:18.597  INFO 19000 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 15:18:30.077  WARN 19000 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 15:19:10.302  INFO 19000 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 15:19:10.807  INFO 19000 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 15:19:18.597  INFO 19000 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 15:19:30.079  WARN 19000 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 15:20:02.927  INFO 19000 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 15:20:03.451  INFO 19000 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 15:20:18.597  INFO 19000 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 15:20:30.079  WARN 19000 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 15:20:30.205  INFO 19000 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 15:20:30.726  INFO 19000 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 15:20:31.716  INFO 19000 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 15:20:32.232  INFO 19000 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 15:21:00.080  WARN 19000 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 15:21:11.361  INFO 19000 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 15:21:11.871  INFO 19000 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 15:21:18.597  INFO 19000 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 15:21:30.080  WARN 19000 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 15:21:39.721  INFO 19000 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 15:21:40.232  INFO 19000 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 15:21:54.137  INFO 19000 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 15:21:54.647  INFO 19000 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 15:21:56.354  INFO 19000 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 15:21:56.858  INFO 19000 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 15:22:00.080  WARN 19000 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 15:22:00.724  INFO 19000 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 15:22:01.236  INFO 19000 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 15:22:05.373  INFO 19000 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 15:22:05.885  INFO 19000 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 15:22:15.237  INFO 19000 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 15:22:15.749  INFO 19000 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 15:22:18.598  INFO 19000 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2022-03-30 15:22:30.081  WARN 19000 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
-2022-03-30 15:22:34.235  INFO 19000 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 15:22:34.750  INFO 19000 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 15:22:38.862  INFO 19000 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 15:22:38.996  INFO 19000 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
-2022-03-30 15:22:41.557  INFO 19000 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
-2022-03-30 15:22:42.064  INFO 19000 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:16:57.924  INFO 31724 --- [main] c.w.e.EurekaServerApplication            : Starting EurekaServerApplication using Java 17 on DESKTOP-HB7E3FD with PID 31724 (C:\Users\user\Desktop\code\whatsapp-clone-microservices\eureka_server\target\classes started by user in C:\Users\user\Desktop\code\whatsapp-clone-microservices\eureka_server)
+2022-04-01 07:16:57.950  INFO 31724 --- [main] c.w.e.EurekaServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-04-01 07:17:01.038  INFO 31724 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=25eda9e0-56ef-3976-b92e-b1826873253f
+2022-04-01 07:17:01.841  INFO 31724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
+2022-04-01 07:17:01.861  INFO 31724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-01 07:17:01.863  INFO 31724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-01 07:17:02.244  INFO 31724 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-01 07:17:02.249  INFO 31724 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 4164 ms
+2022-04-01 07:17:03.219  INFO 31724 --- [main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.4 05/24/2017 03:20 PM'
+2022-04-01 07:17:03.343  INFO 31724 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-04-01 07:17:03.347  INFO 31724 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-04-01 07:17:03.780  INFO 31724 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-04-01 07:17:03.781  INFO 31724 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-04-01 07:17:05.867  INFO 31724 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2022-04-01 07:17:06.031  WARN 31724 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-04-01 07:17:06.085  INFO 31724 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-04-01 07:17:06.164  INFO 31724 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-04-01 07:17:06.166  INFO 31724 --- [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2022-04-01 07:17:06.185  INFO 31724 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648786626183 with initial instances count: 0
+2022-04-01 07:17:06.251  INFO 31724 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2022-04-01 07:17:06.255  INFO 31724 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2022-04-01 07:17:06.558  INFO 31724 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-04-01 07:17:06.559  INFO 31724 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-04-01 07:17:06.561  INFO 31724 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-04-01 07:17:06.562  INFO 31724 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-04-01 07:17:06.872  INFO 31724 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2022-04-01 07:17:06.934  INFO 31724 --- [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2022-04-01 07:17:06.949  INFO 31724 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2022-04-01 07:17:06.961  INFO 31724 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-01 07:17:07.004  INFO 31724 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+2022-04-01 07:17:07.009  INFO 31724 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
+2022-04-01 07:17:07.025  INFO 31724 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2022-04-01 07:17:07.026  INFO 31724 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2022-04-01 07:17:07.028  INFO 31724 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2022-04-01 07:17:07.028  INFO 31724 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2022-04-01 07:17:07.029  INFO 31724 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2022-04-01 07:17:07.058  INFO 31724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8761 (http) with context path ''
+2022-04-01 07:17:07.060  INFO 31724 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2022-04-01 07:17:07.122  INFO 31724 --- [Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2022-04-01 07:17:07.258  INFO 31724 --- [main] c.w.e.EurekaServerApplication            : Started EurekaServerApplication in 11.259 seconds (JVM running for 12.199)
+2022-04-01 07:17:09.473  INFO 31724 --- [http-nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-01 07:17:09.474  INFO 31724 --- [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-01 07:17:09.477  INFO 31724 --- [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2022-04-01 07:17:09.525  WARN 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:17:20.184  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 07:17:20.823  INFO 31724 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 07:17:30.001  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:17:34.325  WARN 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: CONFIG-SERVER - host.docker.internal:CONFIG-SERVER:8085
+2022-04-01 07:17:34.326  WARN 31724 --- [http-nio-8761-exec-7] c.n.eureka.resources.InstanceResource    : Not Found (Renew): CONFIG-SERVER - host.docker.internal:CONFIG-SERVER:8085
+2022-04-01 07:17:34.337  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085 with status UP (replication=false)
+2022-04-01 07:17:34.844  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/host.docker.internal:CONFIG-SERVER:8085 with status UP (replication=true)
+2022-04-01 07:18:00.002  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:18:07.033  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:19:07.033  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:20:07.040  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
+2022-04-01 07:20:07.518  INFO 31724 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:20:08.041  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:20:11.479  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:20:11.987  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:20:18.698  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:20:19.214  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:20:25.388  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:20:25.905  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:20:30.008  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:20:32.118  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:20:32.631  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:20:38.711  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:20:39.219  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:20:41.345  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:20:41.853  INFO 31724 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:20:50.948  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:20:51.461  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:21:00.008  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:21:07.041  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:21:07.243  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:21:07.749  INFO 31724 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:21:10.912  INFO 31724 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:21:11.426  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:21:16.811  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:21:17.326  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:21:19.172  INFO 31724 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:21:19.676  INFO 31724 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:21:21.400  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:21:21.904  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:21:23.547  INFO 31724 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:21:24.058  INFO 31724 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:21:28.847  INFO 31724 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:21:29.352  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:21:30.008  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:21:31.462  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:21:31.966  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:21:34.062  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:21:34.571  INFO 31724 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:21:39.269  INFO 31724 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:21:39.781  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:21:41.887  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:21:42.394  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:21:43.261  INFO 31724 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:21:43.773  INFO 31724 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:21:53.983  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:21:54.492  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:22:00.010  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:22:07.042  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:22:15.409  INFO 31724 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:22:15.944  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:22:30.014  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:23:07.042  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:23:08.048  INFO 31724 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:23:08.560  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:23:14.977  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:23:15.493  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:23:16.762  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:23:17.274  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:23:20.461  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:23:20.668  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:23:25.001  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:23:25.509  INFO 31724 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:23:27.202  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:23:27.712  INFO 31724 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:23:30.028  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:24:07.043  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:24:48.442  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:24:48.961  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:25:00.026  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:25:07.043  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:25:30.049  INFO 31724 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:25:30.560  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:25:51.701  INFO 31724 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:25:52.209  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:26:00.030  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:26:00.530  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:26:01.042  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:26:07.044  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:26:30.028  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:27:07.045  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:28:07.045  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:29:03.603  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:29:04.122  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:29:07.045  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:29:20.292  INFO 31724 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:29:20.782  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:29:30.053  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:30:07.046  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:31:01.947  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:31:02.458  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:31:07.061  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2022-04-01 07:31:30.070  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:32:06.935  INFO 31724 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2022-04-01 07:32:07.062  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:33:07.062  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:33:41.778  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:33:42.286  INFO 31724 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:33:47.107  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:33:47.614  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:33:59.455  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:33:59.959  INFO 31724 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:34:00.084  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:34:07.062  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:34:18.707  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:34:19.228  INFO 31724 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:34:30.091  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:34:31.759  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:34:32.272  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:34:41.990  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:34:42.501  INFO 31724 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:35:00.091  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:35:07.063  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-04-01 07:35:10.311  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:35:10.818  INFO 31724 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:35:12.267  INFO 31724 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:35:12.774  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:35:13.849  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:35:14.358  INFO 31724 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:35:15.657  INFO 31724 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:35:16.163  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:35:18.513  INFO 31724 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:35:19.019  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:35:30.092  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:35:31.374  INFO 31724 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:35:31.880  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:35:43.825  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:35:44.329  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:35:45.578  INFO 31724 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:35:46.089  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:35:50.167  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:35:50.677  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:35:58.289  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:35:58.804  INFO 31724 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:36:00.116  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:36:00.960  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:36:01.471  INFO 31724 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:36:07.064  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:36:08.175  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:36:08.688  INFO 31724 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:36:30.115  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:36:43.943  INFO 31724 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:36:44.454  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:37:00.115  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:37:07.065  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:38:02.686  INFO 31724 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:38:03.191  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:38:07.105  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 40ms
+2022-04-01 07:38:30.116  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:39:07.105  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:40:07.106  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:41:02.278  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 07:41:02.786  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 07:41:06.294  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 07:41:06.813  WARN 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:41:06.816  INFO 31724 --- [http-nio-8761-exec-1] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:41:06.852  WARN 31724 --- [TaskBatchingWorker-target_localhost-17] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 07:41:06.854  WARN 31724 --- [TaskBatchingWorker-target_localhost-17] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 07:41:07.130  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 24ms
+2022-04-01 07:41:18.942  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 07:41:19.454  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 07:41:23.244  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 07:41:23.346  INFO 31724 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 07:41:23.747  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 07:41:23.748  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=true)
+2022-04-01 07:41:27.483  WARN 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:41:27.484  INFO 31724 --- [http-nio-8761-exec-10] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:41:30.234  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:41:45.630  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 07:41:45.908  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 07:41:46.422  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 07:41:50.206  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 07:41:50.714  WARN 31724 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:41:50.715  INFO 31724 --- [http-nio-8761-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:41:50.716  WARN 31724 --- [TaskBatchingWorker-target_localhost-15] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 07:41:50.718  WARN 31724 --- [TaskBatchingWorker-target_localhost-15] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 07:42:00.250  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:42:01.431  INFO 31724 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 07:42:01.937  INFO 31724 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 07:42:05.742  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 07:42:06.254  WARN 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:42:06.256  INFO 31724 --- [http-nio-8761-exec-8] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:42:06.260  WARN 31724 --- [TaskBatchingWorker-target_localhost-12] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 07:42:06.262  WARN 31724 --- [TaskBatchingWorker-target_localhost-12] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 07:42:07.141  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 11ms
+2022-04-01 07:42:30.264  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:42:32.882  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 07:42:33.303  INFO 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 07:42:35.359  INFO 31724 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 07:42:35.681  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 07:42:40.109  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 07:42:40.731  WARN 31724 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:42:40.735  INFO 31724 --- [http-nio-8761-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:42:40.737  WARN 31724 --- [TaskBatchingWorker-target_localhost-19] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 07:42:40.738  WARN 31724 --- [TaskBatchingWorker-target_localhost-19] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 07:42:46.764  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 07:42:46.773  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 07:42:46.845  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 07:42:47.355  INFO 31724 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 07:42:51.011  INFO 31724 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 07:42:51.365  WARN 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:42:51.366  INFO 31724 --- [http-nio-8761-exec-7] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:42:51.517  WARN 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:42:51.517  INFO 31724 --- [http-nio-8761-exec-9] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:42:51.519  WARN 31724 --- [TaskBatchingWorker-target_localhost-12] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 07:42:51.520  WARN 31724 --- [TaskBatchingWorker-target_localhost-12] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 07:43:00.262  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:43:07.143  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:43:16.695  WARN 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:43:16.696  WARN 31724 --- [http-nio-8761-exec-7] c.n.eureka.resources.InstanceResource    : Not Found (Renew): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:43:16.702  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 07:43:17.211  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 07:43:30.263  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:43:51.644  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 07:43:52.157  INFO 31724 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 07:43:55.924  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 07:43:56.210  INFO 31724 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 07:43:56.440  INFO 31724 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=true)
+2022-04-01 07:43:56.442  INFO 31724 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 07:43:57.652  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 07:43:58.165  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 07:44:00.267  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:44:00.833  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 07:44:01.381  WARN 31724 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:44:01.383  INFO 31724 --- [http-nio-8761-exec-6] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:44:01.385  WARN 31724 --- [TaskBatchingWorker-target_localhost-18] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 07:44:01.391  WARN 31724 --- [TaskBatchingWorker-target_localhost-18] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 07:44:03.659  WARN 31724 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:44:03.661  INFO 31724 --- [http-nio-8761-exec-4] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:44:07.143  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-04-01 07:44:18.089  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance UNKNOWN/host.docker.internal with status UP (replication=false)
+2022-04-01 07:44:18.451  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance UNKNOWN/host.docker.internal with status UP (replication=false)
+2022-04-01 07:44:18.973  INFO 31724 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance UNKNOWN/host.docker.internal with status UP (replication=true)
+2022-04-01 07:44:19.401  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 07:44:19.439  INFO 31724 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 07:44:19.937  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 07:44:20.452  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 07:44:22.702  INFO 31724 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance UNKNOWN/host.docker.internal (replication=false)
+2022-04-01 07:44:23.206  WARN 31724 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/host.docker.internal
+2022-04-01 07:44:23.207  INFO 31724 --- [http-nio-8761-exec-6] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): UNKNOWN - host.docker.internal
+2022-04-01 07:44:23.208  WARN 31724 --- [TaskBatchingWorker-target_localhost-17] c.n.eureka.cluster.ReplicationTask       : The replication of task UNKNOWN/host.docker.internal:Cancel@localhost failed with response code 404
+2022-04-01 07:44:23.209  WARN 31724 --- [TaskBatchingWorker-target_localhost-17] c.netflix.eureka.cluster.PeerEurekaNode  : UNKNOWN/host.docker.internal:Cancel@localhost: missing entry.
+2022-04-01 07:44:23.689  INFO 31724 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 07:44:24.162  WARN 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:44:24.163  INFO 31724 --- [http-nio-8761-exec-10] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:44:24.192  WARN 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:44:24.193  INFO 31724 --- [http-nio-8761-exec-3] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:44:24.195  WARN 31724 --- [TaskBatchingWorker-target_localhost-17] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 07:44:24.195  WARN 31724 --- [TaskBatchingWorker-target_localhost-17] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 07:44:30.273  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:44:47.236  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 07:44:47.747  INFO 31724 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 07:44:47.931  WARN 31724 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: UNKNOWN - host.docker.internal
+2022-04-01 07:44:47.933  WARN 31724 --- [http-nio-8761-exec-1] c.n.eureka.resources.InstanceResource    : Not Found (Renew): UNKNOWN - host.docker.internal
+2022-04-01 07:44:47.973  INFO 31724 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance UNKNOWN/host.docker.internal with status UP (replication=false)
+2022-04-01 07:44:48.487  INFO 31724 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance UNKNOWN/host.docker.internal with status UP (replication=true)
+2022-04-01 07:44:49.243  WARN 31724 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: lease doesn't exist, registering resource: PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:44:49.245  WARN 31724 --- [http-nio-8761-exec-4] c.n.eureka.resources.InstanceResource    : Not Found (Renew): PROFILE-SERVICE - host.docker.internal:PROFILE-SERVICE:8083
+2022-04-01 07:44:49.252  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 07:44:49.763  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 07:45:00.273  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1

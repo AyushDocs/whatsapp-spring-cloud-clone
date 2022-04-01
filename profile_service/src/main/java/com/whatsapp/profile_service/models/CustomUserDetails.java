@@ -1,7 +1,5 @@
 package com.whatsapp.profile_service.models;
 
-import java.time.LocalDateTime;
-import java.time.temporal.TemporalUnit;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -12,7 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class CustomUserDetails implements UserDetails {
-    private final User user;
+    private  final transient User user;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

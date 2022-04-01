@@ -7,6 +7,9 @@
 	margin: 0;
 	padding: 0;
 }
+html, body{
+	height: 100%;
+}
 :root {
 	--whatsapp-light-dark: #202c33;
 	--whatsapp-dark: rgb(17, 27, 33);

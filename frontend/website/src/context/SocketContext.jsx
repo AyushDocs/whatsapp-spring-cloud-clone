@@ -11,10 +11,8 @@ const SocketProvider = ({children}) => {
 	const [room, setRoom] = useState();
 
 	useEffect(() => {
-		console.log('socket opened')
-		setSocket(io('http://localhost:3001'));
+		setSocket(io('http://localhost:8078'));
 		return () => {
-			console.log('socket closed');
 			socket.close();
 		};
 	}, []);

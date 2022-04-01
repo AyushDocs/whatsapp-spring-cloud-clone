@@ -2,7 +2,6 @@ package com.whatsapp.message_service.models;
 
 import java.time.LocalDateTime;
 
-import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;

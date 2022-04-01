@@ -3,7 +3,6 @@ package com.whatsapp.profile_service.services;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-import com.whatsapp.profile_service.dto.UserDto;
 import com.whatsapp.profile_service.exceptions.UserNotFoundException;
 import com.whatsapp.profile_service.models.User;
 import com.whatsapp.profile_service.repositories.UserRepository;

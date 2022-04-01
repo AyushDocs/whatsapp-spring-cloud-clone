@@ -2,29 +2,18 @@
 
 import axios from 'axios';
 import {createContext, useState} from 'react';
-import {saveUser} from '../apiUrls';
-
 export const authContext = createContext();
-const getUser = () => {
-	const profileObj = JSON.parse(localStorage.getItem('user'));
-	if (!profileObj) return undefined;
-	if (profileObj.timeStamp > Date.now() + 1000 * 60 * 60 * 24) {
-		localStorage.removeItem('user');
-		return undefined;
-	}
-	return profileObj;
-};
+
 const AuthProvider = ({children}) => {
-	const [user, setUser] = useState(getUser());
-	const handleLoginSuccess = async googleData => {
-		const {email, imageUrl, name} = googleData.profileObj;
-		console.log(googleData);
-		const res = await axios.post(saveUser(), {email, photoUrl: imageUrl, displayName: name});
-		const _user = res.data.data;
-		setUser(_user);
-		localStorage.setItem('user', JSON.stringify({..._user, timeStamp: Date.now()}));
-		setTimeout(() => localStorage.removeItem('user'), 1000 * 60 * 60 * 24);
-	};
-	return <authContext.Provider value={{user, handleLoginSuccess, setUser: process.env.NODE_ENV !== 'production' && setUser}}>{children}</authContext.Provider>;
+	const [user, setUser] = useState();
+	const [jwt, setJwt] = useState()
+	const handleLoginSubmit=async(e,email,password)=>{
+		e.preventDefault();
+		const res=await axios.post('http://localhost:8078/api/v1/users/login',{email,password})
+		if(!res.status===200) return alert('Invalid Credentials')
+		setJwt(res.headers['set-cookie']['token'])
+		setUser({email})
+	}
+	return <authContext.Provider value={{user,handleLoginSubmit,jwt}}>{children}</authContext.Provider>;
 };
 export default AuthProvider;
