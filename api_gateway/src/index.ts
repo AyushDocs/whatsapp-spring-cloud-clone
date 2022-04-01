@@ -9,7 +9,7 @@ import {handleImageRequests, proxyRequest} from './service';
 import handleIo from './socket';
 import corsConfig from './socket/cors.config.json';
 import cookieParser from 'cookie-parser';
-import { corsMiddleware } from './middleware/cookieMiddleware';
+import { corsMiddleware } from './middleware/corsMiddleware';
 
 const port = process.env.PORT ? parseInt(process.env.PORT) : 8078;
 const app = express();

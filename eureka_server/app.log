@@ -318,3 +318,324 @@
 2022-04-01 07:47:06.935  INFO 31724 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 8
 2022-04-01 07:47:07.146  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
 2022-04-01 07:48:00.280  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:48:07.159  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2022-04-01 07:49:07.159  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:50:07.162  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2022-04-01 10:39:22.486  INFO 18260 --- [main] c.w.e.EurekaServerApplication            : Starting EurekaServerApplication using Java 17 on DESKTOP-HB7E3FD with PID 18260 (C:\Users\user\Desktop\code\whatsapp-clone-microservices\eureka_server\target\classes started by user in C:\Users\user\Desktop\code\whatsapp-clone-microservices\eureka_server)
+2022-04-01 10:39:22.492  INFO 18260 --- [main] c.w.e.EurekaServerApplication            : No active profile set, falling back to 1 default profile: "default"
+2022-04-01 10:39:23.439  INFO 18260 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=25eda9e0-56ef-3976-b92e-b1826873253f
+2022-04-01 10:39:23.772  INFO 18260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8761 (http)
+2022-04-01 10:39:23.782  INFO 18260 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-04-01 10:39:23.783  INFO 18260 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.60]
+2022-04-01 10:39:23.936  INFO 18260 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-04-01 10:39:23.937  INFO 18260 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1387 ms
+2022-04-01 10:39:24.345  INFO 18260 --- [main] c.s.j.s.i.a.WebApplicationImpl           : Initiating Jersey application, version 'Jersey: 1.19.4 05/24/2017 03:20 PM'
+2022-04-01 10:39:24.399  INFO 18260 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-04-01 10:39:24.401  INFO 18260 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-04-01 10:39:24.586  INFO 18260 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-04-01 10:39:24.587  INFO 18260 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-04-01 10:39:25.526  INFO 18260 --- [main] DiscoveryClientOptionalArgsConfiguration : Eureka HTTP Client uses Jersey
+2022-04-01 10:39:25.580  WARN 18260 --- [main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2022-04-01 10:39:25.599  INFO 18260 --- [main] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2022-04-01 10:39:25.632  INFO 18260 --- [main] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2022-04-01 10:39:25.633  INFO 18260 --- [main] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2022-04-01 10:39:25.648  INFO 18260 --- [main] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1648798765647 with initial instances count: 0
+2022-04-01 10:39:25.681  INFO 18260 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2022-04-01 10:39:25.684  INFO 18260 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:8761/eureka/]
+2022-04-01 10:39:25.852  INFO 18260 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2022-04-01 10:39:25.853  INFO 18260 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2022-04-01 10:39:25.853  INFO 18260 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2022-04-01 10:39:25.854  INFO 18260 --- [main] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2022-04-01 10:39:26.019  INFO 18260 --- [main] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:8761/eureka/
+2022-04-01 10:39:26.051  INFO 18260 --- [main] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2022-04-01 10:39:26.060  INFO 18260 --- [main] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2022-04-01 10:39:26.066  INFO 18260 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+2022-04-01 10:39:26.090  INFO 18260 --- [main] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application UNKNOWN with eureka with status UP
+2022-04-01 10:39:26.094  INFO 18260 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Setting the eureka configuration..
+2022-04-01 10:39:26.106  INFO 18260 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2022-04-01 10:39:26.107  INFO 18260 --- [Thread-9] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2022-04-01 10:39:26.108  INFO 18260 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2022-04-01 10:39:26.109  INFO 18260 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2022-04-01 10:39:26.110  INFO 18260 --- [Thread-9] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2022-04-01 10:39:26.126  INFO 18260 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8761 (http) with context path ''
+2022-04-01 10:39:26.128  INFO 18260 --- [main] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 8761
+2022-04-01 10:39:26.171  INFO 18260 --- [Thread-9] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2022-04-01 10:39:26.239  INFO 18260 --- [main] c.w.e.EurekaServerApplication            : Started EurekaServerApplication in 4.355 seconds (JVM running for 4.766)
+2022-04-01 10:40:07.365  INFO 18260 --- [http-nio-8761-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-04-01 10:40:07.366  INFO 18260 --- [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-04-01 10:40:07.368  INFO 18260 --- [http-nio-8761-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2022-04-01 10:40:07.601  INFO 18260 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/DESKTOP-HB7E3FD:CONFIG-SERVER:8085 with status UP (replication=false)
+2022-04-01 10:40:08.188  INFO 18260 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance CONFIG-SERVER/DESKTOP-HB7E3FD:CONFIG-SERVER:8085 with status UP (replication=true)
+2022-04-01 10:40:24.187  WARN 18260 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 10:40:26.112  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:40:31.723  INFO 18260 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 10:40:32.239  INFO 18260 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 10:41:00.021  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 10:41:26.113  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:41:32.952  INFO 18260 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 10:41:33.462  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 10:42:00.025  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 10:42:26.114  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:43:26.114  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:44:26.115  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:45:26.115  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:45:30.026  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 10:46:26.115  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:47:26.115  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:48:26.116  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:49:00.034  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 10:49:26.122  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
+2022-04-01 10:50:26.123  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:51:26.123  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:52:00.037  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 10:52:26.124  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:53:26.126  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2022-04-01 10:54:26.052  INFO 18260 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2022-04-01 10:54:26.126  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:55:00.050  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 10:55:26.127  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:56:26.127  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:57:26.127  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:58:00.054  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 10:58:26.128  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 10:59:26.129  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-04-01 11:00:26.129  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:01:00.061  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:01:26.130  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:02:26.130  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:03:26.130  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:04:00.070  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:04:26.131  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:04:36.368  INFO 18260 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 11:04:36.878  INFO 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 11:04:40.190  INFO 18260 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 11:04:40.704  WARN 18260 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:04:40.705  INFO 18260 --- [http-nio-8761-exec-8] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:04:40.707  WARN 18260 --- [TaskBatchingWorker-target_localhost-4] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 11:04:40.709  WARN 18260 --- [TaskBatchingWorker-target_localhost-4] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 11:04:44.237  INFO 18260 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 11:04:44.747  INFO 18260 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 11:05:00.068  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:05:22.449  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 11:05:23.079  INFO 18260 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 11:05:26.146  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
+2022-04-01 11:05:27.854  INFO 18260 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 11:05:28.505  WARN 18260 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:05:28.509  INFO 18260 --- [http-nio-8761-exec-6] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:05:28.516  WARN 18260 --- [TaskBatchingWorker-target_localhost-2] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 11:05:28.520  WARN 18260 --- [TaskBatchingWorker-target_localhost-2] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 11:05:30.080  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:06:01.516  INFO 18260 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 11:06:02.023  INFO 18260 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 11:06:12.434  INFO 18260 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:06:12.939  INFO 18260 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:06:26.146  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:06:30.079  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:07:26.147  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:08:26.148  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:09:26.052  INFO 18260 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2022-04-01 11:09:26.148  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:09:30.083  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:09:55.799  INFO 18260 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 11:09:56.310  INFO 18260 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 11:09:59.176  INFO 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 11:09:59.679  WARN 18260 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:09:59.682  INFO 18260 --- [http-nio-8761-exec-8] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:09:59.683  WARN 18260 --- [TaskBatchingWorker-target_localhost-16] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 11:09:59.684  WARN 18260 --- [TaskBatchingWorker-target_localhost-16] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 11:10:00.084  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:10:26.149  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:10:33.674  INFO 18260 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 11:10:34.181  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 11:11:00.085  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:11:20.560  INFO 18260 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:11:21.073  INFO 18260 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:11:26.150  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:11:30.084  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:12:26.150  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:13:26.151  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:14:26.154  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2022-04-01 11:14:26.639  INFO 18260 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 11:14:27.155  INFO 18260 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 11:14:30.088  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:14:34.759  INFO 18260 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 11:14:35.265  WARN 18260 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:14:35.269  INFO 18260 --- [http-nio-8761-exec-7] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:14:35.273  WARN 18260 --- [TaskBatchingWorker-target_localhost-13] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 11:14:35.274  WARN 18260 --- [TaskBatchingWorker-target_localhost-13] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 11:14:40.232  INFO 18260 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 11:14:40.709  INFO 18260 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 11:14:41.221  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 11:14:44.999  INFO 18260 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 11:14:45.514  WARN 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:14:45.515  INFO 18260 --- [http-nio-8761-exec-1] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:14:45.517  WARN 18260 --- [TaskBatchingWorker-target_localhost-16] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 11:14:45.519  WARN 18260 --- [TaskBatchingWorker-target_localhost-16] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 11:14:50.415  INFO 18260 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 11:14:50.921  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 11:15:00.088  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:15:06.631  INFO 18260 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:15:07.139  INFO 18260 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:15:26.154  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:15:30.090  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:16:26.155  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:17:26.155  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:18:26.155  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:18:30.092  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:19:26.156  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:19:30.177  INFO 18260 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 11:19:30.689  INFO 18260 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 11:19:33.482  INFO 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 11:19:33.995  WARN 18260 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:19:33.997  INFO 18260 --- [http-nio-8761-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:19:33.998  WARN 18260 --- [TaskBatchingWorker-target_localhost-8] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 11:19:33.999  WARN 18260 --- [TaskBatchingWorker-target_localhost-8] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 11:19:38.412  INFO 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 11:19:38.920  INFO 18260 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 11:20:00.095  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:20:26.156  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:21:26.157  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:22:26.157  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:23:00.097  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:23:26.157  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:24:04.410  INFO 18260 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 11:24:04.926  INFO 18260 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 11:24:08.315  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 11:24:08.869  WARN 18260 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:24:08.870  INFO 18260 --- [http-nio-8761-exec-9] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:24:08.872  WARN 18260 --- [TaskBatchingWorker-target_localhost-7] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 11:24:08.873  WARN 18260 --- [TaskBatchingWorker-target_localhost-7] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 11:24:14.554  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 11:24:15.065  INFO 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 11:24:15.303  INFO 18260 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 11:24:15.811  INFO 18260 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 11:24:19.584  INFO 18260 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 11:24:20.092  WARN 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:24:20.093  INFO 18260 --- [http-nio-8761-exec-5] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:24:20.096  WARN 18260 --- [TaskBatchingWorker-target_localhost-0] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 11:24:20.098  WARN 18260 --- [TaskBatchingWorker-target_localhost-0] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 11:24:23.274  INFO 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 11:24:23.785  INFO 18260 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 11:24:26.053  INFO 18260 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2022-04-01 11:24:26.158  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:24:30.098  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:25:26.158  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:25:35.808  INFO 18260 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 11:25:36.321  INFO 18260 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 11:25:39.922  INFO 18260 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 11:25:40.425  WARN 18260 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:25:40.426  INFO 18260 --- [http-nio-8761-exec-8] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:25:40.428  WARN 18260 --- [TaskBatchingWorker-target_localhost-2] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 11:25:40.429  WARN 18260 --- [TaskBatchingWorker-target_localhost-2] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 11:25:48.729  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 11:25:49.249  INFO 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 11:26:00.100  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:26:26.159  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:27:12.647  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 11:27:13.225  INFO 18260 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 11:27:16.709  INFO 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 11:27:17.218  WARN 18260 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:27:17.221  INFO 18260 --- [http-nio-8761-exec-7] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:27:17.224  WARN 18260 --- [TaskBatchingWorker-target_localhost-0] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 11:27:17.225  WARN 18260 --- [TaskBatchingWorker-target_localhost-0] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 11:27:21.806  INFO 18260 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 11:27:22.316  INFO 18260 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 11:27:22.470  INFO 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 11:27:22.978  INFO 18260 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 11:27:26.159  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:27:26.722  INFO 18260 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 11:27:27.233  WARN 18260 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:27:27.234  INFO 18260 --- [http-nio-8761-exec-8] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:27:27.235  WARN 18260 --- [TaskBatchingWorker-target_localhost-0] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 11:27:27.236  WARN 18260 --- [TaskBatchingWorker-target_localhost-0] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 11:27:30.103  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:27:30.190  INFO 18260 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 11:27:30.695  INFO 18260 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 11:27:59.220  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:27:59.730  INFO 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:28:00.104  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:28:13.227  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 11:28:13.736  INFO 18260 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 11:28:16.700  INFO 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 11:28:17.208  WARN 18260 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:28:17.209  INFO 18260 --- [http-nio-8761-exec-9] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:28:17.210  WARN 18260 --- [TaskBatchingWorker-target_localhost-0] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 11:28:17.211  WARN 18260 --- [TaskBatchingWorker-target_localhost-0] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 11:28:26.159  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:28:30.102  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:28:56.041  INFO 18260 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 11:28:56.544  INFO 18260 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 11:29:00.102  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:29:18.888  INFO 18260 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:29:19.403  INFO 18260 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:29:26.160  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:29:30.103  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:29:45.243  INFO 18260 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=false)
+2022-04-01 11:29:45.757  INFO 18260 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status DOWN (replication=true)
+2022-04-01 11:29:49.381  INFO 18260 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 (replication=false)
+2022-04-01 11:29:49.438  WARN 18260 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:29:49.441  INFO 18260 --- [http-nio-8761-exec-7] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): PROFILE-SERVICE - DESKTOP-HB7E3FD:PROFILE-SERVICE:8083
+2022-04-01 11:29:49.566  WARN 18260 --- [TaskBatchingWorker-target_localhost-6] c.n.eureka.cluster.ReplicationTask       : The replication of task PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost failed with response code 404
+2022-04-01 11:29:49.570  WARN 18260 --- [TaskBatchingWorker-target_localhost-6] c.netflix.eureka.cluster.PeerEurekaNode  : PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083:Cancel@localhost: missing entry.
+2022-04-01 11:30:00.213  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:30:12.394  INFO 18260 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance UNKNOWN/DESKTOP-HB7E3FD with status UP (replication=false)
+2022-04-01 11:30:12.782  INFO 18260 --- [http-nio-8761-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Registered instance UNKNOWN/DESKTOP-HB7E3FD with status DOWN (replication=false)
+2022-04-01 11:30:13.287  INFO 18260 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance UNKNOWN/DESKTOP-HB7E3FD with status DOWN (replication=true)
+2022-04-01 11:30:17.065  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance UNKNOWN/DESKTOP-HB7E3FD (replication=false)
+2022-04-01 11:30:17.573  WARN 18260 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: UNKNOWN/DESKTOP-HB7E3FD
+2022-04-01 11:30:17.574  INFO 18260 --- [http-nio-8761-exec-9] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): UNKNOWN - DESKTOP-HB7E3FD
+2022-04-01 11:30:17.577  WARN 18260 --- [TaskBatchingWorker-target_localhost-18] c.n.eureka.cluster.ReplicationTask       : The replication of task UNKNOWN/DESKTOP-HB7E3FD:Cancel@localhost failed with response code 404
+2022-04-01 11:30:17.579  WARN 18260 --- [TaskBatchingWorker-target_localhost-18] c.netflix.eureka.cluster.PeerEurekaNode  : UNKNOWN/DESKTOP-HB7E3FD:Cancel@localhost: missing entry.
+2022-04-01 11:30:23.159  INFO 18260 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=false)
+2022-04-01 11:30:23.671  INFO 18260 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/DESKTOP-HB7E3FD:PROFILE-SERVICE:8083 with status UP (replication=true)
+2022-04-01 11:30:26.161  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:30:30.211  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:30:58.401  INFO 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:30:58.914  INFO 18260 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:31:00.211  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:31:26.161  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:32:26.162  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:33:26.163  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-04-01 11:34:00.217  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:34:26.163  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:35:26.163  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:36:26.164  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:37:00.219  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:37:20.255  INFO 18260 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:37:20.765  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:37:22.888  INFO 18260 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:37:23.396  INFO 18260 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:37:26.164  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:37:30.220  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:37:46.701  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:37:47.214  INFO 18260 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:37:50.317  INFO 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:37:50.821  INFO 18260 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:38:00.227  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:38:01.107  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:38:01.618  INFO 18260 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:38:03.304  INFO 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:38:03.808  INFO 18260 --- [http-nio-8761-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:38:23.305  INFO 18260 --- [http-nio-8761-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:38:23.768  INFO 18260 --- [http-nio-8761-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:38:26.165  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:38:30.225  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:38:51.134  INFO 18260 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:38:51.653  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:39:00.251  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:39:10.943  INFO 18260 --- [http-nio-8761-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:39:11.451  INFO 18260 --- [http-nio-8761-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:39:26.053  INFO 18260 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 6
+2022-04-01 11:39:26.166  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:39:30.248  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:40:18.470  INFO 18260 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:40:18.973  INFO 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:40:26.167  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:40:30.249  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:41:26.167  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:42:26.168  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 11:43:26.169  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2022-04-01 11:43:30.253  WARN 18260 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 11:44:12.472  INFO 18260 --- [http-nio-8761-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=false)
+2022-04-01 11:44:12.976  INFO 18260 --- [http-nio-8761-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance API-GATEWAY/localhost with status UP (replication=true)
+2022-04-01 11:44:26.170  INFO 18260 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
