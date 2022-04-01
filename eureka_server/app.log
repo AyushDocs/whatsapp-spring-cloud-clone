@@ -313,3 +313,8 @@
 2022-04-01 07:44:49.252  INFO 31724 --- [http-nio-8761-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=false)
 2022-04-01 07:44:49.763  INFO 31724 --- [http-nio-8761-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance PROFILE-SERVICE/host.docker.internal:PROFILE-SERVICE:8083 with status UP (replication=true)
 2022-04-01 07:45:00.273  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
+2022-04-01 07:45:07.144  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:46:07.145  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:47:06.935  INFO 31724 --- [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 8
+2022-04-01 07:47:07.146  INFO 31724 --- [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2022-04-01 07:48:00.280  WARN 31724 --- [Eureka-CacheFillTimer] c.n.e.registry.AbstractInstanceRegistry  : No remote registry available for the remote region us-east-1
