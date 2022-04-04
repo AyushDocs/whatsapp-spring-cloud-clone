@@ -7,7 +7,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.whatsapp.profile_service.dto.UserDto;
+import com.whatsapp.profile_service.dto.LoginRequest;
+import com.whatsapp.profile_service.dto.SignupRequest;
 import com.whatsapp.profile_service.services.AuthService;
 
 import org.junit.jupiter.api.Test;
@@ -19,6 +20,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilder;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -31,8 +33,7 @@ class AuthControllerTest {
 
     @Test
     void should_signup_successfully() throws Exception {
-        UserDto userDto = new UserDto("test", "test", "test@gmail.com");
-        when(userService.signupAndReturnSuccessState("test@gmail.com", "test", "test")).thenReturn(true);
+        SignupRequest userDto = new SignupRequest("test", "test", "test@gmail.com");
         mockMvc.perform(post("/api/v1/users/signup")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(asJsonString(userDto)))
@@ -40,24 +41,15 @@ class AuthControllerTest {
     }
     @Test
     void should_login_successfully() throws Exception {
-        UserDto userDto = new UserDto("test", "test", "test@gmail.com");
+        LoginRequest userDto = new LoginRequest("test","test@gmail.com");
         when(userService.generateToken("test@gmail.com", "test","127.0.0.1")).thenReturn("test");
-        mockMvc.perform(post("/api/v1/users/login")
+        MockHttpServletRequestBuilder request = post("/api/v1/users/login")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(asJsonString(userDto)))
+                .content(asJsonString(userDto));
+        mockMvc.perform(request)
                 .andExpect(status().isOk())
                 .andExpect(cookie().exists("token"))
                 .andExpect(cookie().value("token", "test"));
-    }
-    @Test
-    void should_not_login_successfully() throws Exception {
-        UserDto fake = new UserDto("fake", "fake", "fake@gmail.com");
-        when(userService.generateToken("test@gmail.com", "test","127.0.0.1")).thenReturn("test");
-        mockMvc.perform(post("/api/v1/users/signup")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(asJsonString(fake)))
-                .andExpect(status().isBadRequest())
-                .andExpect(cookie().doesNotExist("token"));
     }
 
     private String asJsonString(Object obj) throws JsonProcessingException {

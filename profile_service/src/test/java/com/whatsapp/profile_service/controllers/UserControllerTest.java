@@ -46,11 +46,7 @@ class UserControllerTest {
       @Test
       void should_find_new_friends_with_email() throws Exception {
             Response<Page<User>> res = getPageResponseOfUsers();
-            FriendRequest friendRequestObj = FriendRequest.builder()
-                        .textInput("test@example.com")
-                        .page(1)
-                        .offset(0)
-                        .build();
+            FriendRequest friendRequestObj = FriendRequest.builder("test@example.com",1,0);
             when(userService.findNewFriends(any(FriendRequest.class))).thenReturn(res);
             MockHttpServletRequestBuilder request = MockMvcRequestBuilders
                         .get("/api/v1/users/?text=test@example.com&page=1&offset=0");

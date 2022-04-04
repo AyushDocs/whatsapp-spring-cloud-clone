@@ -71,11 +71,7 @@ class UserServiceTest {
       }
 
       private FriendRequest getDummyFriendRequest() {
-            FriendRequest request = FriendRequest.builder()
-                        .textInput("email1")
-                        .page(10)
-                        .offset(1)
-                        .build();
+            FriendRequest request = FriendRequest.builder("email1",10,1);
             return request;
       }
 

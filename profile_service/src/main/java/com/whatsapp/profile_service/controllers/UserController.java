@@ -34,16 +34,12 @@ public class UserController {
 
       @GetMapping
       public ResponseEntity<Response<Page<User>>> findNewFriends(
-                  @RequestParam("text") String text,
-                  @RequestParam("page") Optional<Integer> pageOpt,
-                  @RequestParam("offset") Optional<Integer> offsetOpt) {
-            FriendRequest request = FriendRequest.builder()
-                        .textInput(text)
-                        .page(pageOpt.orElse(10))
-                        .offset(offsetOpt.orElse(0))
-                        .build();
+                  @RequestParam String text,
+                  @RequestParam(defaultValue = "10") Integer page,
+                  @RequestParam(defaultValue = "0") Integer offset) {
+            FriendRequest request = FriendRequest.builder(text, page, offset);
             Response<Page<User>> response = userService.findNewFriends(request);
-            
+
             if (response.getData().isEmpty())
                   return ResponseEntity.noContent().build();
             return ResponseEntity.status(HttpStatus.PARTIAL_CONTENT).body(response);

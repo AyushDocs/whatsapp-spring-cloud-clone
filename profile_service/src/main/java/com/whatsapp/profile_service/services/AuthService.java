@@ -3,11 +3,11 @@ package com.whatsapp.profile_service.services;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import com.whatsapp.profile_service.exceptions.RequestValidationException;
 import com.whatsapp.profile_service.exceptions.UserNotFoundException;
 import com.whatsapp.profile_service.models.User;
 import com.whatsapp.profile_service.repositories.UserRepository;
 import com.whatsapp.profile_service.utils.JwtUtils;
-import com.whatsapp.profile_service.validators.EmailValidator;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -20,26 +20,32 @@ public class AuthService {
     private final UserRepository repository;
     private final JwtUtils jwtUtils;
     private final PasswordEncoder passwordEncoder;
-    private final EmailValidator emailValidator;
     private final RateLimiterService rateLimiterService;
 
-    public boolean signupAndReturnSuccessState(String email, String password, String username) {
-        if (!emailValidator.test(email)) return false;
-        boolean userExists = repository.existsByEmail(email);
-        if (userExists) return false;
+    public void signup(String email, String password, String username) {
+        checkIfUserExistsInDb(email);
         saveUser(email, password, username);
-        return true;
+    }
+
+
+    private void checkIfUserExistsInDb(String email) {
+        boolean userExists = repository.existsByEmail(email);
+        if (userExists)throw new RequestValidationException("User with similar credentials already exists");
     }
 
     
     public String generateToken(String email, String password,String ip) {
-        if (!rateLimiterService.isEligibleForLogin(ip)) return null;
-        if (!emailValidator.test(email)) return null;
-        User user = fetchUser(email,ip);
-        boolean passwordMatches=checkIfPasswordsAreCorrect(user,password,ip);
-        if(!passwordMatches) return null;
+        if (!rateLimiterService.isEligibleForLogin(ip)) throw new RequestValidationException("You have used up all your tries please try again later");
+        User user = fetchUserFromDb(email,ip);
+        validateUserCredentials(password, ip, user);
         updateLastLoggedInAtForUser(user);
         return jwtUtils.generateToken(user);
+    }
+
+
+    private void validateUserCredentials(String password, String ip, User user) {
+        boolean passwordMatches=checkIfPasswordsAreCorrect(user,password,ip);
+        if(!passwordMatches) throw new RequestValidationException("Incorrect credentials provided");
     }
 
     private void saveUser(String email, String password, String username) {
@@ -62,7 +68,7 @@ public class AuthService {
         return matches;
     }
 
-    private User fetchUser(String email,String ip) {
+    private User fetchUserFromDb(String email,String ip) {
         return repository
         .findByEmail(email)
         .orElseThrow(() -> {

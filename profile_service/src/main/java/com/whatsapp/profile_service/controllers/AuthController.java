@@ -3,8 +3,10 @@ package com.whatsapp.profile_service.controllers;
 import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
-import com.whatsapp.profile_service.dto.UserDto;
+import com.whatsapp.profile_service.dto.LoginRequest;
+import com.whatsapp.profile_service.dto.SignupRequest;
 import com.whatsapp.profile_service.services.AuthService;
 
 import org.springframework.beans.factory.annotation.Value;
@@ -16,6 +18,7 @@ import org.springframework.security.access.prepost.PreFilter;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import lombok.RequiredArgsConstructor;
@@ -32,35 +35,42 @@ public class AuthController {
 
     @PostMapping("/signup")
     @PreFilter("hasRole('NONE')")
-    public ResponseEntity<Void> signup(@RequestBody UserDto userDto) {
-        String username=userDto.getUsername();
-        String email=userDto.getEmail();
-        String password=userDto.getPassword();
-        boolean successState=userService.signupAndReturnSuccessState(email,password,username);       
-        return ResponseEntity
-                .status(successState?
-                         HttpStatus.CREATED:
-                         HttpStatus.BAD_REQUEST)
-                .build();
+    @ResponseStatus(HttpStatus.CREATED)
+    public void signup(@RequestBody @Valid SignupRequest userDto) {
+        String username = userDto.getUsername();
+        String email = userDto.getEmail();
+        String password = userDto.getPassword();
+        
+        userService.signup(email, password, username);
     }
 
     @PostMapping("/login")
     @PreFilter("hasRole('NONE')")
-    public ResponseEntity<Void> login(@RequestBody UserDto userDto,HttpServletRequest request) {
-        String email = userDto.getEmail();
-        String password = userDto.getPassword();
-        Optional<String> jwtOpt =Optional.ofNullable(userService.generateToken(email,password,request.getRemoteAddr())) ;
-        if (jwtOpt.isEmpty()) return ResponseEntity.badRequest().build();
-        ResponseCookie cookie = ResponseCookie.from(jwtCookieName, jwtOpt.get())
+    public ResponseEntity<Void> login(@RequestBody @Valid LoginRequest loginRequest, HttpServletRequest request) {
+        String email = loginRequest.getEmail();
+        String password = loginRequest.getPassword();
+        String ip = request.getRemoteAddr();
+
+        String jwt = userService.generateToken(email, password, ip);
+        ResponseCookie cookie = createCookieWithJwtInIt(jwt);
+        return createResponseWithCookieInIt(cookie);
+    }
+
+    private ResponseEntity<Void> createResponseWithCookieInIt(ResponseCookie cookie) {
+        return ResponseEntity
+                .ok()
+                .header(HttpHeaders.SET_COOKIE, cookie.toString())
+                .build();
+    }
+
+    private ResponseCookie createCookieWithJwtInIt(String jwt) {
+        return ResponseCookie.from(jwtCookieName, jwt)
                 .httpOnly(true)
                 .maxAge(900000l)
                 .secure(true)
                 .sameSite("None")
                 .path("/")
                 .build();
-        return ResponseEntity
-                .ok()
-                .header(HttpHeaders.SET_COOKIE, cookie.toString())
-                .build();
+
     }
 }
