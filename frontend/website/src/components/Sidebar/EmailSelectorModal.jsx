@@ -24,10 +24,10 @@ Modal.setAppElement('#root');
 const EmailSelectorModal = () => {
 	const {toggleModal, openModal} = useContext(context);
 	const [search, setSearch] = React.useState('');
-	const [searchResults, setSearchResults] = React.useState([]);
+	const [searchResults, setSearchResults] = React.useState({content:[]});
 	const handleSubmit = async e => {
 		e.preventDefault();
-		const res = await axios.get(findUserByNameOrEmail(search, search));
+		const res = await axios.get(findUserByNameOrEmail(search));
 		console.log(search);
 		const data = res.data.data;
 		setSearchResults(data);
@@ -45,7 +45,7 @@ const EmailSelectorModal = () => {
 						<button type='submit'>Submit</button>
 					</SearchArea>
 					<EmailList>
-						{searchResults.sort().map((item, index) => (
+						{searchResults.content.sort().map((item, index) => (
 							<EmailItem key={index} {...item} />
 						))}
 					</EmailList>
@@ -122,17 +122,17 @@ const EmailSearchText = styled.div`
 	padding-block: 20px;
 	width: 100%;
 `;
-const EmailItem = ({displayName, photoUrl}) => {
+const EmailItem = ({name, photoUrl}) => {
 	const {toggleModal} = useContext(context);
 	const {user} = useContext(authContext);
 	const handleClick = async () => {
-		await axios.post(createRoom(), {userDisplayName: user.displayName, friendDisplayName: displayName});
+		// await axios.post(createRoom(), {userDisplayName: user.displayName, friendDisplayName: displayName});
 		toggleModal();
 	};
 	return (
 		<EmailSearchItem onClick={handleClick}>
 			<Img height={40} style={{margin: 'auto 5px'}} alt="search person's photo" src={photoUrl} />
-			<EmailSearchText>{displayName}</EmailSearchText>
+			<EmailSearchText>{name}</EmailSearchText>
 		</EmailSearchItem>
 	);
 };

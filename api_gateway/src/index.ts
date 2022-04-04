@@ -19,10 +19,14 @@ app.use(fileMiddleWare);
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
+app.all('/api/v1/images', handleImageRequests);
 app.all('/api/v1/images/:path', handleImageRequests);
+
+app.all('/api/v1/users',(req, res) => proxyRequest(req, res, 'PROFILE-SERVICE'));
 app.all('/api/v1/users/:path',(req, res) => proxyRequest(req, res, 'PROFILE-SERVICE'));
+
+app.all('/api/v1/messages',(req, res) => proxyRequest(req, res, 'MESSAGE-SERVICE'));
 app.all('/api/v1/messages/:path',(req, res) => proxyRequest(req, res, 'MESSAGE-SERVICE'));
-app.all('/api/v1/messages/',(req, res) => proxyRequest(req, res, 'MESSAGE-SERVICE'));
 
 const httpServer = new HttpServer(app);
 const socketIoServer = new SocketIO.Server(httpServer, corsConfig);

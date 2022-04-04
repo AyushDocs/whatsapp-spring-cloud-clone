@@ -36,7 +36,7 @@ export const proxyRequest = async (request: express.Request, response: express.R
 	const res: Response = await Fetch(serverPath, {
 		method: request.method,
 		headers,
-		body: JSON.stringify(request.body)
+		body:request.method=='GET'?undefined: JSON.stringify(request.body)
 	});
 	const body=await res.text()
 	addHeadersToResponse(response,res.headers);
