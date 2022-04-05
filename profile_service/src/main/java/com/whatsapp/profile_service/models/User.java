@@ -43,6 +43,7 @@ public class User{
     private LocalDate updatedAt;
     private String roles="NONE";
     private LocalDateTime lastLoggedInAt;
+    private String imageUrl;
     @ManyToMany
     @JsonIgnore
     private List<User> friends=new ArrayList<>();

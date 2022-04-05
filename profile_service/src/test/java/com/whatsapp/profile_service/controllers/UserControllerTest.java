@@ -7,11 +7,13 @@ import static org.mockito.Mockito.when;
 
 import java.util.List;
 
+import com.whatsapp.profile_service.configuration.JwtConfig;
 import com.whatsapp.profile_service.dto.FriendRequest;
 import com.whatsapp.profile_service.dto.Response;
 import com.whatsapp.profile_service.models.User;
 import com.whatsapp.profile_service.services.UserService;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +35,14 @@ class UserControllerTest {
       private MockMvc mvc;
       @MockBean
       private UserService userService;
+      @MockBean private JwtConfig jwtConfig;
 
+      @BeforeEach
+      void setUp() {
+            when(jwtConfig.getSecret()).thenReturn("secret");
+            when(jwtConfig.getCookieName()).thenReturn("token");
+            when(jwtConfig.getTimeDelta()).thenReturn(9000000l);
+      }
       @Test
       void should_add_friend() throws Exception {
             MockHttpServletRequestBuilder request = MockMvcRequestBuilders.post("/api/v1/users/{userId}/{friendId}", 1,

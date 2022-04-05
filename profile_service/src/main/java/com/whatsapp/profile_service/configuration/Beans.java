@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.client.RestTemplate;
 
 import lombok.AllArgsConstructor;
 
@@ -28,5 +29,10 @@ public class Beans {
             return new CustomUserDetails(
                     user);
         } ;
+    }
+    
+    @Bean
+    public RestTemplate restTemplate() {
+        return new RestTemplate();
     }
 }

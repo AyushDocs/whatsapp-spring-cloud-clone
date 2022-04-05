@@ -5,36 +5,39 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+import com.whatsapp.profile_service.configuration.JwtConfig;
 import com.whatsapp.profile_service.models.CustomUserDetails;
 import com.whatsapp.profile_service.models.User;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import lombok.RequiredArgsConstructor;
 
 @Service
+@RequiredArgsConstructor
 public class JwtUtils {
-    @Value("${jwt.secret_key}")
-    private String jwtSecret;
-    @Value("${jwt.time_delta}")
-    private Long jwtCookieMaxAge;
+    private final JwtConfig jwtConfig;
 
     public String generateToken(User user) {
         return Jwts
                 .builder()
                 .setClaims(generateClaimsMap(user))
                 .setIssuedAt(new Date())
-                .setExpiration(new Date(System.currentTimeMillis() + jwtCookieMaxAge))
+                .setExpiration(new Date(System.currentTimeMillis() + jwtConfig.getTimeDelta()))
                 .signWith(SignatureAlgorithm.HS256,
-                        jwtSecret)
+                        jwtConfig.getSecret())
                 .compact();
     }
 
     private Claims extractClaims(String token) {
-        return Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody();
+        return Jwts
+                .parser()
+                .setSigningKey(jwtConfig.getSecret())
+                .parseClaimsJws(token)
+                .getBody();
     }
 
     public Object extractClaim(String token, Function<Claims, Object> f) {

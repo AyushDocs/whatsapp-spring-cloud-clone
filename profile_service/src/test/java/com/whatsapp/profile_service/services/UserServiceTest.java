@@ -7,6 +7,7 @@ import static org.mockito.Mockito.when;
 
 import java.util.List;
 
+import com.whatsapp.profile_service.configuration.JwtConfig;
 import com.whatsapp.profile_service.dto.FriendRequest;
 import com.whatsapp.profile_service.dto.Response;
 import com.whatsapp.profile_service.models.User;
@@ -26,10 +27,14 @@ class UserServiceTest {
       @MockBean
       private UserRepository userRepository;
       private UserService underTest;
+      @MockBean private JwtConfig jwtConfig;
 
       @BeforeEach
       void setUp() {
             underTest = new UserService(userRepository);
+            when(jwtConfig.getSecret()).thenReturn("secret");
+            when(jwtConfig.getCookieName()).thenReturn("token");
+            when(jwtConfig.getTimeDelta()).thenReturn(9000000l);
       }
 
       @Test
@@ -60,8 +65,8 @@ class UserServiceTest {
       @Test
       void should_find_friends_by_email() {
             List<User> users = getDummyUsers();
-            Page<User> page = new PageImpl<>(users, PageRequest.of(1,10),2);
-            when(userRepository.findAllByEmailContainingOrNameContaining("email1","email1", PageRequest.of(1,10)))
+            Page<User> page = new PageImpl<>(users, PageRequest.of(1, 10), 2);
+            when(userRepository.findAllByEmailContainingOrNameContaining("email1", "email1", PageRequest.of(1, 10)))
                         .thenReturn(page);
             FriendRequest request = getDummyFriendRequest();
             Response<Page<User>> friends = underTest.findNewFriends(request);
@@ -71,7 +76,7 @@ class UserServiceTest {
       }
 
       private FriendRequest getDummyFriendRequest() {
-            FriendRequest request = FriendRequest.builder("email1",10,1);
+            FriendRequest request = FriendRequest.builder("email1", 10, 1);
             return request;
       }
 

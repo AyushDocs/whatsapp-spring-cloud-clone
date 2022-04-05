@@ -1,15 +1,13 @@
 package com.whatsapp.profile_service.controllers;
 
-import java.util.Optional;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 
+import com.whatsapp.profile_service.configuration.JwtConfig;
 import com.whatsapp.profile_service.dto.LoginRequest;
 import com.whatsapp.profile_service.dto.SignupRequest;
 import com.whatsapp.profile_service.services.AuthService;
 
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseCookie;
@@ -20,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import lombok.RequiredArgsConstructor;
 
@@ -28,10 +27,7 @@ import lombok.RequiredArgsConstructor;
 @RequestMapping("/api/v1/users")
 public class AuthController {
     private final AuthService userService;
-    @Value("${jwt.cookie_name}")
-    private String jwtCookieName;
-    @Value("${jwt.time_delta}")
-    private Long jwtCookieMaxAge;
+    private final JwtConfig jwtConfig;
 
     @PostMapping("/signup")
     @PreFilter("hasRole('NONE')")
@@ -40,8 +36,8 @@ public class AuthController {
         String username = userDto.getUsername();
         String email = userDto.getEmail();
         String password = userDto.getPassword();
-        
-        userService.signup(email, password, username);
+        MultipartFile file=userDto.getFile();
+        userService.signup(email, password, username,file);
     }
 
     @PostMapping("/login")
@@ -64,7 +60,7 @@ public class AuthController {
     }
 
     private ResponseCookie createCookieWithJwtInIt(String jwt) {
-        return ResponseCookie.from(jwtCookieName, jwt)
+        return ResponseCookie.from(jwtConfig.getCookieName(), jwt)
                 .httpOnly(true)
                 .maxAge(900000l)
                 .secure(true)

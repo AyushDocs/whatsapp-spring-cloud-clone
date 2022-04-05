@@ -7,10 +7,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.whatsapp.profile_service.configuration.JwtConfig;
 import com.whatsapp.profile_service.dto.LoginRequest;
 import com.whatsapp.profile_service.dto.SignupRequest;
 import com.whatsapp.profile_service.services.AuthService;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -30,10 +32,17 @@ class AuthControllerTest {
     private MockMvc mockMvc;
     @MockBean
     private AuthService userService;
+    @MockBean private JwtConfig jwtConfig;
 
+    @BeforeEach
+    void setUp() {
+        when(jwtConfig.getSecret()).thenReturn("secret");
+        when(jwtConfig.getCookieName()).thenReturn("token");
+        when(jwtConfig.getTimeDelta()).thenReturn(9000000l);
+    }
     @Test
     void should_signup_successfully() throws Exception {
-        SignupRequest userDto = new SignupRequest("test", "test", "test@gmail.com");
+        SignupRequest userDto = new SignupRequest("test", "test",null, "test@gmail.com");
         mockMvc.perform(post("/api/v1/users/signup")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(asJsonString(userDto)))

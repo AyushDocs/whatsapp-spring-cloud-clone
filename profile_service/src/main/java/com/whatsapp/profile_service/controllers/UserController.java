@@ -1,7 +1,5 @@
 package com.whatsapp.profile_service.controllers;
 
-import java.util.Optional;
-
 import com.whatsapp.profile_service.dto.FriendRequest;
 import com.whatsapp.profile_service.dto.Response;
 import com.whatsapp.profile_service.models.User;

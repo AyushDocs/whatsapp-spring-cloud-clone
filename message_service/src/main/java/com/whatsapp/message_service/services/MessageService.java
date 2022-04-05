@@ -1,9 +1,9 @@
 package com.whatsapp.message_service.services;
 
-import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
+import com.whatsapp.message_service.exceptions.MessageNotFoundException;
 import com.whatsapp.message_service.models.Message;
 import com.whatsapp.message_service.models.Status;
 import com.whatsapp.message_service.repositories.MessageRepo;
@@ -18,14 +18,7 @@ public class MessageService {
 
     private final MessageRepo messageRepo;
 
-    public void saveMessage(String content, String sentBy, String sentTo) {
-        Message message = Message.builder()
-                .content(content)
-                .sentBy(sentBy)
-                .sentTo(sentTo)
-                .timestamp(LocalDateTime.now())
-                .status(Status.RECEIVED_BY_SERVER)
-                .build();
+    public void saveMessage(Message message) {
         messageRepo.save(message);
     }
 
@@ -33,13 +26,15 @@ public class MessageService {
         return messageRepo.findUreadMessages(forWhom);
     }
 
-    public boolean updateMessageStateToSentToFriend(Long id) {
-        Optional<Message> message = messageRepo.findById(id);
-        if (!message.isPresent()) return message.isPresent();
-        Message m = message.get();
+    public void updateMessageState(Long id) {
+        Message m = getMessageFromDb(id);
         if (m.getStatus().equals(Status.SENT_TO_FRIEND)) m.setStatus(Status.SENT_TO_FRIEND);
         else m.setStatus(Status.RECEIVED_BY_FRIEND);
         messageRepo.save(m);
-        return message.isPresent();
+    }
+
+    private Message getMessageFromDb(Long id) {
+        Optional<Message> message = messageRepo.findById(id);
+        return message.orElseThrow(MessageNotFoundException::new);
     }
 }
