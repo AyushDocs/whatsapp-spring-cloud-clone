@@ -12,7 +12,6 @@ import com.whatsapp.profile_service.dto.LoginRequest;
 import com.whatsapp.profile_service.dto.SignupRequest;
 import com.whatsapp.profile_service.services.AuthService;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -32,33 +31,33 @@ class AuthControllerTest {
     private MockMvc mockMvc;
     @MockBean
     private AuthService userService;
-    @MockBean private JwtConfig jwtConfig;
-
-    @BeforeEach
-    void setUp() {
-        when(jwtConfig.getSecret()).thenReturn("secret");
-        when(jwtConfig.getCookieName()).thenReturn("token");
-        when(jwtConfig.getTimeDelta()).thenReturn(9000000l);
-    }
+    @MockBean
+    private JwtConfig jwtConfig;
+    
     @Test
     void should_signup_successfully() throws Exception {
-        SignupRequest userDto = new SignupRequest("test", "test",null, "test@gmail.com");
-        mockMvc.perform(post("/api/v1/users/signup")
+        SignupRequest userDto = new SignupRequest("test", "test", "test@gmail.com");
+
+        MockHttpServletRequestBuilder request = post("/api/v1/users/signup")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(asJsonString(userDto)))
+                .content(asJsonString(userDto));
+
+        mockMvc.perform(request)
                 .andExpect(status().isCreated());
     }
     @Test
     void should_login_successfully() throws Exception {
         LoginRequest userDto = new LoginRequest("test","test@gmail.com");
+        String cookieName ="token";
+        when(jwtConfig.getCookieName()).thenReturn(cookieName);
         when(userService.generateToken("test@gmail.com", "test","127.0.0.1")).thenReturn("test");
         MockHttpServletRequestBuilder request = post("/api/v1/users/login")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(asJsonString(userDto));
         mockMvc.perform(request)
                 .andExpect(status().isOk())
-                .andExpect(cookie().exists("token"))
-                .andExpect(cookie().value("token", "test"));
+                .andExpect(cookie().exists(cookieName))
+                .andExpect(cookie().value(cookieName, "test"));
     }
 
     private String asJsonString(Object obj) throws JsonProcessingException {

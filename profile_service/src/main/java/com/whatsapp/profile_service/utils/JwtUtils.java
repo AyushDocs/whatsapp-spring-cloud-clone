@@ -5,6 +5,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Function;
 
+import javax.annotation.PostConstruct;
+
 import com.whatsapp.profile_service.configuration.JwtConfig;
 import com.whatsapp.profile_service.models.CustomUserDetails;
 import com.whatsapp.profile_service.models.User;
@@ -28,14 +30,14 @@ public class JwtUtils {
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + jwtConfig.getTimeDelta()))
                 .signWith(SignatureAlgorithm.HS256,
-                        jwtConfig.getSecret())
+                        jwtConfig.getSecretKey())
                 .compact();
     }
 
     private Claims extractClaims(String token) {
         return Jwts
                 .parser()
-                .setSigningKey(jwtConfig.getSecret())
+                .setSigningKey(jwtConfig.getSecretKey())
                 .parseClaimsJws(token)
                 .getBody();
     }
@@ -66,5 +68,9 @@ public class JwtUtils {
         user.setName((String) claims.get("username"));
         return new CustomUserDetails(user);
     }
-
+    @PostConstruct
+    public void init() {
+        System.out.println("--------------------------------------------------------------------");
+        System.out.println("\n\n\n\n\n\n"+jwtConfig);
+    }
 }

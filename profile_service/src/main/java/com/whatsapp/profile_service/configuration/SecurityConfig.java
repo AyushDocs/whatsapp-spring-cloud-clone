@@ -11,21 +11,25 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 @EnableWebSecurity
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
     private final UserDetailsService userDetailsService;
     private final PasswordEncoder passwordEncoder;
-    private JwtUtils jwtUtils;
+    private final JwtUtils jwtUtils;
+    private final JwtConfig jwtConfig;
+
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
         auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder);
     }
     @Override
     protected void configure(HttpSecurity http) throws Exception {
+        JwtFilter jwtFilter = new JwtFilter(jwtUtils,jwtConfig);
+        
         http
-        .addFilterBefore(new JwtFilter(jwtUtils),UsernamePasswordAuthenticationFilter.class)
+        .addFilterBefore(jwtFilter,UsernamePasswordAuthenticationFilter.class)
         .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
         .and()
         .authorizeRequests()

@@ -7,7 +7,6 @@ import static org.mockito.Mockito.when;
 
 import java.util.List;
 
-import com.whatsapp.profile_service.configuration.JwtConfig;
 import com.whatsapp.profile_service.dto.FriendRequest;
 import com.whatsapp.profile_service.dto.Response;
 import com.whatsapp.profile_service.models.User;
@@ -27,14 +26,10 @@ class UserServiceTest {
       @MockBean
       private UserRepository userRepository;
       private UserService underTest;
-      @MockBean private JwtConfig jwtConfig;
 
       @BeforeEach
       void setUp() {
             underTest = new UserService(userRepository);
-            when(jwtConfig.getSecret()).thenReturn("secret");
-            when(jwtConfig.getCookieName()).thenReturn("token");
-            when(jwtConfig.getTimeDelta()).thenReturn(9000000l);
       }
 
       @Test

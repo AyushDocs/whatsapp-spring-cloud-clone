@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
 
 import lombok.RequiredArgsConstructor;
 
@@ -36,8 +35,7 @@ public class AuthController {
         String username = userDto.getUsername();
         String email = userDto.getEmail();
         String password = userDto.getPassword();
-        MultipartFile file=userDto.getFile();
-        userService.signup(email, password, username,file);
+        userService.signup(email, password, username);
     }
 
     @PostMapping("/login")

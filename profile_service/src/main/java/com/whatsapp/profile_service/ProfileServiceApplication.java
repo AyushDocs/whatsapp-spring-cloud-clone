@@ -9,7 +9,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 @EnableEurekaClient
 @EnableConfigurationProperties
 public class ProfileServiceApplication {
-
 	public static void main(String[] args) {
 		SpringApplication.run(ProfileServiceApplication.class, args);
 	}

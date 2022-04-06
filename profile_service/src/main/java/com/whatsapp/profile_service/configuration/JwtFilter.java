@@ -21,28 +21,29 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.web.filter.OncePerRequestFilter;
 
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 
-@AllArgsConstructor()
+@RequiredArgsConstructor
 public class JwtFilter extends OncePerRequestFilter {
         private final JwtUtils jwtUtils;
+        private final JwtConfig jwtConfig;
 
         @Override
         protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response,
                         FilterChain filterChain) throws ServletException, IOException {
+                String cookieName = jwtConfig.getCookieName();
                 Optional.ofNullable(request.getCookies())
-                                .ifPresentOrElse(cookies -> 
-                                        Arrays.stream(cookies)
-                                                        .filter(i -> i.getName().equals("token"))
-                                                        .findFirst()
-                                                        .ifPresentOrElse(cookie -> {
-                                                                if (userHasValidJwt(cookie))
-                                                                        createJwtUser(cookie, request);
-                                                                else
-                                                                        createdBaseUser(request);
-                                                        },
-                                                                        () -> createdBaseUser(request))
-                        , () -> createdBaseUser(request));
+                .ifPresentOrElse(cookies -> Arrays.stream(cookies)
+                        .filter(i ->i.getName().equals(cookieName))
+                        .findFirst()
+                        .ifPresentOrElse(cookie -> {
+                                if (userHasValidJwt(cookie))
+                                        createJwtUser(cookie, request);
+                                else
+                                        createdBaseUser(request);
+                                },
+                                () -> createdBaseUser(request)),
+                        () -> createdBaseUser(request));
                 filterChain.doFilter(request, response);
         }
 

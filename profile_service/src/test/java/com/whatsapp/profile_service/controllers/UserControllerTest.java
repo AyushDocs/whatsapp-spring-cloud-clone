@@ -35,18 +35,11 @@ class UserControllerTest {
       private MockMvc mvc;
       @MockBean
       private UserService userService;
-      @MockBean private JwtConfig jwtConfig;
 
-      @BeforeEach
-      void setUp() {
-            when(jwtConfig.getSecret()).thenReturn("secret");
-            when(jwtConfig.getCookieName()).thenReturn("token");
-            when(jwtConfig.getTimeDelta()).thenReturn(9000000l);
-      }
       @Test
       void should_add_friend() throws Exception {
-            MockHttpServletRequestBuilder request = MockMvcRequestBuilders.post("/api/v1/users/{userId}/{friendId}", 1,
-                        2);
+            MockHttpServletRequestBuilder request = MockMvcRequestBuilders
+            .post("/api/v1/users/{userId}/{friendId}", 1,2);
             mvc.perform(request)
                         .andExpect(MockMvcResultMatchers.status().isCreated());
             verify(userService).addFriend(1l, 2l);
