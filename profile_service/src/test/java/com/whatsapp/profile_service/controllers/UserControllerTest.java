@@ -2,14 +2,18 @@ package com.whatsapp.profile_service.controllers;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.List;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.whatsapp.profile_service.configuration.JwtConfig;
 import com.whatsapp.profile_service.dto.FriendRequest;
 import com.whatsapp.profile_service.dto.Response;
+import com.whatsapp.profile_service.exceptions.UserNotFoundException;
+import com.whatsapp.profile_service.models.ModifyUserRequest;
 import com.whatsapp.profile_service.models.User;
 import com.whatsapp.profile_service.services.UserService;
 
@@ -35,6 +39,7 @@ class UserControllerTest {
       private MockMvc mvc;
       @MockBean
       private UserService userService;
+      private ObjectMapper mapper=new ObjectMapper();
 
       @Test
       void should_add_friend() throws Exception {
@@ -60,6 +65,33 @@ class UserControllerTest {
             verify(userService).findNewFriends(ar.capture());
             assertEquals(friendRequestObj, ar.getValue());
 
+      }
+      @Test
+      void should_update_user() throws Exception {
+            ModifyUserRequest modifyUserRequest = ModifyUserRequest
+            .builder().name("test").email("a@g.com").build();
+            MockHttpServletRequestBuilder request = MockMvcRequestBuilders
+                        .put("/api/v1/users/{userId}", 1)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(mapper.writeValueAsString(modifyUserRequest));
+            mvc.perform(request)
+                        .andExpect(MockMvcResultMatchers.status().isNoContent());
+            verify(userService).updateUser(1,modifyUserRequest);
+      }
+      @Test
+      void should_not_update_user_no_user_with_given_id() throws Exception {
+            ModifyUserRequest modifyUserRequest = ModifyUserRequest
+            .builder().name("test").email("a@g.com").build();
+            doThrow(UserNotFoundException.class).when(userService).updateUser(1,modifyUserRequest);
+            MockHttpServletRequestBuilder request = MockMvcRequestBuilders
+                        .put("/api/v1/users/{userId}", 1)
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(mapper.writeValueAsString(modifyUserRequest));
+            mvc.perform(request)
+                        .andExpect(MockMvcResultMatchers.status().isBadRequest())
+                        .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON))
+                        .andExpect(MockMvcResultMatchers.jsonPath("$.message").value("User with id 1 not found"));
+            verify(userService).updateUser(1,modifyUserRequest);
       }
 
       private Response<Page<User>> getPageResponseOfUsers() {

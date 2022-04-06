@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.whatsapp.profile_service.dto.Response;
 import com.whatsapp.profile_service.exceptions.RequestValidationException;
+import com.whatsapp.profile_service.exceptions.UserNotFoundException;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -28,6 +29,11 @@ public class RestExceptionHandler {
                         .forEach(err -> errors.put(err.getField(), err.getDefaultMessage()));
 
             Response<Map<String, String>> res = new Response<>(errors, "errors are there", true);
+            return ResponseEntity.badRequest().body(res);
+      }
+      @ExceptionHandler(UserNotFoundException.class)
+      public ResponseEntity<Response<Void>> invalidRequest(UserNotFoundException ex) {
+            Response<Void> res = new Response<Void>(null, ex.getMessage(), true);
             return ResponseEntity.badRequest().body(res);
       }
 }
