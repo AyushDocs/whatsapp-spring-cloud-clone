@@ -9,4 +9,5 @@ import lombok.Data;
 public class ImageConfig {
    @Value("${image.upload.dir}")
    private String imageUploadDir;
+   private String[] imageFormats = { "jpg", "jpeg", "png", "gif", "bmp","webp" };
 }

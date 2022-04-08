@@ -1,15 +1,19 @@
 package com.whatsapp.image_service.services;
 
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.time.LocalDate;
+import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardCopyOption;
 import java.util.Base64;
-import java.util.List;
+
+import javax.imageio.ImageIO;
 
 import com.whatsapp.image_service.configuration.ImageConfig;
 import com.whatsapp.image_service.models.Image;
-import com.whatsapp.image_service.models.ImageMetadata;
-import com.whatsapp.image_service.repositories.ImageMetadataRepo;
 import com.whatsapp.image_service.repositories.ImageRepo;
 
 import org.apache.commons.io.FileUtils;
@@ -18,23 +22,22 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 
 @Service
+@Slf4j
 @RequiredArgsConstructor
 public class ImageService {
     private final ImageRepo imageRepo;
-    private final ImageMetadataRepo imageMetadataRepo;
-    private final ImageProcessor imageProcessor;
     private final ImageConfig imageConfig;
-
-    public Image storeImage(MultipartFile file, String userId) {
-        imageProcessor.storeImageInDifferentFormats(file, userId);
-        return saveImageInDb(file, userId);
+    public void storeImage(MultipartFile file, String userId) {
+        storeImageInDifferentFormats(file, userId);
+        saveImageInDb(file, userId);
     }
     public String findImages(String imageUrl,String userId){
         
         try {
-            String imageFilePath ="%s%s/%s".formatted(
+            String imageFilePath ="%s/%s/%s".formatted(
                     imageConfig.getImageUploadDir(),
                     userId,
                     imageUrl);
@@ -49,20 +52,56 @@ public class ImageService {
         }
     }
 
-    private Image saveImageInDb(MultipartFile file, String userId) {
-        String fileName = StringUtils.cleanPath(file.getOriginalFilename());
-        String fileLocation = "/api/v1/users/" + userId + "/images/" + fileName;
-        ImageMetadata imageMetadata = ImageMetadata.builder()
-                .imgType(file.getContentType())
-                .createdAt(LocalDate.now())
-                .imgUrl(fileLocation)
-                .build();
-        Image image = Image.builder()
-                .userId(userId)
-                .imgName(fileName)
-                .metadata(List.of(imageMetadata))
-                .build();
-        imageMetadataRepo.save(imageMetadata);
-        return imageRepo.save(image);
+    private void saveImageInDb(MultipartFile file, String userId) {
+        String fileName = getFileName(file);
+        Image image =new Image(null,userId,fileName);
+        imageRepo.save(image);
+    }
+
+    private String getFileName(MultipartFile file) {
+        return StringUtils.cleanPath(file.getOriginalFilename());
+    }
+    public void storeImageInDifferentFormats(MultipartFile file, String userId) {
+        try { 
+            for(String format:imageConfig.getImageFormats()){
+                saveFile(file, userId, format);
+            }
+        } catch (IOException e) {
+            log.error("Could not save image file: " + file.getOriginalFilename() + " for userId: " + userId, e);
+        }
+    }
+
+    private void saveFile(MultipartFile multiPartFile, String userId, String fileType)
+            throws IOException {
+        String fileName = getFileName(multiPartFile, fileType);
+        createBlankImageInDir(multiPartFile, fileName, userId);
+        saveFileInDir(multiPartFile, fileName, fileType, userId);
+    }
+    private String getFileName(MultipartFile file, String fileType) {
+        String fileName = getFileName(file);
+        fileName=fileName.substring(0,fileName.lastIndexOf("."))+ "." + fileType;
+        return fileName;
+    }
+
+    private void saveFileInDir(MultipartFile multiPartFile, String fileName, String fileType, String userId)
+            throws IOException {
+        InputStream is = multiPartFile.getInputStream();
+        BufferedImage img = ImageIO.read(is);
+        String fullPathToFile = "%s/%s/%s".formatted(imageConfig.getImageUploadDir(), userId, fileName);
+        File file = Paths.get(fullPathToFile).toFile();
+        ImageIO.write(img, fileType, file);
+    }
+
+    private void createBlankImageInDir(MultipartFile multiPartFile, String fileName, String userId) throws IOException {
+        Path uploadPath = getUserImagesDirPath(userId);// user-images/5
+        Path filePath = uploadPath.resolve(fileName);// user-images/5/a.jpg
+        if (!Files.exists(uploadPath))
+            Files.createDirectories(uploadPath);
+        Files.copy(multiPartFile.getInputStream(), filePath, StandardCopyOption.REPLACE_EXISTING);
+    }
+
+    private Path getUserImagesDirPath(String userId) {
+        String userImagesDirPath = imageConfig.getImageUploadDir()+"/" + userId;
+        return Paths.get(userImagesDirPath);
     }
 }

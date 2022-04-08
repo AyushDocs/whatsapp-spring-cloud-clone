@@ -1,6 +1,6 @@
 # @format
 
-image.upload.dir: user-photos/
+image.upload.dir: user-photos
 spring:
   datasource:
     url: jdbc:h2:mem:mydb
