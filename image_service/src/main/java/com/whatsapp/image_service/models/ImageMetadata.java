@@ -3,11 +3,15 @@ package com.whatsapp.image_service.models;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.whatsapp.image_service.configuration.ImageTypes;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,10 +23,10 @@ import lombok.NoArgsConstructor;
 @Table(name = "image_tbl")
 @AllArgsConstructor
 @NoArgsConstructor
-public class Image {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String userId;
-    private String imgName;
+public class ImageMetadata {
+      @Id
+      @GeneratedValue(strategy = GenerationType.IDENTITY)
+      private Long id;
+      @Enumerated(EnumType.STRING)
+      private ImageTypes imgType;
 }

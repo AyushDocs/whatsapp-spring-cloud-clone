@@ -4,7 +4,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Map;
 
-import com.whatsapp.image_service.models.Image;
+import com.whatsapp.image_service.models.UserImage;
 import com.whatsapp.image_service.services.ImageService;
 
 import org.springframework.http.ResponseEntity;
@@ -29,7 +29,7 @@ public class ImageController {
     @PostMapping
     @ResponseStatus(HttpStatus.ACCEPTED)
     public void uploadImage(@RequestParam MultipartFile image,@PathVariable String userId) {
-       imageService.storeImage(image, userId);
+       imageService.storeProfileImage(image, userId);
     }
 
     @GetMapping("/{imageUrl}")
