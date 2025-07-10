@@ -8,34 +8,52 @@ import {authContext} from '../../context/authContext';
 import {context as socketContext} from '../../context/SocketContext';
 import background from '../../media/chat-background.jpeg';
 const MainChat = () => {
-	const [messages, setMessages] = React.useState([]);
-	const {NewMessage, room} = useContext(socketContext);
-	const {user} = useContext(authContext);
-	useEffect(() => {
-		(async () => {
-			if (!room || !room.roomId) return;
-			const res = await axios.get(findAllMessages(room?.roomId));
-			console.log(res.data.data);
-			setMessages(res.data.data);
-		})();
-	}, [room?.roomId]);
-	useEffect(() => {
-		if (!NewMessage) return;
-		setMessages(messages.concat(NewMessage));
-	}, [NewMessage]);
-	return (
-		<ChatArea>
-			{messages?.reverse()?.map((message, index) => (
-				message.sentBy === user._id ? <MyMessage  content={message.content} key={index} /> : <FriendMessage content={message.content} key={index} />
-			))}
-		</ChatArea>
-	);
+  // Dummy data for demonstration
+  const dummyMessages = [
+	{ sentBy: 'user1', content: 'Hello!' },
+	{ sentBy: 'user2', content: 'Hi, how are you?' },
+	{ sentBy: 'user1', content: 'I am good, thanks! And you?' },
+	{ sentBy: 'user2', content: 'Doing well, excited for this chat app!' },
+  ];
+  const [messages, setMessages] = React.useState(dummyMessages);
+  const { NewMessage, room } = useContext(socketContext);
+//   const { user } = useContext(authContext);
+  const user={
+	_id:'user1'
+  }
+
+  // Commented out API fetching for demo
+  // useEffect(() => {
+  //   (async () => {
+  //     if (!room || !room.roomId) return;
+  //     const res = await axios.get(findAllMessages(room?.roomId));
+  //     console.log(res.data.data);
+  //     setMessages(res.data.data);
+  //   })();
+  // }, [room?.roomId]);
+
+  useEffect(() => {
+	if (!NewMessage) return;
+	setMessages(messages.concat(NewMessage));
+  }, [NewMessage]);
+
+  return (
+	<ChatArea>
+	  {messages?.slice().reverse().map((message, index) => (
+		message.sentBy === user._id ? (
+		  <MyMessage content={message.content} key={index} />
+		) : (
+		  <FriendMessage content={message.content} key={index} />
+		)
+	  ))}
+	</ChatArea>
+  );
 };
 /**
  * 	sentTo: {
 	content: {
 	sentBy:{
-    creationDate:{
+	creationDate:{
 	roomId:{
  */
 const ChatArea = styled.div`

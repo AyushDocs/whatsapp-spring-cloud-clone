@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 import React, {useContext, useEffect, useState} from 'react';
-import {AiOutlinePlus, AiOutlineSearch} from 'react-icons/all';
+import {AiOutlinePlus, AiOutlineSearch} from 'react-icons/ai';
 import {Img} from 'react-image';
 import styled from 'styled-components';
 import {findAllRooms} from '../../apiUrls';
@@ -13,15 +13,19 @@ import SidebarItem from './SidebarItem';
 
 const Sidebar = () => {
 	const [Data, setData] = useState([]);
-	const {user} = useContext(authContext);
+	// const {user} = useContext(authContext);
+	const user={
+		photoUrl:'',
+		displayName:''
+	}
 	const {toggleModal} = useContext(context);
 	useEffect(() => {
 		
-		(async () => {
-			const res = await axios.get(findAllRooms(user._id));
-			console.log(res.data);
-			setData(res.data.data);
-		})();
+		// (async () => {
+		// 	const res = await axios.get(findAllRooms(user._id));
+		// 	console.log(res.data);
+		// 	setData(res.data.data);
+		// })();
 	}, []);
 
 	return (

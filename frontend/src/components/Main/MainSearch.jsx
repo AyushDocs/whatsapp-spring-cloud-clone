@@ -1,7 +1,8 @@
 /** @format */
 
 import React, {useContext, useState} from 'react';
-import {BsFillEmojiSmileFill, BsMic, IoAttach} from 'react-icons/all';
+import {BsFillEmojiSmileFill, BsMic} from 'react-icons/bs';
+import {IoMdAttach} from 'react-icons/io';
 import styled from 'styled-components';
 import {authContext} from '../../context/authContext';
 import {context as socketContext} from '../../context/SocketContext';
@@ -18,7 +19,7 @@ const MainSearch = () => {
 	return (
 		<SearchArea onSubmit={handleSubmit}>
 			<BsFillEmojiSmileFill style={{marginInline: '5px', fontSize: 20}} />
-			<IoAttach style={{marginInline: '5px', fontSize: 20}} />
+			<IoMdAttach style={{marginInline: '5px', fontSize: 20}} />
 			<SearchContainer>
 				<SearchInput value={Text} onChange={e => setText(e.target.value)} placeholder='Type a message' />
 			</SearchContainer>

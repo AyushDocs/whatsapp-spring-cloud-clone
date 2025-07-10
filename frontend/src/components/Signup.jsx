@@ -1,57 +1,89 @@
 /** @format */
 
-import React, { useContext, useState } from 'react';
+import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import { authContext } from '../context/authContext';
+import axios from 'axios';
+import { uploadImage } from '../apiUrls';
 
-const Login = () => {
-	const { handleLoginSubmit } = useContext(authContext);
-	const [FormData, setFormData] = useState({ email: '', password: '' });
+const Signup = () => {
+	const {handleSignupSubmit}=useContext(authContext)
+	const [formData, setFormData] = useState({
+		username: '',
+		email: '',
+		password: '',
+		image: ''
+	});
 
-	const handleChange = (e) =>
-		setFormData({ ...FormData, [e.target.name]: e.target.value });
+	const handleChange = (e) => {
+		const { name, value, files } = e.target;
+		if (name === 'image' && files) {
+			setFormData({ ...formData, image: files[0] });
+		} else {
+			setFormData({ ...formData, [name]: value });
+		}
+	};
 
 	return (
 		<Wrapper>
 			<Card>
-				<Title>Welcome Back 👋</Title>
-				<Form
-					onSubmit={e => {
-						e.preventDefault();
-						handleLoginSubmit(e, FormData.email, FormData.password);
+				<Title>Create Account 📝</Title>
+				<Form onSubmit={e=>{
+					e.preventDefault()
+					handleSignupSubmit(formData)
 					}}>
-					<Label htmlFor="login-email">Email</Label>
+					<Label htmlFor="signup-username">Username</Label>
 					<Input
-						id="login-email"
+						id="signup-username"
+						type="text"
+						name="username"
+						value={formData.username}
+						onChange={handleChange}
+						placeholder="Your name"
+						required
+					/>
+
+					<Label htmlFor="signup-email">Email</Label>
+					<Input
+						id="signup-email"
 						type="email"
 						name="email"
-						autoComplete="username"
-						value={FormData.email}
+						value={formData.email}
 						onChange={handleChange}
-						placeholder="Enter your email"
+						placeholder="you@example.com"
+						autoComplete="username"
+						required
 					/>
 
-					<Label htmlFor="login-password">Password</Label>
+					<Label htmlFor="signup-password">Password</Label>
 					<Input
-						id="login-password"
+						id="signup-password"
 						type="password"
 						name="password"
-						autoComplete="current-password"
-						value={FormData.password}
+						value={formData.password}
 						onChange={handleChange}
 						placeholder="••••••••"
+						autoComplete="new-password"
+						required
 					/>
 
-					<Button type="submit">Login</Button>
+					<Label htmlFor="signup-image">Profile Image</Label>
+					<Input
+						id="signup-image"
+						type="file"
+						name="image"
+						accept="image/*"
+						onChange={handleChange}
+					/>
+
+					<Button type="submit">Sign Up</Button>
 				</Form>
 			</Card>
 		</Wrapper>
 	);
 };
 
-export default Login;
-
-// === Styled Components ===
+export default Signup;
 
 const Wrapper = styled.div`
 	display: flex;
