@@ -1,44 +1,26 @@
-HELP.md
+# Node.js / Next.js
+node_modules/
+.next/
+dist/
+out/
+
+# Java / Maven
 target/
-!.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+*.class
+*.log
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
-
-### IntelliJ IDEA ###
-.idea
-*.iws
-*.iml
-*.ipr
-
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
+# IDEs / Editors
 .vscode/
+.idea/
+*.iml
 
-user-photos
-config_server/config
-build
-
+# Environment
 .env
-.env.development
-.env.test
+.env.*
 
-node_modules
-dist
+# OS / System files
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml

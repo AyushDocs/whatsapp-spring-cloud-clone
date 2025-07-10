@@ -1,0 +1,23 @@
+# Common build/cache artifacts
+node_modules
+target
+dist
+.next
+out
+
+# Local config
+.env
+.env.*
+
+# Git
+.git
+.gitignore
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Editor/project settings
+.vscode
+.idea
+*.iml
