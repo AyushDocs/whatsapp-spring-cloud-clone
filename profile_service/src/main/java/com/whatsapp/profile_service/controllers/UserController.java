@@ -1,8 +1,8 @@
 package com.whatsapp.profile_service.controllers;
 
 import com.whatsapp.profile_service.dto.FriendRequest;
+import com.whatsapp.profile_service.dto.ModifyUserRequest;
 import com.whatsapp.profile_service.dto.Response;
-import com.whatsapp.profile_service.models.ModifyUserRequest;
 import com.whatsapp.profile_service.models.User;
 import com.whatsapp.profile_service.services.UserService;
 
@@ -11,7 +11,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,12 +25,6 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class UserController {
       private final UserService userService;
-
-      @PostMapping("{userId}/{friendId}")
-      @ResponseStatus(HttpStatus.CREATED)
-      public void addFriend(@PathVariable Long userId, @PathVariable Long friendId) {
-            userService.addFriend(userId, friendId);
-      }
       
       @PutMapping("{userId}")
       @ResponseStatus(HttpStatus.NO_CONTENT)

@@ -1,0 +1,5 @@
+# @format
+spring:
+  profiles:
+    active:
+      - dev

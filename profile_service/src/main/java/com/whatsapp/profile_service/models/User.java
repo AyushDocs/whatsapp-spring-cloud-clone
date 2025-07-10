@@ -2,15 +2,13 @@ package com.whatsapp.profile_service.models;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.UUID;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 import javax.persistence.PrePersist;
 import javax.persistence.PreUpdate;
 import javax.persistence.Table;
@@ -31,7 +29,8 @@ import lombok.NoArgsConstructor;
 public class User{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long userId;
+    private Long id;
+    private String uuid;
     private String name;
     @JsonIgnore
     private String password;
@@ -44,9 +43,6 @@ public class User{
     private String roles="NONE";
     private LocalDateTime lastLoggedInAt;
     private String imageUrl;
-    @ManyToMany
-    @JsonIgnore
-    private List<User> friends=new ArrayList<>();
     public User(String username, String password, String email){
         this.name = username;
         this.password = password;
@@ -60,6 +56,6 @@ public class User{
     public void onPersist(){
         this.updatedAt = LocalDate.now();
         this.createdAt=LocalDate.now();
-
+        this.uuid = UUID.randomUUID().toString();
     }
 }

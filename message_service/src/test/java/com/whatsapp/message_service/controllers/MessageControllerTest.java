@@ -1,21 +1,16 @@
 package com.whatsapp.message_service.controllers;
 
-import static org.mockito.Mockito.when;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-
-import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.whatsapp.message_service.dto.MessageDto;
-import com.whatsapp.message_service.models.Message;
-import com.whatsapp.message_service.models.Status;
 import com.whatsapp.message_service.services.MessageService;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -37,27 +32,25 @@ class MessageControllerTest {
     void setup(){
         objectMapper = new ObjectMapper();
     }
-    @Test
+    @ParameterizedTest()
+    @CsvSource({ "987654321","atfyny","a@gjubuu","a@g."})
+    void should_not_send_message_invalid_email(String email) throws Exception {
+        MessageDto messageDto = new MessageDto("Hello World", email);
+        RequestBuilder request = post("/api/v1/messages")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(messageDto));
+        
+        mvc.perform(request)
+            .andExpect(status().isBadRequest());
+    }
+    @Test()
     void should_send_message() throws Exception {
-        MessageDto messageDto = new MessageDto("Hello World", "123456789","987654321");
+        MessageDto messageDto = new MessageDto("Hello World", "a@g.com");
         RequestBuilder request = post("/api/v1/messages")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(messageDto));
         
         mvc.perform(request)
             .andExpect(status().isCreated());
-    }
-    @Test
-    void should_fetch_message() throws Exception {
-        RequestBuilder request = get("/api/v1/messages/a@g.com");
-        Message message =new Message(0l, "Hello World!", "ayush", "a@g.com", null, Status.RECEIVED_BY_SERVER);
-        when(messageService.findMessages("a@g.com"))
-            .thenReturn(List.of(message));
-        mvc.perform(request)
-            .andExpect(status().isOk())
-            .andExpect(jsonPath("$[0].content").value("Hello World!"))
-            .andExpect(jsonPath("$[0].sentBy").value("ayush"))
-            .andExpect(jsonPath("$[0].sentTo").value("a@g.com"))
-            .andExpect(jsonPath("$").isArray());
     }
 }

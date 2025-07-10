@@ -10,9 +10,9 @@ import java.util.List;
 import java.util.Optional;
 
 import com.whatsapp.profile_service.dto.FriendRequest;
+import com.whatsapp.profile_service.dto.ModifyUserRequest;
 import com.whatsapp.profile_service.dto.Response;
 import com.whatsapp.profile_service.exceptions.UserNotFoundException;
-import com.whatsapp.profile_service.models.ModifyUserRequest;
 import com.whatsapp.profile_service.models.User;
 import com.whatsapp.profile_service.repositories.UserRepository;
 
@@ -35,32 +35,6 @@ class UserServiceTest {
       void setUp() {
             underTest = new UserService(userRepository);
       }
-
-      @Test
-      void should_add_friend() {
-            // given
-            User userOne = new User();
-            User userTwo = new User();
-            userOne.setUserId(1l);
-            userTwo.setUserId(2l);
-            when(userRepository.findAllById(List.of(1l, 2l))).thenReturn(List.of(userOne, userTwo));
-
-            // when
-            underTest.addFriend(1l, 2l);
-            // then
-            verify(userRepository).findAllById(List.of(1l, 2l));
-            ArgumentCaptor<Iterable<User>> argumentCaptor = ArgumentCaptor.forClass(Iterable.class);
-            verify(userRepository).saveAll(argumentCaptor.capture());
-            List<User> users = (List<User>) argumentCaptor.getValue();
-            User user1 = users.get(0);
-            User user2 = users.get(1);
-            assertTrue(user1.getFriends().contains(user2));
-            assertTrue(user2.getFriends().contains(user1));
-            assertEquals(2, users.size());
-            assertEquals(1l, user1.getUserId());
-            assertEquals(2l, user2.getUserId());
-      }
-
       @Test
       void should_find_friends_by_email() {
             List<User> users = getDummyUsers();
@@ -77,7 +51,7 @@ class UserServiceTest {
       void should_update_user() {
             // given
             User user = new User("name","password","email");
-            user.setUserId(1l);
+            user.setId(1l);
             user.setImageUrl("http://a.com/5");
             when(userRepository.findById(1l)).thenReturn(Optional.of(user));
             ModifyUserRequest modifyUserRequest = ModifyUserRequest
@@ -89,7 +63,7 @@ class UserServiceTest {
             ArgumentCaptor<User> argumentCaptor = ArgumentCaptor.forClass(User.class);
             verify(userRepository).save(argumentCaptor.capture());
             User user1 = argumentCaptor.getValue();
-            assertEquals(1l, user1.getUserId());
+            assertEquals(1l, user1.getId());
             assertEquals("updatedName", user1.getName());
             assertEquals("updatedEmail", user1.getEmail());
             assertEquals("http://a.com/6", user1.getImageUrl());

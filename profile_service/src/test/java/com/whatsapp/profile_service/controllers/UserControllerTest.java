@@ -9,15 +9,13 @@ import static org.mockito.Mockito.when;
 import java.util.List;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.whatsapp.profile_service.configuration.JwtConfig;
 import com.whatsapp.profile_service.dto.FriendRequest;
+import com.whatsapp.profile_service.dto.ModifyUserRequest;
 import com.whatsapp.profile_service.dto.Response;
 import com.whatsapp.profile_service.exceptions.UserNotFoundException;
-import com.whatsapp.profile_service.models.ModifyUserRequest;
 import com.whatsapp.profile_service.models.User;
 import com.whatsapp.profile_service.services.UserService;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,16 +38,7 @@ class UserControllerTest {
       @MockBean
       private UserService userService;
       private ObjectMapper mapper=new ObjectMapper();
-
-      @Test
-      void should_add_friend() throws Exception {
-            MockHttpServletRequestBuilder request = MockMvcRequestBuilders
-            .post("/api/v1/users/{userId}/{friendId}", 1,2);
-            mvc.perform(request)
-                        .andExpect(MockMvcResultMatchers.status().isCreated());
-            verify(userService).addFriend(1l, 2l);
-      }
-
+      
       @Test
       void should_find_new_friends_with_email() throws Exception {
             Response<Page<User>> res = getPageResponseOfUsers();

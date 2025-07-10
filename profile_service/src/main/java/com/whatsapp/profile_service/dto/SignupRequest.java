@@ -1,6 +1,7 @@
 package com.whatsapp.profile_service.dto;
 
 import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
@@ -11,10 +12,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class SignupRequest {
-    @NotNull(message="username must not be null")
+    @NotBlank
+    @NotNull
     private String username;
-    @NotNull(message="password must not be null")
+    @NotNull
+    @NotBlank
     private String password;
-    @Email(message="email must be valid")
+    @Email
     private String email;
 }

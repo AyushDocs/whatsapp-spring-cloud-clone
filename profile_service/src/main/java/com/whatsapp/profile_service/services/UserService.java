@@ -1,11 +1,9 @@
 package com.whatsapp.profile_service.services;
 
-import java.util.List;
-
 import com.whatsapp.profile_service.dto.FriendRequest;
+import com.whatsapp.profile_service.dto.ModifyUserRequest;
 import com.whatsapp.profile_service.dto.Response;
 import com.whatsapp.profile_service.exceptions.UserNotFoundException;
-import com.whatsapp.profile_service.models.ModifyUserRequest;
 import com.whatsapp.profile_service.models.User;
 import com.whatsapp.profile_service.repositories.UserRepository;
 
@@ -24,15 +22,6 @@ public class UserService {
        */
       private static final String NO_USER_ERR_MESSAGE = "User with id %s not found";
       private final UserRepository userRepository;
-
-      public void addFriend(Long userId, Long friendId) {
-            List<User> users = userRepository.findAllById(List.of(userId, friendId));
-            User user = users.get(0);
-            User friend = users.get(1);
-            user.getFriends().add(friend);
-            friend.getFriends().add(user);
-            userRepository.saveAll(users);
-      }
 
       public Response<Page<User>> findNewFriends(FriendRequest request) {
             PageRequest page = PageRequest.of(request.getOffset(), request.getPage());

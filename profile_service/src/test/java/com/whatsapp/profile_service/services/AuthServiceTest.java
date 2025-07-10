@@ -76,7 +76,7 @@ class AuthServiceTest {
     void should_signup() throws RestClientException, URISyntaxException {
         SignupRequest userDto = new SignupRequest("ayush", "123456", "ayush@gmail.com");
         User user = new User("ayush", "123456", "ayush@gmail.com");
-        user.setUserId(5l);
+        user.setId(5l);
         when(passwordEncoder.encode("123456")).thenReturn("123456");
         when(repository.existsByEmail("ayush@gmail.com")).thenReturn(false);
         when(repository.save(any(User.class))).thenReturn(user);

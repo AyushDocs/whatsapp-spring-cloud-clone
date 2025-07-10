@@ -1,15 +1,13 @@
 package com.whatsapp.message_service.models;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 import javax.persistence.Entity;
-import javax.persistence.EnumType;
-import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import javax.persistence.PrePersist;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -27,9 +25,11 @@ public class Message {
     private Long id;
     private String content;
     private String sentBy;
-    private String sentTo;
+    private String uuid;
+    private String roomId;
     private LocalDateTime timestamp;
-    @Enumerated(EnumType.STRING)
-    @JsonIgnore
-    private Status status;
+    @PrePersist
+    void init() {
+        uuid = UUID.randomUUID().toString();
+    }
 }

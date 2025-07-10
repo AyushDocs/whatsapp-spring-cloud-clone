@@ -10,7 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class CustomUserDetails implements UserDetails {
-    private  final transient User user;
+    private final transient User user;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

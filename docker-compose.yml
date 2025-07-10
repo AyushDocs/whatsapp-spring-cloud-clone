@@ -1,0 +1,103 @@
+version: '3.9'
+
+services:
+  frontend:
+    build:
+      context: ./frontend
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules  # avoid host node_modules conflicts
+    ports:
+      - "3000:3000"
+    command: npm run dev
+    networks:
+      - backend
+
+  api_gateway:
+    build:
+      context: ./api_gateway
+    volumes:
+      - ./api_gateway:/app
+      - /app/node_modules
+    ports:
+      - "8080:8080"
+    command: npx nodemon src/index.ts
+    networks:
+      - backend
+
+  config_server:
+    build: ./config_server
+    volumes:
+      - ./config_server:/app
+    ports:
+      - "8888:8888"
+    command: ./mvnw spring-boot:run
+    networks:
+      - backend
+
+  eureka_server:
+    build: ./eureka_server
+    volumes:
+      - ./eureka_server:/app
+    ports:
+      - "8761:8761"
+    command: ./mvnw spring-boot:run
+    networks:
+      - backend
+    depends_on:
+      - config_server
+
+  profile_service:
+    build: ./profile_service
+    volumes:
+      - ./profile_service:/app
+    ports:
+      - "9001:9001"
+    command: ./mvnw spring-boot:run
+    networks:
+      - backend
+    depends_on:
+      - eureka_server
+      - config_server
+
+  room_service:
+    build: ./room_service
+    volumes:
+      - ./room_service:/app
+    ports:
+      - "9002:9002"
+    command: ./mvnw spring-boot:run
+    networks:
+      - backend
+    depends_on:
+      - eureka_server
+      - config_server
+
+  message_service:
+    build: ./message_service
+    volumes:
+      - ./message_service:/app
+    ports:
+      - "9003:9003"
+    command: ./mvnw spring-boot:run
+    networks:
+      - backend
+    depends_on:
+      - eureka_server
+      - config_server
+
+  image_service:
+    build: ./image_service
+    volumes:
+      - ./image_service:/app
+    ports:
+      - "9004:9004"
+    command: ./mvnw spring-boot:run
+    networks:
+      - backend
+    depends_on:
+      - eureka_server
+      - config_server
+
+networks:
+  backend:

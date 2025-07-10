@@ -1,6 +1,5 @@
 package com.whatsapp.profile_service.services;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 import com.whatsapp.profile_service.exceptions.RequestValidationException;
@@ -57,10 +56,8 @@ public class AuthService {
     }
 
     private void saveUser(String email, String password, String username) {
-        LocalDate todayDate = LocalDate.now();
         String encodedPassword = passwordEncoder.encode(password);
-        User user = new User(null, username, encodedPassword, email, todayDate,
-                todayDate, "NONE", LocalDateTime.now(), null, null);
+        User user = new User(username,encodedPassword,email);
         repository.save(user);
     }
 
