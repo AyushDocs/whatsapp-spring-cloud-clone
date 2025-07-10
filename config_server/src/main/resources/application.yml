@@ -10,9 +10,9 @@ spring:
             fail-fast: true
             discovery:
                 enabled: true
-            server:
-                native:
-                    search-locations: ${userprofile}/Desktop/code/whatsapp-clone-microservices/config_server/config
+            #server:
+            #    native:
+            #        search-locations: ${userprofile}/Desktop/code/whatsapp-clone-microservices/config_server/config
 server:
     port: 8085
 eureka:
